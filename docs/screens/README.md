@@ -6,7 +6,7 @@ Low-fidelity sketches from stage 3 (Nov 2, 2026). They settle layout and behavio
 
 ![Today: list view and by-goal view](today.png)
 
-- Three groups: **Keep life running**, **Move forward**, **Free time**. Timed tasks show "by 7 a.m." or "at 6 p.m." and anchor the order; untimed tasks float.
+- Three groups: **Keep life running**, **Move forward**, **Free time**. Free time is the time tasks don't fill, not a list of tasks. Timed tasks show "by 7 a.m." or "at 6 p.m." and anchor the order; untimed tasks float.
 - Each goal task shows its goal and aspiration ("Be strong · Be fit").
 - Progress for today at the top ("1 of 4 done"). Weekly progress per goal lives on the Week screen.
 - Toggle between **List** (default) and **By goal**. The chosen view is remembered (ADR-004).
@@ -44,4 +44,4 @@ Six screens cover the prototype. Prompts like "still matter?", reviews and "not 
 | Goals | Weekly or less | Aspirations with their goals and progress at a glance | 1, 6 |
 | Goal detail | Weekly or less | Label, measurable line, baseline, milestones, weekly target, progress, check-ins | 2, 6, 7 |
 | Add / edit | Rarely | One-sentence entry for an aspiration, goal, task or maintenance item | 1, 2, 3 |
-| Settings | Rarely | Intensity, how much free time to protect, notifications | 8 |
+| Settings | Rarely | Intensity (which sets how much free time is protected), notifications | 8 |

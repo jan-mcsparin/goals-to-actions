@@ -10,7 +10,7 @@ Seven entities cover the prototype. An aspiration has many goals; a goal has man
 | Weekly target | Count or amount (3 sessions, 25 miles), unit | Effective from (so changes keep history) | Goal |
 | Task | Title, optional value logged (miles, weight), status (in bank, planned, done, skipped), rollover count | Week it belongs to, planned day, optional due date, optional time of day (due by 7 a.m., or at 6 p.m.), completed date | Optional goal or recurring item |
 | Recurring item (maintenance or an ongoing practice) | Name, repeat rule (every Tuesday, monthly on the 1st, once a week), fixed day or flexible within the window, active | Next due | Optional aspiration |
-| Settings | Intensity (going hard, normal, easing off), free time to protect, week start day | Intensity set on | — |
+| Settings | Intensity (going hard, normal, easing off; it also sets how much free time is protected), week start day | Intensity set on | — |
 
 Notes:
 
