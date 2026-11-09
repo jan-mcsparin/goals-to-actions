@@ -67,7 +67,7 @@ The heart of the app, and the most automated part. Planning should mostly be a g
 
 1. **Start of the week:** the app drafts the whole week from the bank. It places maintenance on its due days first, spreads goal work across the week (learning your rhythm over time), leaves free time, and follows your intensity setting (flow 8).
 2. **Throughout the week:** the plan updates continuously as tasks get done, skipped or moved, so you can look ahead at any day and adjust it. Today's plan changes only because of something you did.
-3. **Whenever you open it** (often the next morning): today's plan is shown in three groups: keeping life running, moving forward, and free time.
+3. **Whenever you open it** (often the next morning): today's plan is shown in three groups: keeping life running, moving forward, and free time. Free time is the time tasks don't fill; it holds no tasks.
 4. You can:
    - **accept it** by doing nothing,
    - **swap** a task for one from the bank,

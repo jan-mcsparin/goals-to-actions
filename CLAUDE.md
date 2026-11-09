@@ -19,6 +19,7 @@ A personal, installable, mobile-first web app that connects aspirations → goal
 - **web-frontend/** (`goals-to-actions-web-frontend`): React + Vite + TypeScript, client-rendered, vite-plugin-pwa. Installable PWA.
 - **api/** (`goals-to-actions-api`): Python FastAPI, typed (type hints + Pydantic), Postgres. Not created yet.
 - **The OpenAPI schema is the contract.** Front-end API types (and ideally the client) are generated from FastAPI's schema, never hand-written. Regenerate whenever the API changes.
+- **JSON field names are camelCase.** The API aliases its Pydantic fields (`alias_generator=to_camel`) so generated types match the front end's.
 
 ## Non-negotiables
 
