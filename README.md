@@ -1,0 +1,70 @@
+# Goals to Actions
+
+*Working title. The product name lives in one place in the front end (`src/config.ts` in `web-frontend/`; see `web-frontend/CLAUDE.md`), so renaming later is cheap.*
+
+An installable, mobile-first web app that connects what you want from life to what you do today. You name an aspiration and a measurable goal; the app fills each week with the right tasks, plans your days so life keeps running and there's still time to rest, and shows how far you've come.
+
+## Why
+
+Even when I know what I want and roughly what it takes, I stall, sometimes for years. What feels easy or comfortable right now wins over what I want far more for the future. To-do lists capture today's tasks but not the big themes, so I can't tell which tasks actually move me forward. And a plan that ignores the work of keeping life running, or leaves no time to rest, falls apart.
+
+**The aim:** not a short, grandiose burst of progress, but a life where I keep moving forward and improving, over years, while also being happy.
+
+Built for me first, as a tool I'll use daily and as building practice. Others may use it later.
+
+## How it works
+
+```
+Aspiration  →  Goals  →  Milestones  →  Weekly targets and tasks  →  Today
+"Be fit"       "Be strong:   Week 8: bench 155    3 lifting sessions     Lift: bench day
+               bench 175…"                         a week                 at 6 p.m.
+```
+
+Each day balances three kinds of time: **keeping life running**, **moving forward**, and **rest**. The app automates the frequent work (filling the weekly bank, planning each day); you enter the rare stuff (aspirations, goals, milestones).
+
+Start with [`docs/concept.md`](docs/concept.md), then [`docs/product-rules.md`](docs/product-rules.md).
+
+## Stack
+
+| Part | Choice | Why |
+| --- | --- | --- |
+| App | Installable PWA, mobile-first | [ADR-001](docs/adr/0001-pwa.md) |
+| Front end | React + Vite + TypeScript, client-rendered, vite-plugin-pwa | [ADR-002](docs/adr/0002-react-vite.md) |
+| Back end | Python FastAPI + Postgres; OpenAPI schema is the contract | [ADR-003](docs/adr/0003-fastapi-postgres.md) |
+| Performance | Today opens instantly from on-device data | [ADR-004](docs/adr/0004-instant-open.md) |
+
+## Project layout
+
+Separate repos inside one project folder. This folder is its own small repo for product docs; `web-frontend/` and `api/` are independent repos, ignored here. (A monorepo was a reasonable alternative; git submodules were rejected: extra parent commits, detached-HEAD confusion, no need to pin versions together.)
+
+```
+goals-to-actions/        this repo: product docs and shared context
+  README.md
+  CLAUDE.md              the whole product: what it is, the stack, rules
+  docs/
+    concept.md           one-page concept
+    product-rules.md     the rules every screen and planner must follow
+    flows.md             the 8 core flows, edge cases, settled questions
+    data-model.md        conceptual entities
+    screens/             low-fi sketches and screen inventory
+    adr/                 architecture decision records
+    setup/               first-time setup checklist
+  .github/               issue template
+  web-frontend/ (own repo) goals-to-actions-web-frontend: React + Vite PWA
+  api/          (own repo) goals-to-actions-api: FastAPI (set up later in stage 4)
+```
+
+## Getting started
+
+```bash
+git clone git@github.com:<you>/goals-to-actions.git
+cd goals-to-actions
+git clone git@github.com:<you>/goals-to-actions-web-frontend.git web-frontend
+# later: git clone git@github.com:<you>/goals-to-actions-api.git api
+```
+
+Run instructions live in each sub-repo's README. First-time setup steps: [`docs/setup/SETUP.md`](docs/setup/SETUP.md).
+
+## Work tracking
+
+GitHub Issues plus a GitHub Projects board (Todo / In progress / Done). Issues use the template in `.github/ISSUE_TEMPLATE/`: Goal, Acceptance criteria, References to the docs here. Project stages and hours are tracked separately in the claude.ai project.

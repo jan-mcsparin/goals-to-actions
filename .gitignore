@@ -1,0 +1,14 @@
+# Sub-repos live here but are their own git repositories
+/web-frontend/
+/api/
+
+# OS and editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Local config and secrets
+.env
+.env.*
+!.env.example

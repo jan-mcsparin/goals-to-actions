@@ -1,0 +1,37 @@
+# CLAUDE.md: Goals to Actions
+
+Context for Claude Code. This folder holds product docs; the code lives in `web-frontend/` (front end) and `api/` (back end), each its own git repo with its own CLAUDE.md.
+
+## What this is
+
+A personal, installable, mobile-first web app that connects aspirations → goals → milestones → weekly targets and tasks → today's plan. It plans each day so life keeps running, goals move forward, and free time stays protected. Built for one user (the founder) first; used mostly on an iPhone, many times a day.
+
+## Read before changing behavior
+
+- `docs/product-rules.md`: the rules. Short. Read it before any planner or UI work.
+- `docs/flows.md`: the 8 flows in detail, edge cases and settled questions.
+- `docs/data-model.md`: conceptual entities.
+- `docs/screens/README.md`: sketches and screen inventory.
+- `docs/adr/`: why the stack is what it is.
+
+## Stack
+
+- **web-frontend/** (`goals-to-actions-web-frontend`): React + Vite + TypeScript, client-rendered, vite-plugin-pwa. Installable PWA.
+- **api/** (`goals-to-actions-api`): Python FastAPI, typed (type hints + Pydantic), Postgres. Not created yet.
+- **The OpenAPI schema is the contract.** Front-end API types (and ideally the client) are generated from FastAPI's schema, never hand-written. Regenerate whenever the API changes.
+
+## Non-negotiables
+
+- **Today opens instantly** (ADR-004): cached app shell, last-known plan in IndexedDB rendered first then refreshed, optimistic check-offs with an offline queue, current screen and view persisted across iOS restarts.
+- **Today only changes because of something the user did.** Tasks the user placed on a day stay there.
+- **No nagging.** The only unprompted questions are "Still matter?" (task rolled over two weeks) and a slipped opt-in deadline. No review prompts, no pace prompts, no shame language; falling short is "not yet."
+- **Weeks start Monday.** Maintenance is planned first, then goal work; days are never packed full (task cap set by intensity).
+
+## Conventions
+
+- Keep logic out of components: the API client, types and client-side rules (planning, pacing) live in plain TypeScript modules and hooks; components only render. This keeps a later move to Capacitor or React Native cheap.
+- During the click-through, screens get data through the same API-client functions the real app will use, returning mock data for now.
+- When a change alters behavior described in `docs/`, update the doc in the same piece of work. New architecture-level decisions get an ADR (`docs/adr/README.md` says when).
+- Start Claude Code here for work spanning both repos, or inside `web-frontend/` or `api/` for focused work. Commit in the repo the change belongs to.
+- Work items are GitHub issues using `.github/ISSUE_TEMPLATE/task.md`.
+- Plain, concise writing in docs and UI copy. UI text is warm and never judgmental.
