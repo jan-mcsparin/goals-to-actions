@@ -48,7 +48,6 @@ goals-to-actions/        this repo: product docs and shared context
     data-model.md        conceptual entities
     screens/             low-fi sketches and screen inventory
     adr/                 architecture decision records
-    setup/               first-time setup checklist
   .github/               issue template
   web-frontend/ (own repo) goals-to-actions-web-frontend: React + Vite PWA
   api/          (own repo) goals-to-actions-api: FastAPI (set up later in stage 4)
@@ -63,7 +62,7 @@ git clone git@github.com:<you>/goals-to-actions-web-frontend.git web-frontend
 # later: git clone git@github.com:<you>/goals-to-actions-api.git api
 ```
 
-Run instructions live in each sub-repo's README. First-time setup steps: [`docs/setup/SETUP.md`](docs/setup/SETUP.md).
+Run instructions live in each sub-repo's README.
 
 ## Work tracking
 
