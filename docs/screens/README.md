@@ -6,11 +6,12 @@ Low-fidelity sketches from stage 3 (Nov 2, 2026). They settle layout and behavio
 
 ![Today: list view and by-goal view](today.png)
 
-- Three groups: **Keep life running**, **Move forward**, **Free time**. Free time is the time tasks don't fill, not a list of tasks. Timed tasks show "by 7 a.m." or "at 6 p.m." and anchor the order; untimed tasks float.
-- Each goal task shows its goal and aspiration ("Be strong · Be fit").
+- Three groups: **Keep life running**, **Move forward**, **Free time**. Keep life running holds maintenance and tasks with no goal ("Fill out my ballot"). Free time is the time tasks don't fill, not a list of tasks; it reads "The rest is yours." Timed tasks show "by 7 a.m." or "at 6 p.m." and anchor the order; untimed tasks follow.
+- Each goal task shows its goal and aspiration ("Be strong · Be fit"). In **By goal**, each card is titled the same way.
+- Tap a task to mark it done; tap again to undo.
 - Progress for today at the top ("1 of 4 done"). Weekly progress per goal lives on the Week screen.
 - Toggle between **List** (default) and **By goal**. The chosen view is remembered (ADR-004).
-- **Pull from bank** adds extra work; swipe or tap actions swap or skip a task.
+- **Pull from bank** adds extra work. Each task's **⋯** menu offers **Back to bank** (skipping, in flows.md) and **Swap** for a bank task, which takes its place in the day. Done tasks have no menu. Swipe gestures may come later.
 
 ## Week
 
