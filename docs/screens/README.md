@@ -22,7 +22,7 @@ Low-fidelity sketches from stage 3 (Nov 2, 2026). They settle layout and behavio
 - Monday to Sunday. Today highlighted, past days dimmed; an empty day reads "Free day". Tap a day to open it like Today, with every Today action; "‹ Week" goes back. On past days, Pull from bank and Swap are hidden.
 - Fixed-day items (trash on Tuesday) stay put: they have no ⋯ menu, but can be checked off.
 - **The bank:** this week's tasks not yet on a day, as chips. Tap one, then pick a day (today or later). Drag may come later. Anything placed by hand stays put.
-- A tab bar (Today | Week) switches screens; the open screen, including an opened day, is remembered.
+- A tab bar switches screens; the open screen, including an opened day, is remembered. It's Today | Week as built so far, and becomes **Today | Week | + | Aspirations**: the + opens the Add sheet over whatever screen is open.
 - The "This week" header and date range stay pinned while the page scrolls.
 
 ## Aspirations, Aspiration, Keep life running, Goal detail, Add, Settings
@@ -39,11 +39,11 @@ The app is organized aspirations first, matching the model: **Aspirations tab �
 
 ![Goals, Goal detail, Add and Settings (Nov 2 sketch)](other-screens.png)
 
-- **Goal detail:** label, measurable line, aspiration (a link up to its page: "Be fit ›"; back returns wherever you came from), type, milestone timeline, weekly target (editable), next check-in. Review, Pause and End goal live here; reviews are never prompted.
+- **Goal detail:** label, measurable line, aspiration (a link up to its page: "Be fit ›"; back returns wherever you came from), type, milestone timeline, weekly target (editable), next check-in. Review, Pause and End goal live here; reviews are never prompted. Pausing sets the goal's unfinished tasks aside for the week; resuming returns them to the bank.
   - **The milestone timeline is vertical**, not horizontal as sketched: measurable lines need the full width, and side-swiping fights the iPhone back gesture (decided Nov 10).
   - **Past four milestones it condenses:** the latest past milestone, any "not yet", Next and the goal always show; the rest fold into tappable rows ("2 more: Wk 16, Wk 20"), with Show all / Show less remembered per goal. This keeps the weekly target and Check in near the top.
-- **Add:** one sheet with Task / Goal / Aspiration / Recurring tabs. A task needs only a title; goal, due date and time of day are optional.
-- **Settings:** intensity (Easing off / Normal / Going hard), week starts Monday, notifications (off), export my data.
+- **Add:** one sheet with Task / Goal / Aspiration / Recurring tabs, opened by the + in the tab bar. A task needs only a title; goal, due date and time of day are optional. It goes to the bank, or onto today (preselected when the sheet is opened from Today). A goal is a short form, type first; its milestones are added on its page. A recurring item can repeat "N times a week"; with no aspiration it belongs to Keep life running.
+- **Settings:** reached by the gear on the Aspirations tab. Intensity (Easing off / Normal / Going hard), week starts Monday, notifications (off), export my data.
 
 ![Goal detail: condensed and expanded milestone timeline](goal-detail-timeline.png)
 

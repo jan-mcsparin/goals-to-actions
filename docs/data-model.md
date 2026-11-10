@@ -9,12 +9,14 @@ Seven entities cover the prototype. An aspiration has many goals; a goal has man
 | Milestone | Measurable line (bench 155…), result when checked, status (upcoming, hit, not yet) | Optional target date, checked-in date | Goal |
 | Weekly target | Count or amount (3 sessions, 25 miles), unit | Effective from (so changes keep history) | Goal |
 | Task | Title, optional value logged (miles, weight), status (in bank, planned, done, skipped), rollover count, placed by hand | Week it belongs to, planned day, optional due date, optional time of day (due by 7 a.m., or at 6 p.m.), completed date | Optional goal or recurring item |
-| Recurring item (maintenance or an ongoing practice) | Name, repeat rule (every Tuesday, monthly on the 1st, once a week), fixed day or flexible within the window, active | Next due | Optional aspiration |
+| Recurring item (maintenance or an ongoing practice) | Name, repeat rule (every Tuesday, monthly on the 1st, once a week, 3 times a week), fixed day or flexible within the window, active | Next due | Optional aspiration |
 | Settings | Intensity (going hard, normal, easing off; it also sets how much free time is protected), week start day | Intensity set on | — |
 
 Notes:
 
 - **Every goal has a finish line it could reach** (its measurable line), but no forced end date. It stays active as long as it's needed, until it's reached or you end it. Ongoing practices that should never end are recurring items, not goals.
+- **The goal is its own final milestone.** It isn't stored as a milestone: progress counts the goal's milestones plus one ("1 of 6"), and a goal with none reads "0 of 1". A one-off goal's steps are its milestones.
+- **Skipped** is the status of a task set aside when its goal is paused or its aspiration is retired with its work paused. Resuming the goal returns this week's to the bank. ("Back to bank" on Today is not this: that task is simply in the bank again.)
 - **Placed by hand:** set when you put a task on a day yourself (pull from the bank, swap, or pick a day on the Week screen), cleared when it goes back to the bank. The planner never moves these tasks.
 - **Tasks carry two kinds of date:** the day they're planned for, which the app moves freely, and an optional due date, which is a real constraint. A task can also have an optional time of day; tasks without one float, and the app plans them around the timed ones.
 - **Quitting goals** need two more pieces: a daily yes/no log from the start date, rather than tasks, and an occasional urge rating that shows when the habit is broken.

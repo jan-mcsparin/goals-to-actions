@@ -30,8 +30,8 @@ Branches:
 - **Edit** the name and why at any time.
 - **Reorder:** move up or move down. Priority order drives which goal work comes first when the week is tight, and the order on Week and in Today's by-goal view.
 - **Review** (only when you tap it): still the right aspiration? still in the right place?
-- **Retire:** the sheet leads with what the aspiration has seen (goals reached, goals active, recurring items), then asks one thing: pause its active goals and recurring items (default), or keep them going without an aspiration. The aspiration moves to Retired, history intact. Nothing counts against you.
-- **Bring back** a retired aspiration: active again, last in priority. Goals it paused stay paused until you resume them.
+- **Retire:** the sheet leads with what the aspiration has seen (goals reached, goals active, recurring items), then asks one thing: pause its active goals and recurring items (default), or keep them going without an aspiration. Pausing them takes their unfinished tasks off this week's days and out of the bank; finished tasks stay. The aspiration moves to Retired, history intact. Nothing counts against you.
+- **Bring back** a retired aspiration: active again, last in priority. Goals it paused stay paused until you resume them, and recurring items it paused stay off for now.
 
 ## Flow 2: Set a goal and its milestones
 
@@ -41,7 +41,7 @@ Rare: a few times a year per aspiration. It defines concretely what reaching the
 2. From an aspiration (or on its own), type one sentence: "Be strong: bench 175, squat 350, deadlift 400."
 3. The app splits it into a **label** ("Be strong") and a **measurable line** (the numbers). If there's no measurable line, it asks: "How will you know you've got there?" Every goal needs a finish line it could reach. There's no forced end date, though: a goal stays active as long as it's needed, until it's reached or you end it.
 4. **Baseline:** "Where are you now?" (bench 145, squat 275, deadlift 315). Realistic targets depend on this.
-5. **Milestones:** you add checkpoints, each with a measurable line and an optional date (week 8: bench 155, squat 300, deadlift 345). App suggestions come later.
+5. **Milestones:** you add checkpoints, each with a measurable line and an optional date (week 8: bench 155, squat 300, deadlift 345). The goal itself is the final milestone. In the app the short Add form saves the goal first; milestones are added on its page. App suggestions come later.
 6. **Optional deadline** for the goal. Opt-in only.
 7. **Weekly target:** you enter it ("3 lifting sessions a week"). App suggestions come later.
 8. The app puts this week's tasks for the goal into the bank (flow 3).
@@ -50,7 +50,7 @@ Branches:
 
 - **No aspiration yet:** the app asks "What's this for?" You can link one, create one, or skip.
 - **Quitting goal:** instead of a weekly target, set a start date and a daily all-or-nothing commitment. The finish line is the habit being broken, not a set number of days: you've quit when you don't really want one anymore. The app occasionally asks how strong the urge is, and the goal is reached when it has stayed low for a while, or when you say so.
-- **One-off goal:** set a deadline and enter a short checklist of steps, each landing in the bank before it's due.
+- **One-off goal:** set an optional deadline and a short list of steps. The steps are the goal's milestones: you mark each one reached on the goal's page ("Step 3 of 6"). The tasks that get a step done are ordinary tasks for the goal; checking one off doesn't move the step.
 
 ## Flow 3: Fill the task bank
 
@@ -61,7 +61,7 @@ Mostly automatic, once a week. The bank holds everything to get done this week, 
    - steps from one-off goals that are due soon,
    - recurring maintenance due this week (laundry, rent),
    - anything that rolled over from last week (flow 7), and tasks from the upcoming list that are now due.
-2. Anytime, you can add a task by hand: a title, and optionally the goal it serves and a due date. If it's due this week or has no due date, it goes straight into this week's bank. If it's due later, it waits in an upcoming list and moves into the bank at the start of the week it's due (or a week or two early, for things that need lead time).
+2. Anytime, you can add a task by hand: a title, and optionally the goal it serves and a due date. If it's due this week or has no due date, it goes straight into this week's bank, or onto today if you choose (the default when you add it from Today). If it's due later, it waits in an upcoming list and moves into the bank at the start of the week it's due (or a week or two early, for things that need lead time).
 3. **Maintenance is set up once:** a name, a repeat and how fixed it is. Fixed-day items happen on a set day ("take out the trash every Tuesday," "rent on the 1st"), and the plan always puts them there. Flexible items just need doing sometime in the window ("laundry once a week," "clean the bathroom every two weeks"), and the app places them on whichever day fits. Only the things that actually slip go in; automatic habits stay out. The same kind of recurring item can also keep up a practice after its goal ends (lifting 3 times a week, under Be fit).
 
 Branches:
@@ -128,7 +128,7 @@ Mostly automatic. The app asks short questions only when something suggests it s
 
 **Light review (only when you choose to; the app doesn't prompt):**
 
-3. A short card per goal: still important? Is the weekly target right? Keep, adjust the target, pause, or end the goal.
+3. A short card per goal: still important? Is the weekly target right? Keep, adjust the target, pause, or end the goal. Pausing a goal sets its unfinished tasks aside for the week; resuming returns them to the bank.
 4. Occasionally, aspirations too: still the right ones? Has the order changed?
 
 **When a goal ends** (reached, deadline passed, or you end it):
