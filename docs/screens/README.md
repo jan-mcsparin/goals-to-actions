@@ -31,8 +31,12 @@ Low-fidelity sketches from stage 3 (Nov 2, 2026). They settle layout and behavio
 
 - **Goals:** aspirations with their why, and each goal's progress (milestone count, or stage for one-off goals). Count of recurring items.
 - **Goal detail:** label, measurable line, aspiration, type, milestone timeline, weekly target (editable), next check-in. Review, Pause and End goal live here; reviews are never prompted.
+  - **The milestone timeline is vertical**, not horizontal as sketched: measurable lines need the full width, and side-swiping fights the iPhone back gesture (decided Nov 10).
+  - **Past four milestones it condenses:** the latest past milestone, any "not yet", Next and the goal always show; the rest fold into tappable rows ("2 more: Wk 16, Wk 20"), with Show all / Show less remembered per goal. This keeps the weekly target and Check in near the top.
 - **Add:** one sheet with Task / Goal / Aspiration / Recurring tabs. A task needs only a title; goal, due date and time of day are optional.
 - **Settings:** intensity (Easing off / Normal / Going hard), week starts Monday, notifications (off), export my data.
+
+![Goal detail: condensed and expanded milestone timeline](goal-detail-timeline.png)
 
 ## Core loop
 
