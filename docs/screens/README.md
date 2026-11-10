@@ -10,6 +10,7 @@ Low-fidelity sketches from stage 3 (Nov 2, 2026). They settle layout and behavio
 - Each goal task shows its goal and aspiration ("Be strong · Be fit"). In **By goal**, each card is titled the same way.
 - Tap a task to mark it done; tap again to undo.
 - Progress for today at the top ("1 of 4 done"). Weekly progress per goal lives on the Week screen.
+- The header (heading, "1 of 4 done", progress bar, and "‹ Week" on an opened day) stays pinned while the list scrolls. The List / By goal toggle scrolls away.
 - Toggle between **List** (default) and **By goal**. The chosen view is remembered (ADR-004).
 - **Pull from bank** adds extra work. Each task's **⋯** menu offers **Back to bank** (skipping, in flows.md) and **Swap** for a bank task, which takes its place in the day. Done tasks have no menu. Swipe gestures may come later.
 
@@ -22,6 +23,7 @@ Low-fidelity sketches from stage 3 (Nov 2, 2026). They settle layout and behavio
 - Fixed-day items (trash on Tuesday) stay put: they have no ⋯ menu, but can be checked off.
 - **The bank:** this week's tasks not yet on a day, as chips. Tap one, then pick a day (today or later). Drag may come later. Anything placed by hand stays put.
 - A tab bar (Today | Week) switches screens; the open screen, including an opened day, is remembered.
+- The "This week" header and date range stay pinned while the page scrolls.
 
 ## Goals, Goal detail, Add, Settings
 
