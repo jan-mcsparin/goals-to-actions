@@ -8,7 +8,8 @@ Help a person keep moving their life forward and improving over years, while als
 
 ## The model
 
-- **Aspiration:** who you want to be, plus why. Never ends. Has several goals.
+- **Aspiration:** who you want to be, plus why. Has several goals (Be fit: Be strong, Have endurance, Look good). Never ends, but can be **retired**: set aside with its history, and brought back anytime. Ordered by priority.
+- **Navigation follows the model:** Aspirations tab → aspiration → goal → milestones. Goals with no aspiration sit under "Other goals".
 - **Goal:** a label plus a **measurable line** it could cross. No forced end date; it stays active until reached or ended. Type is picked first, with one tap, and never inferred:
   - **Building:** flexible weekly target (e.g. 3 lifting sessions).
   - **Quitting:** start date, daily yes/no, occasional urge rating. Reached when the urge has stayed low, not after N days.

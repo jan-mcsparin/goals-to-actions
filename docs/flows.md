@@ -17,13 +17,21 @@ Rare: on first use, or when something changes. It captures why you want what you
 1. Tap **Add aspiration**, or the app offers it when a goal has none.
 2. Write it in your own words: "Be fit."
 3. The app asks one question: "What would this give you?" Your answer becomes the why: "so I can keep skiing, biking and playing hockey at a high level for decades."
-4. Optional: place it among your other aspirations, so the app knows which comes first when they compete for time.
+4. It goes last in priority. Move it up on its page if it should come first when aspirations compete for time.
 5. Saved. The app offers **Add a goal for this**, which leads to flow 2.
 
 Branches:
 
 - **Skip the why:** the aspiration saves anyway. The app may ask again later, gently, in a review.
 - **Start from a goal instead:** flow 2 can create the aspiration on the spot, or leave the goal without one.
+
+**Managing aspirations afterwards** (from the aspiration's page, reached from the Aspirations tab):
+
+- **Edit** the name and why at any time.
+- **Reorder:** move up or move down. Priority order drives which goal work comes first when the week is tight, and the order on Week and in Today's by-goal view.
+- **Review** (only when you tap it): still the right aspiration? still in the right place?
+- **Retire:** the sheet leads with what the aspiration has seen (goals reached, goals active, recurring items), then asks one thing: pause its active goals and recurring items (default), or keep them going without an aspiration. The aspiration moves to Retired, history intact. Nothing counts against you.
+- **Bring back** a retired aspiration: active again, last in priority. Goals it paused stay paused until you resume them.
 
 ## Flow 2: Set a goal and its milestones
 
