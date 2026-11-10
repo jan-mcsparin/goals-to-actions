@@ -17,9 +17,11 @@ Low-fidelity sketches from stage 3 (Nov 2, 2026). They settle layout and behavio
 
 ![Week screen](week.png)
 
-- Weekly progress per goal with pacing ("1 of 3", "6 days left · on pace").
-- Monday to Sunday. Today highlighted, past days dimmed, fixed-day items stay put. Tap a day to open it like Today.
-- **The bank:** this week's tasks not yet on a day. Drag onto a day, or tap to add to today. Anything placed by hand stays put.
+- Weekly progress per goal ("1 of 3") with a pacing line: "6 days left · on pace", "6 days left · 1 more to plan", or "Done for the week". Nothing else, and never a warning.
+- Monday to Sunday. Today highlighted, past days dimmed; an empty day reads "Free day". Tap a day to open it like Today, with every Today action; "‹ Week" goes back. On past days, Pull from bank and Swap are hidden.
+- Fixed-day items (trash on Tuesday) stay put: they have no ⋯ menu, but can be checked off.
+- **The bank:** this week's tasks not yet on a day, as chips. Tap one, then pick a day (today or later). Drag may come later. Anything placed by hand stays put.
+- A tab bar (Today | Week) switches screens; the open screen, including an opened day, is remembered.
 
 ## Goals, Goal detail, Add, Settings
 
