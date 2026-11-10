@@ -71,7 +71,7 @@ The heart of the app, and the most automated part. Planning should mostly be a g
 4. You can:
    - **accept it** by doing nothing,
    - **swap** a task for one from the bank,
-   - **skip** a task, which sends it back to the bank,
+   - **skip** a task, which sends it back to the bank (shown as "Back to bank"),
    - **pull extra** work forward from the bank.
 5. Any change reflows the rest of the week's draft.
 
@@ -86,7 +86,7 @@ Branches:
 Daily, and the most frequent interaction. It has to take one tap.
 
 1. Each task on today's plan shows the goal it serves and, where there is one, the aspiration behind it ("Lift: bench day · Be strong · Be fit").
-2. Tap to mark it done.
+2. Tap to mark it done. Tap again to undo a mis-tap.
 3. For tasks with a number attached, an optional quick value (miles, weight, minutes): one field, skippable.
 4. Pacing updates right away: "2 of 3 lifting sessions, 3 days left."
 
