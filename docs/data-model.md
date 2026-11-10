@@ -4,7 +4,7 @@ Seven entities cover the prototype. An aspiration has many goals; a goal has man
 
 | Entity | Key fields | Dates | Belongs to |
 | --- | --- | --- | --- |
-| Aspiration | Name ("Be fit"), why, priority order | Created, last reviewed | — |
+| Aspiration | Name ("Be fit"), why, priority order, status (active, retired) | Created, last reviewed, retired | — |
 | Goal | Label ("Be strong"), measurable line, type (building, quitting, one-off), baseline, status (active, paused, reached, ended) | Start, optional deadline, last reviewed, ended | Optional aspiration |
 | Milestone | Measurable line (bench 155…), result when checked, status (upcoming, hit, not yet) | Optional target date, checked-in date | Goal |
 | Weekly target | Count or amount (3 sessions, 25 miles), unit | Effective from (so changes keep history) | Goal |

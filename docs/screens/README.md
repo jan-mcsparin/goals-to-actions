@@ -25,12 +25,21 @@ Low-fidelity sketches from stage 3 (Nov 2, 2026). They settle layout and behavio
 - A tab bar (Today | Week) switches screens; the open screen, including an opened day, is remembered.
 - The "This week" header and date range stay pinned while the page scrolls.
 
-## Goals, Goal detail, Add, Settings
+## Aspirations, Aspiration, Keep life running, Goal detail, Add, Settings
 
-![Goals, Goal detail, Add and Settings](other-screens.png)
+The app is organized aspirations first, matching the model: **Aspirations tab → an aspiration → a goal → its milestones** (decided Nov 10). The Nov 2 sketch below still shows the older "Goals" screen; the Aspirations tab replaces it.
 
-- **Goals:** aspirations with their why, and each goal's progress (milestone count, or stage for one-off goals). Count of recurring items.
-- **Goal detail:** label, measurable line, aspiration, type, milestone timeline, weekly target (editable), next check-in. Review, Pause and End goal live here; reviews are never prompted.
+![Aspirations tab, aspiration page and the Retire sheet](aspirations.png)
+
+- **Aspirations (tab, replaces Goals):** one card per aspiration in priority order: name, why, a **This week** bar across all its goals ("2 of 5 this week"; sessions only, hours and other amounts come later), its goals with their progress ("Milestone 1 of 6", or "Step 3 of 6" for one-off goals; the goal itself is the final milestone), and its recurring items. Tap the card to open the aspiration; tap a goal row to go straight to Goal detail. Below the cards: **Other goals** (goals with no aspiration, and their past goals collapsed), **Keep life running** (a row that opens its page), and **Retired (n)**, collapsed. The gear for Settings sits in the header; aspirations are added with the + (Add sheet).
+- **Aspiration page:** "‹ Aspirations", the name and why, the This week bar, a card per active goal (measurable line, milestone progress, this week's count against its target), **+ Add a goal for Be fit** (Add sheet, Goal tab, aspiration preselected), its recurring items with **+ Add recurring**, **Past goals (n)** collapsed, **Priority** ("1st of 3 aspirations") with move up / move down, and **Edit name and why · Review · Retire**.
+- **Keep life running page:** the special case beside the aspirations: what has to happen but rolls up to no goal or aspiration (laundry, the trash, a library book, the insurance). It lists the recurring items with no aspiration and the not-done tasks with no goal, each with where it sits (a day, the bank or a later week). It only shows; checking off and placing happen on Today and Week.
+- **Managing aspirations** (all in the click-through): add (Add sheet; a new one goes last in priority), edit the name and why (a sheet), reorder (move up / down on its page), retire and bring back (below), review (a sheet, only when tapped).
+- **Retire** is a sheet that leads with the aspiration's history ("Since March: 1 goal reached, 3 goals active, 2 recurring items"), then one choice for its active goals and recurring items: **Pause them** (default) or **Keep them going** without an aspiration, under Other goals. The aspiration moves to Retired with its history. **Bring back** (on a retired aspiration's page) makes it active again, last in priority; goals paused by retiring stay paused until resumed one by one.
+
+![Goals, Goal detail, Add and Settings (Nov 2 sketch)](other-screens.png)
+
+- **Goal detail:** label, measurable line, aspiration (a link up to its page: "Be fit ›"; back returns wherever you came from), type, milestone timeline, weekly target (editable), next check-in. Review, Pause and End goal live here; reviews are never prompted.
   - **The milestone timeline is vertical**, not horizontal as sketched: measurable lines need the full width, and side-swiping fights the iPhone back gesture (decided Nov 10).
   - **Past four milestones it condenses:** the latest past milestone, any "not yet", Next and the goal always show; the rest fold into tappable rows ("2 more: Wk 16, Wk 20"), with Show all / Show less remembered per goal. This keeps the weekly target and Check in near the top.
 - **Add:** one sheet with Task / Goal / Aspiration / Recurring tabs. A task needs only a title; goal, due date and time of day are optional.
@@ -44,13 +53,15 @@ Low-fidelity sketches from stage 3 (Nov 2, 2026). They settle layout and behavio
 
 ## Screen inventory
 
-Six screens cover the prototype. Prompts like "still matter?", reviews and "not yet" appear as cards on these screens, not as screens of their own.
+Eight screens cover the prototype. Prompts like "still matter?", reviews and "not yet" appear as cards on these screens, not as screens of their own.
 
 | Screen | Used | What it does | Flows |
 | --- | --- | --- | --- |
 | Today | Daily, the home screen | Today's plan in three groups; check off, swap, skip; pacing | 4, 5 |
 | Week | A few times a week | The week's draft by day, plus the bank; move tasks between days and the bank | 3, 4, 7 |
-| Goals | Weekly or less | Aspirations with their goals and progress at a glance | 1, 6 |
+| Aspirations | Weekly or less | Aspirations in priority order, each with its week, goals and progress; other goals, Keep life running, retired | 1, 6 |
+| Aspiration | Weekly or less | One aspiration: why, this week, its goals, recurring items, past goals; edit, reorder, review, retire | 1, 6, 7 |
+| Keep life running | Rarely | Recurring items and tasks that belong to no goal or aspiration; show-only | 3 |
 | Goal detail | Weekly or less | Label, measurable line, baseline, milestones, weekly target, progress, check-ins | 2, 6, 7 |
 | Add / edit | Rarely | One-sentence entry for an aspiration, goal, task or maintenance item | 1, 2, 3 |
 | Settings | Rarely | Intensity (which sets how much free time is protected), notifications | 8 |
