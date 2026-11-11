@@ -39,7 +39,10 @@ The app is organized aspirations first, matching the model: **Aspirations tab �
 
 ![Goals, Goal detail, Add and Settings (Nov 2 sketch)](other-screens.png)
 
-- **Goal detail:** label, measurable line, aspiration (a link up to its page: "Be fit ›"; back returns wherever you came from), type, milestone timeline, weekly target (editable), next check-in. Review, Pause and End goal live here; reviews are never prompted. Pausing sets the goal's unfinished tasks aside for the week; resuming returns them to the bank.
+- **Goal detail:** label, measurable line, aspiration (a link up to its page: "Be fit ›"; back returns wherever you came from), type, Started at / Latest, milestone timeline, weekly target (editable), next check-in with **Check in**, and **Pause · End goal**. Nothing opens unprompted, and there's no Review (dropped Nov 10, as for aspirations). Pausing sets the goal's unfinished tasks aside for the week; resuming returns them to the bank.
+  - **Checking in** is a sheet titled with the milestone: "How did it go?", an optional result, **Hit it** / **Not yet** (**Done** for a one-off goal's steps, which can be tapped in any order).
+  - **Not yet** shows a quiet card under Next check-in that leads with progress since the baseline, then **Keep the date · Move the date · Adjust the milestone**. Moving a date later pushes later milestones out, up to the deadline.
+  - **End goal** leads with Started at / Latest and milestones hit, then **I reached it** or **End it for now**. A reached goal reads "Reached Nov 10" and "What's next for Be fit?", counts complete (milestones not checked in read "Passed on the way") and has a quiet **Reopen**; an ended one reads "Not yet." with **Go again**.
   - **The milestone timeline is vertical**, not horizontal as sketched: measurable lines need the full width, and side-swiping fights the iPhone back gesture (decided Nov 10).
   - **Past four milestones it condenses:** the latest hit milestone, any "not yet", Next and the goal always show. Each run of two or more of the rest, Start included, folds into one tappable row ("Start and 1 hit milestone", "2 more: Wk 16, Wk 20"); a single row shows as itself. Tapping a fold or Show all expands the timeline, and Show all / Show less is remembered per goal. This keeps the weekly target and Check in near the top.
 - **Add:** one sheet with Task / Goal / Aspiration / Recurring tabs, opened by the + in the tab bar. A task needs only a title; goal, due date and time of day are optional. It goes to the bank, or onto today (preselected when the sheet is opened from Today). A goal is a short form, type first; its milestones are added on its page. A recurring item can repeat "N times a week"; with no aspiration it belongs to Keep life running.
@@ -53,7 +56,7 @@ The app is organized aspirations first, matching the model: **Aspirations tab �
 
 ## Screen inventory
 
-Eight screens cover the prototype. Prompts like "still matter?", reviews and "not yet" appear as cards on these screens, not as screens of their own.
+Eight screens cover the prototype. Prompts like "still matter?" and "not yet" appear as cards on these screens, not as screens of their own.
 
 | Screen | Used | What it does | Flows |
 | --- | --- | --- | --- |
