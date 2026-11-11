@@ -138,7 +138,7 @@ Mostly automatic. The app asks short questions only when something suggests it s
 **When a goal ends** (reached, deadline passed, or you end it):
 
 5. **End goal** leads with what you achieved: where you started, the latest result, and milestones hit. Then you say which it is, **I reached it** or **End it for now**, since only you can tell whether the line was crossed. Ending moves no tasks.
-6. **Reached:** "What's next for Be fit?" This guards against the drop-off after a big finish. If the practice behind the goal has become part of your life, the app offers to keep it going as a recurring item under the aspiration.
+6. **Reached:** the goal counts complete; milestones you never checked in were passed on the way, and read so. A quiet **Reopen** undoes it, in case you reached it by mistake. "What's next for Be fit?" This guards against the drop-off after a big finish. If the practice behind the goal has become part of your life, the app offers to keep it going as a recurring item under the aspiration.
 7. **Not reached:** the page reads "Not yet." with the same lines. **Go again** makes it active, with its target and milestones as they were, ready to adjust or rethink.
 
 Branch:
@@ -174,5 +174,6 @@ Settled questions (kept so the reasoning isn't lost):
 - Decided: no review prompts, and no Review on a goal either (Nov 10). Changing a goal is something you do when you want to, from its page.
 - Decided: a not-yet milestone stays Next until it's hit; a check-in never passes over one. Moving its date later pushes the later dated milestones out by as much, capped at the deadline (Nov 10).
 - Decided: a one-off goal's steps can be checked in in any order, and don't push each other (Nov 10).
+- Decided: a reached goal counts complete, with milestones never checked in shown as passed on the way, and can be reopened (Nov 11).
 - Decided: a goal whose aspiration is retired can be resumed on its own; it shows under Other goals until the aspiration is brought back (Nov 10).
 - Decided: aspirations have no Review. Its choices repeated Edit, move up or down and Retire, which sit on the aspiration's page anyway.
