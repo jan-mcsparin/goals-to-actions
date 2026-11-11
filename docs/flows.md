@@ -40,9 +40,9 @@ Rare: a few times a year per aspiration. It defines concretely what reaching the
 2. From an aspiration (or on its own), type one sentence: "Be strong: bench 175, squat 350, deadlift 400."
 3. The app splits it into a **label** ("Be strong") and a **measurable line** (the numbers). If there's no measurable line, it asks: "How will you know you've got there?" Every goal needs a finish line it could reach. There's no forced end date, though: a goal stays active as long as it's needed, until it's reached or you end it.
 4. **Baseline:** "Where are you now?" (bench 145, squat 275, deadlift 315). Realistic targets depend on this.
-5. **Milestones:** you add checkpoints, each with a measurable line and an optional date (week 8: bench 155, squat 300, deadlift 345). The goal itself is the final milestone. In the app the short Add form saves the goal first; milestones are added on its page. App suggestions come later.
+5. **Milestones:** you add checkpoints, each with a measurable line and an optional date (week 8: bench 155, squat 300, deadlift 345). A date falls between the goal's start and its deadline. The goal itself is the final milestone. In the app the short Add form saves the goal first; milestones are added on its page. App suggestions come later.
 6. **Optional deadline** for the goal. Opt-in only.
-7. **Weekly target:** you enter it ("3 lifting sessions a week"). App suggestions come later.
+7. **Weekly target:** you enter it ("3 lifting sessions a week"), and change it on the goal's page. A change takes effect this week, so "1 of 3" can become "1 of 4" midweek; earlier weeks keep the target they had. App suggestions come later.
 8. The app puts this week's tasks for the goal into the bank (flow 3).
 
 Branches:
@@ -106,7 +106,10 @@ Branches:
 
 Whenever you want to look, plus a check-in at each milestone. It shows improvement, not just effort.
 
-1. **Per goal:** this week's pacing, milestones hit, and how far you've come from your baseline.
+1. **Per goal:** this week's pacing, milestones hit, and how far you've come from your baseline. On the goal's page:
+   - **Where you started:** "Started at" (the baseline) and "Latest" (the most recent check-in result), side by side as text. Nothing is calculated, since both are free text.
+   - **The timeline** runs from Start through each milestone to the goal itself, with "1 of 6 hit" beside it. Each milestone shows its week ("Wk 9 · Nov 30"; the week the goal starts is Wk 1), or "No date".
+   - **Next** is the first milestone that isn't hit. One marked "not yet" stays Next until it's hit, so a check-in never passes over a milestone. Once every milestone is hit, the goal is Next.
 2. **Overall:** each aspiration with its goals, so you can see the whole picture at a glance.
 3. **Milestone check-in:** as a milestone's date approaches, or whenever you choose, the app offers a quick benchmark ("Test your maxes this week"). You enter the result.
 4. **Milestone hit:** a brief celebration, then the next milestone right away, so progress points forward.
