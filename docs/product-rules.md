@@ -34,7 +34,7 @@ Help a person keep moving their life forward and improving over years, while als
 ## Tone and prompts
 
 - **Ask, don't direct.** The only unprompted questions: "Still matter?" (a task carried over for two weeks: keep, schedule, drop) and "This one slipped" (an opt-in deadline passed).
-- **No review prompts.** Reviews happen from a goal's or an aspiration's page when the person wants.
+- **No review prompts.** Reviews happen from a goal's page when the person wants.
 - **No pace prompts.** Intensity (Going hard / Normal / Easing off) is set by the person, defaults to Normal, and stays until changed.
 - **No shame.** Rollovers carry no penalty. Falling short is **"not yet"**: lead with progress since baseline, then offer keep / move / adjust.
 - When a goal is reached, lead with what was achieved, then ask what's next, and offer to keep the practice as a recurring item.

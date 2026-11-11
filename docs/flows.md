@@ -8,7 +8,7 @@ Eight flows cover the prototype: two you do rarely (aspirations, goals), and six
 
 ![Core loop](screens/core-loop.png)
 
-Aspirations and goals are set up rarely; after that, the bank, the daily plan, checking off and progress repeat every week, with rollovers feeding unfinished work back into the bank. Reviews can also send you back to a goal or aspiration when something has changed.
+Aspirations and goals are set up rarely; after that, the bank, the daily plan, checking off and progress repeat every week, with rollovers feeding unfinished work back into the bank. A goal's review can also send you back to it when something has changed.
 
 ## Flow 1: Name an aspiration
 
@@ -22,15 +22,14 @@ Rare: on first use, or when something changes. It captures why you want what you
 
 Branches:
 
-- **Skip the why:** the aspiration saves anyway. The app may ask again later, gently, in a review.
+- **Skip the why:** the aspiration saves anyway. Add it later from the aspiration's page.
 - **Start from a goal instead:** flow 2 can create the aspiration on the spot, or leave the goal without one.
 
 **Managing aspirations afterwards** (from the aspiration's page, reached from the Aspirations tab):
 
 - **Edit** the name and why at any time.
 - **Reorder:** move up or move down. Priority order drives which goal work comes first when the week is tight, and the order on Week and in Today's by-goal view.
-- **Review** (only when you tap it): still the right aspiration? still in the right place?
-- **Retire:** the sheet leads with what the aspiration has seen (goals reached, goals active, recurring items), then asks one thing: pause its active goals and recurring items (default), or keep them going without an aspiration. Pausing them takes their unfinished tasks off this week's days and out of the bank; finished tasks stay. The aspiration moves to Retired, history intact. Nothing counts against you.
+- **Retire:** the sheet leads with what the aspiration has seen (goals reached, goals active, recurring items), then asks one thing: pause its active goals and recurring items (default), or keep them going without an aspiration. Pausing them takes their unfinished tasks off this week's days and out of the bank, including ones you placed by hand; finished tasks stay. The aspiration moves to Retired, history intact. Nothing counts against you.
 - **Bring back** a retired aspiration: active again, last in priority. Goals it paused stay paused until you resume them, and recurring items it paused stay off for now.
 
 ## Flow 2: Set a goal and its milestones
@@ -129,7 +128,7 @@ Mostly automatic. The app asks short questions only when something suggests it s
 **Light review (only when you choose to; the app doesn't prompt):**
 
 3. A short card per goal: still important? Is the weekly target right? Keep, adjust the target, pause, or end the goal. Pausing a goal sets its unfinished tasks aside for the week; resuming returns them to the bank.
-4. Occasionally, aspirations too: still the right ones? Has the order changed?
+4. Aspirations have no review of their own (decided Nov 10). Their page already has what a review would lead to: edit the name and why, move up or down, retire.
 
 **When a goal ends** (reached, deadline passed, or you end it):
 
@@ -167,4 +166,5 @@ Settled questions (kept so the reasoning isn't lost):
 - Decided: the week starts on Monday.
 - Decided: intensity defaults to normal and stays as set until you change it; no automatic expiry for now.
 - Decided: the app asks "Still matter?" once a task has been carried over for two weeks, however many times it moved. Saying no drops it, with no penalty; ignoring the question just lets it keep rolling over.
-- Decided: no review prompts. Reviewing a goal or aspiration is something you do when you want to, from its screen.
+- Decided: no review prompts. Reviewing a goal is something you do when you want to, from its screen.
+- Decided: aspirations have no Review. Its choices repeated Edit, move up or down and Retire, which sit on the aspiration's page anyway.
