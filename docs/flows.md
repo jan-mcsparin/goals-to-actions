@@ -14,11 +14,11 @@ Aspirations and goals are set up rarely; after that, the bank, the daily plan, c
 
 Rare: on first use, or when something changes. It captures why you want what you want.
 
-1. Tap **Add aspiration**, or the app offers it when a goal has none.
+1. Tap **+** and pick **Aspiration**, or create one while setting a goal (flow 2).
 2. Write it in your own words: "Be fit."
 3. The app asks one question: "What would this give you?" Your answer becomes the why: "so I can keep skiing, biking and playing hockey at a high level for decades."
 4. It goes last in priority. Move it up on its page if it should come first when aspirations compete for time.
-5. Saved. The app offers **Add a goal for this**, which leads to flow 2.
+5. Saved. The sheet stays open on "Saved." with **Add a goal for this**, which leads to flow 2 with the new aspiration selected, and **Done**.
 
 Branches:
 
@@ -36,19 +36,19 @@ Branches:
 
 Rare: a few times a year per aspiration. It defines concretely what reaching the aspiration means to you. One aspiration can have several goals.
 
-1. **Pick the goal type** first: building, quitting or one-off. It's one tap, and it shapes the questions that follow.
-2. From an aspiration (or on its own), type one sentence: "Be strong: bench 175, squat 350, deadlift 400."
-3. The app splits it into a **label** ("Be strong") and a **measurable line** (the numbers). If there's no measurable line, it asks: "How will you know you've got there?" Every goal needs a finish line it could reach. There's no forced end date, though: a goal stays active as long as it's needed, until it's reached or you end it.
+1. **Pick the goal type** first: building, quitting or one-off. It's one tap, and it shapes the questions that follow. Nothing else shows until it's picked, and it can be changed before saving. The app never guesses it from the sentence.
+2. From an aspiration (**+ Add a goal for Be fit** on its page) or on its own (**+**, then **Goal**), type one sentence: "Be strong: bench 175, squat 350, deadlift 400."
+3. The app splits it at the first colon into a **label** ("Be strong") and a **measurable line** (the numbers), and shows both back as you type. With no colon, the sentence is the label, and it asks for the line: "How will you know you've got there?" Every goal needs a finish line it could reach. There's no forced end date, though: a goal stays active as long as it's needed, until it's reached or you end it.
 4. **Baseline:** "Where are you now?" (bench 145, squat 275, deadlift 315). Realistic targets depend on this.
-5. **Milestones:** you add checkpoints, each with a measurable line and an optional date (week 8: bench 155, squat 300, deadlift 345). A date falls between the goal's start and its deadline. The goal itself is the final milestone. In the app the short Add form saves the goal first; milestones are added on its page. App suggestions come later.
-6. **Optional deadline** for the goal. Opt-in only.
+5. **Milestones:** you add checkpoints, each with a measurable line and an optional date (week 8: bench 155, squat 300, deadlift 345). A date falls between the goal's start and its deadline. The goal itself is the final milestone. In the app the short Add form saves the goal first and opens its page: "Saved. Add milestones when you're ready." ("steps" for a one-off goal). Milestones are added there. Back from that page goes to the goal's aspiration, or to the Aspirations tab when it has none, whichever screen the + was tapped over. App suggestions come later.
+6. **Optional deadline** for the goal, whatever its type. Opt-in only, and never before the goal's start date.
 7. **Weekly target:** you enter it ("3 lifting sessions a week"), and change it on the goal's page. A change takes effect this week, so "1 of 3" can become "1 of 4" midweek; earlier weeks keep the target they had. App suggestions come later.
 8. The app puts this week's tasks for the goal into the bank (flow 3).
 
 Branches:
 
 - **No aspiration yet:** the app asks "What's this for?" You can link one, create one, or skip.
-- **Quitting goal:** instead of a weekly target, set a start date and a daily all-or-nothing commitment. The finish line is the habit being broken, not a set number of days: you've quit when you don't really want one anymore. The app occasionally asks how strong the urge is, and the goal is reached when it has stayed low for a while, or when you say so.
+- **Quitting goal:** instead of a weekly target, set a start date (today unless changed) and a daily all-or-nothing commitment. The finish line is the habit being broken, not a set number of days: you've quit when you don't really want one anymore. The app occasionally asks how strong the urge is, and the goal is reached when it has stayed low for a while, or when you say so.
 - **One-off goal:** set an optional deadline and a short list of steps. The steps are the goal's milestones: you mark each one done on the goal's page ("Step 3 of 6"), in any order, since steps rarely depend on each other. The tasks that get a step done are ordinary tasks for the goal; checking one off doesn't move the step.
 
 ## Flow 3: Fill the task bank
@@ -60,12 +60,16 @@ Mostly automatic, once a week. The bank holds everything to get done this week, 
    - steps from one-off goals that are due soon,
    - recurring maintenance due this week (laundry, rent),
    - anything that rolled over from last week (flow 7), and tasks from the upcoming list that are now due.
-2. Anytime, you can add a task by hand: a title, and optionally the goal it serves and a due date. If it's due this week or has no due date, it goes straight into this week's bank, or onto today if you choose (the default when you add it from Today). If it's due later, it waits in an upcoming list and moves into the bank at the start of the week it's due (or a week or two early, for things that need lead time).
+2. Anytime, you can add a task by hand (**+**, the Task tab): a title, and optionally the goal it serves, a due date and a time of day ("by" or "at" a time). If it's due this week or earlier, or has no due date, it goes straight into this week's bank, or onto today if you choose. **On today** is preselected when you add it from the Today screen, not from a day opened on Week, even when that day is today. A new task never goes onto any other day. If it's due later, it waits in an upcoming list and moves into the bank at the start of the week it's due (or a week or two early, for things that need lead time). A short line says where it went: "Added to this week's bank.", "Saved for the week of Nov 23." or "Added to today."
 3. **Maintenance is set up once:** a name, a repeat and how fixed it is. Fixed-day items happen on a set day ("take out the trash every Tuesday," "rent on the 1st"), and the plan always puts them there. Flexible items just need doing sometime in the window ("laundry once a week," "clean the bathroom every two weeks"), and the app places them on whichever day fits. Only the things that actually slip go in; automatic habits stay out. The same kind of recurring item can also keep up a practice after its goal ends (lifting 3 times a week, under Be fit).
+   - **Adding one** (**+**, the Recurring tab, or **+ Add recurring** on an aspiration's page, which selects that aspiration): a name, then **Fixed day** or **Flexible**. Fixed: every week on a weekday, or every month on the 1st to the 28th, so every month has the day. Flexible: once a week, 2 to 6 times a week, every two weeks, or once a month. The repeat reads back as "Every Tuesday", "Monthly on the 1st", "3 times a week", "Every two weeks".
+   - **Under an aspiration** is optional. With none, the item belongs to Keep life running.
+   - **When it's first due:** a fixed item on its next day, today included when today is that day; a flexible item from the day it's added. "Added. It will show up in the plan when it's next due."
+   - Yearly repeats, "every N weeks" and a time of day ("Thursdays at 8 p.m.") aren't offered yet.
 
 Branches:
 
-- **A task with no goal:** fine. It's maintenance or a one-time life task ("fill out my ballot"), usually with a due date, and still part of the day. Things that come around once a year can be yearly recurring items instead.
+- **A task with no goal:** fine. It's maintenance or a one-time life task ("fill out my ballot"), usually with a due date, and still part of the day. Things that come around once a year can be yearly recurring items instead, once those are offered.
 - **More in the bank than the week can hold:** the app says so, and suggests what to push to next week or drop.
 
 ## Flow 4: Plan today
@@ -176,4 +180,5 @@ Settled questions (kept so the reasoning isn't lost):
 - Decided: a one-off goal's steps can be checked in in any order, and don't push each other (Nov 10).
 - Decided: a reached goal counts complete, with milestones never checked in shown as passed on the way, and can be reopened (Nov 11).
 - Decided: a goal whose aspiration is retired can be resumed on its own; it shows under Other goals until the aspiration is brought back (Nov 10).
+- Decided: a new fixed-day recurring item whose day is today is due today, not next week or next month (Nov 11).
 - Decided: aspirations have no Review. Its choices repeated Edit, move up or down and Retire, which sit on the aspiration's page anyway.
