@@ -22,7 +22,7 @@ Low-fidelity sketches from stage 3 (Nov 2, 2026). They settle layout and behavio
 - Monday to Sunday. Today highlighted, past days dimmed; an empty day reads "Free day". Tap a day to open it like Today, with every Today action; "‹ Week" goes back. On past days, Pull from bank and Swap are hidden.
 - Fixed-day items (trash on Tuesday) stay put: they have no ⋯ menu, but can be checked off.
 - **The bank:** this week's tasks not yet on a day, as chips. Tap one, then pick a day (today or later). Drag may come later. Anything placed by hand stays put.
-- A tab bar switches screens; the open screen, including an opened day, is remembered. It's Today | Week as built so far, and becomes **Today | Week | + | Aspirations**: the + opens the Add sheet over whatever screen is open.
+- A tab bar switches screens; the open screen, including an opened day, is remembered. It's **Today | Week | + | Aspirations**: the + opens the Add sheet over whatever screen is open, and is never marked as the current tab.
 - The "This week" header and date range stay pinned while the page scrolls.
 
 ## Aspirations, Aspiration, Keep life running, Goal detail, Add, Settings
