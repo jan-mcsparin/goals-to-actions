@@ -14,3 +14,4 @@ Short records of decisions that shape what gets built: context, decision, and wh
 | [004](0004-instant-open.md) | Today opens instantly from data on the phone | Accepted |
 | [005](0005-history.md) | History is modelled where a feature reads it, audited everywhere else | Accepted |
 | [006](0006-task-weeks.md) | A task is one row for life; each week in play is its own record | Accepted |
+| [007](0007-data-access-and-migrations.md) | Hand-written SQL on psycopg 3; plain SQL migrations with dbmate | Accepted |

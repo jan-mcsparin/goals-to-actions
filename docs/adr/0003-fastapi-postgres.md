@@ -19,3 +19,7 @@ Building the backend is part of the point: practice, a showcase of backend and a
 - Go was the close alternative (simpler deployment, strong backend signal); the AI headroom was the tiebreaker.
 - Generated types mean an API change shows up as a type error in the front end instead of a runtime bug, even across separate repos. Regenerating them becomes a step whenever the API changes.
 - Still to decide when building: data access library and migrations, auth approach, and hosting.
+
+## Revisited 2026-11-13
+
+The data access library and migrations are decided in [ADR-007](0007-data-access-and-migrations.md): psycopg 3 with hand-written SQL and no ORM, and plain SQL migrations with dbmate. Sign-in and hosting are still open.

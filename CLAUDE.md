@@ -10,14 +10,14 @@ A personal, installable, mobile-first web app that connects aspirations → goal
 
 - `docs/product-rules.md`: the rules. Short. Read it before any planner or UI work.
 - `docs/flows.md`: the 8 flows in detail, edge cases and settled questions.
-- `docs/data-model.md`: conceptual entities.
+- `docs/data-model.md`: the tables, fields and rules the API is built on.
 - `docs/screens/README.md`: sketches and screen inventory.
 - `docs/adr/`: why the stack is what it is.
 
 ## Stack
 
 - **web-frontend/** (`goals-to-actions-web-frontend`): React + Vite + TypeScript, client-rendered, vite-plugin-pwa. Installable PWA.
-- **api/** (`goals-to-actions-api`): Python FastAPI, typed (type hints + Pydantic), Postgres. Not created yet.
+- **api/** (`goals-to-actions-api`): Python FastAPI, typed (type hints + Pydantic), Postgres. Hand-written SQL on psycopg 3 in repository modules, no ORM; plain SQL migrations with dbmate (ADR-007). Not created yet.
 - **The OpenAPI schema is the contract.** Front-end API types (and ideally the client) are generated from FastAPI's schema, never hand-written. Regenerate whenever the API changes.
 - **JSON field names are camelCase.** The API aliases its Pydantic fields (`alias_generator=to_camel`) so generated types match the front end's.
 
