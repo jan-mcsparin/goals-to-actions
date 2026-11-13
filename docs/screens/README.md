@@ -2,6 +2,8 @@
 
 Low-fidelity sketches from stage 3 (Nov 2, 2026). They settle layout and behavior, not visual style; hi-fi designs were judged unnecessary for the prototype. Behavior details live in `../flows.md`.
 
+**Behind the data model (Nov 13).** This page describes the click-through as built. The data model pass changed some behavior that the screens don't show yet; where they disagree, `../flows.md` and `../data-model.md` are right. Not yet on screen: a one-off goal's steps as tasks (the goal page still checks them in like milestones), amount targets, the two-choice slipped-deadline card, the quitting goal's daily answer and urge rating, and delete.
+
 ## Today (home screen)
 
 ![Today: list view and by-goal view](today.png)
