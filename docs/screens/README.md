@@ -7,7 +7,7 @@ Low-fidelity sketches from stage 3 (Nov 2, 2026). They settle layout and behavio
 ![Today: list view and by-goal view](today.png)
 
 - Three groups: **Keep life running**, **Move forward**, **Free time**. Keep life running holds maintenance and tasks with no goal ("Fill out my ballot"). Free time is the time tasks don't fill, not a list of tasks; it reads "The rest is yours." Timed tasks show "by 7 a.m." or "at 6 p.m." and anchor the order; untimed tasks follow.
-- Each goal task shows its goal and aspiration ("Be strong · Be fit"). In **By goal**, each card is titled the same way.
+- Each goal task shows its goal and aspiration ("Be strong · Be fit"). In **By goal**, each card is titled the same way. Under each card's title, Keep life running included, a thin bar shows how much of that card is done on the day (bar only, no count). List has no per-group bars.
 - Tap a task to mark it done; tap again to undo.
 - Progress for today at the top ("1 of 4 done"). Weekly progress per goal lives on the Week screen.
 - The header (heading, "1 of 4 done", progress bar, and "‹ Week" on an opened day) stays pinned while the list scrolls. The List / By goal toggle scrolls away.
