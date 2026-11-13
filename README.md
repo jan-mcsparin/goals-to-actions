@@ -51,7 +51,7 @@ goals-to-actions/        this repo: product docs and shared context
     adr/                 architecture decision records
   .github/               issue template
   web-frontend/ (own repo) goals-to-actions-web-frontend: React + Vite PWA
-  api/          (own repo) goals-to-actions-api: FastAPI (set up later in stage 4)
+  api/          (own repo) goals-to-actions-api: FastAPI
 ```
 
 ## Getting started
@@ -60,7 +60,7 @@ goals-to-actions/        this repo: product docs and shared context
 git clone git@github.com:<you>/goals-to-actions.git
 cd goals-to-actions
 git clone git@github.com:<you>/goals-to-actions-web-frontend.git web-frontend
-# later: git clone git@github.com:<you>/goals-to-actions-api.git api
+git clone git@github.com:<you>/goals-to-actions-api.git api
 ```
 
 Run instructions live in each sub-repo's README.
