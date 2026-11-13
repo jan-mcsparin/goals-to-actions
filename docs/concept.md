@@ -45,7 +45,7 @@ Maintenance goes in first, goal work fits into what's left, and the day is never
 4. **Proposed daily plan:** the app drafts the week, fitting maintenance first, then goal work, and leaving free time, and keeps it updated as the week goes, so I can look ahead anytime. I accept, swap or skip. A plan exists even if I never open it.
 5. **Do and check off,** with each task showing the goal it serves and the aspiration behind it.
 6. **See progress:** pacing ("2 of 3 runs, 3 days left"), milestones hit, and improvement, not just effort.
-7. **Rollovers and reviews:** unfinished tasks roll over with no penalty, with a gentle "still matter?" after two weeks. Reviews happen whenever I want them; the app doesn't prompt.
+7. **Rollovers and reviews:** unfinished tasks I added roll over with no penalty, with a gentle "still matter?" after two weeks; missed weekly sessions lapse, and the new week starts fresh. Reviews happen whenever I want them; the app doesn't prompt.
 
 ## Principles that shape every screen
 
@@ -53,7 +53,7 @@ Maintenance goes in first, goal work fits into what's left, and the day is never
 - **Automate what happens most often first.** Daily plans and weekly targets come before rarer steps like suggesting milestones.
 - **Effort early, ease later.** Deeper setup while motivation is high; upkeep near zero after that.
 - **No shame.** Missed weeks are expected. Falling short is "not yet," leading with what was achieved.
-- **Ask, don't direct.** Deadlines are optional; when one slips, ask whether to push it, recommit or rethink.
+- **Ask, don't direct.** Deadlines are optional; when one slips, ask whether to push it back or end the goal for now.
 - **Sensible targets.** AI suggestions stay realistic (no sudden jumps in training load).
 
 ## Out of scope for the prototype

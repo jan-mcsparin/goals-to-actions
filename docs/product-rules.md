@@ -14,14 +14,17 @@ Help a person keep moving their life forward and improving over years, while als
 - **Goal:** a label plus a **measurable line** it could cross. No forced end date; it stays active until reached or ended. Type is picked first, with one tap, and never inferred:
   - **Building:** flexible weekly target (e.g. 3 lifting sessions).
   - **Quitting:** start date, daily yes/no, occasional urge rating. Reached when the urge has stayed low, not after N days.
-  - **One-off:** an optional deadline plus a short list of steps. The steps are its milestones ("Step 3 of 6"): you mark a step done on the goal's page, in any order; checking off a task doesn't.
-- **Milestones:** benchmarks with a measurable line and optional date. They prove improvement from a **baseline**. The goal itself is the final milestone, so a goal with none of its own reads "0 of 1".
+  - **One-off:** an optional deadline plus a short list of steps. The steps are tasks ("Step 3 of 6"): checking one off, on Today or on the goal's page, in any order, is what moves the count. A one-off goal has no milestones.
+- **Milestones:** benchmarks with a measurable line and optional date, on building and quitting goals. They prove improvement from a **baseline**. The goal itself is the final milestone, so a goal with none of its own reads "0 of 1".
+- **A task is something you do; a milestone is something you reach.** There is no third kind of thing.
 - **Recurring items:** maintenance or ongoing practices, fixed-day (trash every Tuesday) or flexible (laundry weekly). Can sit under an aspiration.
 - **Tasks:** belong to a goal, a recurring item, or nothing. Optional due date and optional time of day ("due by" / "at").
+- **Drop and delete are different.** Dropping a task is deciding not to do it; it stays in your history. Deleting is for mistakes, and is offered on tasks, milestones, goals, aspirations and recurring items.
 
 ## Planning
 
 1. **Weeks start Monday.** At the start of each week the bank fills with goal tasks, recurring items, rollovers and upcoming tasks now due.
+   - **Missed sessions don't pile up.** Unfinished weekly-target tasks and flexible recurring items lapse; the new week or period brings fresh ones. Tasks you added yourself and fixed-day items (rent on the 1st) roll over.
 2. The app drafts the whole week: **maintenance first**, then goal work, leaving free time. A day is never packed full.
 3. **Free time is protected** by a cap on tasks per day, set by intensity. No per-day capacity setting, no time estimates.
 4. **The plan adjusts continuously.** No finalize time; you can look ahead and edit any day.
@@ -33,7 +36,8 @@ Help a person keep moving their life forward and improving over years, while als
 
 ## Tone and prompts
 
-- **Ask, don't direct.** The only unprompted questions: "Still matter?" (a task carried over for two weeks: keep, schedule, drop) and "This one slipped" (an opt-in deadline passed).
+- **Ask, don't direct.** The only unprompted questions: "Still matter?" (a task carried over for two weeks: keep, schedule, drop) and "This one slipped" (an opt-in deadline passed: push it back, or end the goal for now).
+- **Quitting goals never count silence against you.** A day with no answer is unknown, not a slip. The urge rating (low, some, strong) sits quietly beside the daily yes/no on some days and can be ignored; it isn't a prompt.
 - **No review prompts, and no Review.** A goal is changed (target, pause, end) from its page when the person wants.
 - **No pace prompts.** Intensity (Going hard / Normal / Easing off) is set by the person, defaults to Normal, and stays until changed.
 - **No shame.** Rollovers carry no penalty. Falling short is **"not yet"**: lead with progress since baseline, then offer keep / move / adjust.
