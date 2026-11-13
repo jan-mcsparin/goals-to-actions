@@ -50,7 +50,10 @@ The app is organized aspirations first, matching the model: **Aspirations tab �
   - **Goal:** the type first, then one sentence split at the first colon into label and line, What's this for? (none, an aspiration, or a new one), Where are you now?, a weekly target (building) or start date (quitting), and an optional deadline. Saving opens its page, where milestones are added.
   - **Aspiration:** a name and an optional why. The sheet stays open on "Saved." with **Add a goal for this** and **Done**.
   - **Recurring:** a name, **Fixed day** (a weekday, or the 1st–28th) or **Flexible** (once to 6 times a week, every two weeks, once a month), and an optional aspiration; with none it belongs to Keep life running.
-- **Settings:** reached by the gear on the Aspirations tab. Intensity (Easing off / Normal / Going hard), week starts Monday, notifications (off), export my data.
+- **Settings:** reached by the gear at the top right of the Aspirations tab; it counts as Aspirations in the tab bar, and "‹ Aspirations" goes back.
+  - **Intensity:** Easing off / Normal / Going hard in one row, Normal to start, with "Sets how full days are and how much is free." A tap saves it, with no Save button and no confirmation; it stays until changed, and nothing suggests changing it. A failed save puts back the earlier choice. Nothing reads it yet; the planner will.
+  - **Week starts** Monday and **Notifications** Off are shown, not set. The app asks for no notification permission.
+  - **Export my data** answers "Coming later."
 
 ![Goal detail: condensed and expanded milestone timeline](goal-detail-timeline.png)
 
@@ -71,4 +74,4 @@ Eight screens cover the prototype. Prompts like "still matter?" and "not yet" ap
 | Keep life running | Rarely | Recurring items and tasks that belong to no goal or aspiration; show-only | 3 |
 | Goal detail | Weekly or less | Label, measurable line, baseline, milestones, weekly target, progress, check-ins | 2, 6, 7 |
 | Add | Rarely | One sheet with a tab each for a task, goal (type first, one sentence), aspiration or recurring item | 1, 2, 3 |
-| Settings | Rarely | Intensity (which sets how much free time is protected), notifications | 8 |
+| Settings | Rarely | Intensity (which sets how much free time is protected); week start, notifications and export shown for later | 8 |
