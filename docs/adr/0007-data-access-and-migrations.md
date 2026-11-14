@@ -43,3 +43,19 @@ sqlc's official Python plugin (`sqlc-gen-python`) runs its generated queries thr
   - that sqlc reads the dbmate migration files as its schema.
 - A down migration restores structure, not data: rolling back a dropped column brings it back empty.
 - Still to decide: sign-in and hosting.
+
+## Revisited 2026-11-13: what the first slice found
+
+The first slice built was `database-foundation` (the `users` and `audit_log` tables), not tasks as planned above, so the checks were run on `users`. Versions: Postgres 18.7, dbmate 2.38.1, sqlc 1.31.1, `sqlc-gen-python` 1.3.0, SQLAlchemy 2.1.8, psycopg 3.3.9, Python 3.15.
+
+- **UUIDs, dates and nullable parameters:** confirmed. `uuid` is `uuid.UUID`, `date` is `datetime.date`, `timestamptz` is a UTC-aware `datetime.datetime`. Nullable columns and parameters are `Optional[...]`, and passing `None` sets a column back to empty. `jsonb` is `Any`. The generated code passes mypy strict with no ignores.
+- **`numeric`:** not answered yet: `users` has no number column. Answered in `tasks-week`, with the value logged on a task.
+- **Text-with-check columns:** they are plain `str` (`intensity`). The database refuses a bad value; the API models narrow it with a `Literal`. Whether that's enough is settled with slice 2's spec.
+- **The per-transaction setting through SQLAlchemy:** confirmed. `set_config(..., true)` inside a SQLAlchemy transaction reaches the audit trigger, and a test that commits for real shows the next transaction on the same pooled connection doesn't inherit the user or action.
+- **sqlc reading the dbmate migrations:** confirmed, including plpgsql functions and triggers.
+
+Also found:
+
+- **Podman, not Docker:** Postgres and dbmate run under `podman compose`.
+- **The dbmate image's `pg_dump` (18.6) writes `pg_attver` values that change on every run,** so `schema.sql` never stayed the same. The API's `bin/dbmate` dumps the schema with the Postgres container's own `pg_dump` instead. Worth trying dbmate's own dump again when its image moves to a newer `pg_dump`.
+- **Every query gets its own row model,** even when the columns match (`GetUserRow`, `SetIntensityRow`), and parameters are keyword-only. Generated code doesn't follow ruff's style, so it's left out of ruff and still type-checked.
