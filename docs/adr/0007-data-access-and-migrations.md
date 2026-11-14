@@ -44,7 +44,7 @@ sqlc's official Python plugin (`sqlc-gen-python`) runs its generated queries thr
 - A down migration restores structure, not data: rolling back a dropped column brings it back empty.
 - Still to decide: sign-in and hosting.
 
-## Revisited 2026-11-14: what the first slice found
+## Revisited 2026-11-13: what the first slice found
 
 The first slice built was `database-foundation` (the `users` and `audit_log` tables), not tasks as planned above, so the checks were run on `users`. Versions: Postgres 18.7, dbmate 2.38.1, sqlc 1.31.1, `sqlc-gen-python` 1.3.0, SQLAlchemy 2.1.8, psycopg 3.3.9, Python 3.15.
 
