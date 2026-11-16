@@ -42,7 +42,7 @@ Rare: a few times a year per aspiration. It defines concretely what reaching the
 4. **Baseline:** "Where are you now?" (bench 145, squat 275, deadlift 315). Realistic targets depend on this.
 5. **Milestones:** you add checkpoints, each with a measurable line and an optional date (week 8: bench 155, squat 300, deadlift 345). A date falls between the goal's start and its deadline. The goal itself is the final milestone. In the app the short Add form saves the goal first and opens its page: "Saved. Add milestones when you're ready." ("steps" for a one-off goal). Milestones are added there; a one-off goal has steps instead, which are tasks. Back from that page goes to the goal's aspiration, or to the Aspirations tab when it has none, whichever screen the + was tapped over. App suggestions come later.
 6. **Optional deadline** for the goal, whatever its type. Opt-in only, and never before the goal's start date.
-7. **Weekly target:** you enter it, and change it on the goal's page. It's either a count ("3 lifting sessions a week") or an amount over a number of sessions ("25 miles over 4 runs"). A count is met by tasks done; an amount by the values logged on them. A change takes effect this week, so "1 of 3" can become "1 of 4" midweek; earlier weeks keep the target they had. App suggestions come later.
+7. **Weekly target:** you enter it, and change it on the goal's page. It's either a count ("3 lifting sessions a week") or an amount over a number of sessions ("25 miles over 4 runs"). A count is met by tasks done; an amount by the values logged on them. A change takes effect this week, so "1 of 3" can become "1 of 4" midweek; earlier weeks keep the target they had. On Sunday evening, once next week is open, it takes effect from next week instead. A goal's sessions start in the week of its start date, and a goal made or brought back midweek gets at most one session for each day left in that week. App suggestions come later.
 8. The app puts this week's tasks for the goal into the bank (flow 3).
 
 Branches:
@@ -52,7 +52,7 @@ Branches:
   - **The daily answer** is held or slipped. A day with no answer is unknown, not a slip, so a week away isn't seven failures. It isn't a task: it never enters the bank or counts against the day's cap.
   - **The urge rating** is low, some or strong. It sits beside the daily yes/no on some days and can be ignored; it's never a prompt.
   - **Reached** when you say so. The app can point out that the urge has stayed low for a while, but never marks the goal reached itself.
-- **One-off goal:** set an optional deadline and a short list of steps. The steps are tasks that belong to the goal ("Step 3 of 6" is tasks done out of the goal's tasks), done in any order, since steps rarely depend on each other. Checking one off on Today finishes the step; there's nothing to mark a second time. A step that takes several sittings stays one unchecked task until it's finished, or you split it. A one-off goal has no milestones.
+- **One-off goal:** set an optional deadline and a short list of steps. The steps are tasks that belong to the goal ("Step 3 of 6" is tasks done out of the goal's tasks, leaving out any you dropped), done in any order, since steps rarely depend on each other. Checking one off on Today finishes the step; there's nothing to mark a second time. A step that takes several sittings stays one unchecked task until it's finished, or you split it. A one-off goal has no milestones.
 
 ## Flow 3: Fill the task bank
 
@@ -64,7 +64,7 @@ Mostly automatic, once a week. The bank holds everything to get done this week, 
    - recurring maintenance due this week (laundry, rent),
    - tasks from the upcoming list that are now due,
    - anything that rolled over from last week (flow 7). These arrive when last week closes, so after the rest unless you wrapped the week up.
-2. Anytime, you can add a task by hand (**+**, the Task tab): a title, and optionally the goal it serves, a due date and a time of day ("by" or "at" a time). If it's due this week or earlier, or has no due date, it goes straight into this week's bank, or onto today if you choose. **On today** is preselected when you add it from the Today screen, not from a day opened on Week, even when that day is today. A new task never goes onto any other day. If it's due later, it waits in an upcoming list and moves into the bank when the week it's due opens (or a week or two early, for things that need lead time). If that week is already open, it goes straight into its bank. A short line says where it went: "Added to this week's bank.", "Saved for the week of Nov 23." or "Added to today."
+2. Anytime, you can add a task by hand (**+**, the Task tab): a title, and optionally the goal it serves, a due date and a time of day ("by" or "at" a time). If it's due this week or earlier, or has no due date, it goes straight into this week's bank, or onto today if you choose. **On today** is preselected when you add it from the Today screen, not from a day opened on Week, even when that day is today. A new task never goes onto any other day. If it's due later, it waits in an upcoming list and moves into the bank when the week it's due opens. If that week is already open, it goes straight into its bank. A short line says where it went: "Added to this week's bank.", "Saved for the week of Nov 23." or "Added to today."
 3. **Maintenance is set up once:** a name, a repeat and how fixed it is. Fixed-day items happen on a set day ("take out the trash every Tuesday," "rent on the 1st"), and the plan always puts them there. Flexible items just need doing sometime in the window ("laundry once a week," "clean the bathroom every two weeks"), and the app places them on whichever day fits. Only the things that actually slip go in; automatic habits stay out. The same kind of recurring item can also keep up a practice after its goal ends (lifting 3 times a week, under Be fit).
    - **Adding one** (**+**, the Recurring tab, or **+ Add recurring** on an aspiration's page, which selects that aspiration): a name, then **Fixed day** or **Flexible**. Fixed: every week on a weekday, or every month on the 1st to the 28th, so every month has the day. Flexible: once a week, 2 to 6 times a week, every two weeks, or once a month. The repeat reads back as "Every Tuesday", "Monthly on the 1st", "3 times a week", "Every two weeks".
    - **Under an aspiration** is optional. With none, the item belongs to Keep life running.
@@ -82,8 +82,8 @@ Branches:
 The heart of the app, and the most automated part. Planning should mostly be a glance and an "OK."
 
 1. **When the week opens:** the app drafts the whole week from the bank, once. It places maintenance on its due days first, spreads goal work across the week (learning your rhythm over time), leaves free time, and follows your intensity setting (flow 8).
-   - **The order:** fixed-day items on their day, tasks with a due date by that date, other maintenance, then goal work.
-   - **Goal work is spread evenly,** on the lightest days. Goals take turns in the order of their aspirations, so every goal gets a first session before any gets a second.
+   - **The order:** fixed-day items on their day, tasks with a due date by that date, other maintenance, then goal work. A recurring item under an aspiration is goal work; one with none is maintenance.
+   - **Goal work is spread evenly,** on the lightest days. Goals take turns in the order of their aspirations, so every goal gets a first session before any gets a second. A goal with no aspiration, or a retired one, comes last.
    - **A day holds at most 3, 4 or 6 tasks** (flow 8), counting everything on it. What doesn't fit stays in the bank. A fixed-day item lands on its day even when that goes over.
 2. **Throughout the week:** the plan is yours to change. You can look ahead at any day and adjust it, and there's no finalize step. Today's plan changes only because of something you did.
 3. **Whenever you open it** (often the next morning): today's plan is shown in three groups: keeping life running, moving forward, and free time. Free time is the time tasks don't fill; it holds no tasks.
@@ -140,20 +140,20 @@ Mostly automatic. The app asks short questions only when something suggests it s
 
 **Weekly rollover (end of each week):**
 
-The week closes when Sunday ends: on Monday, the first time the app is opened. Or sooner, if you choose. From Sunday evening the Week screen shows **Next week**, and on it **Wrap up this week**. A short sheet says what carries over and what ends with the week. Confirming closes the week then and makes next week the current one, so anything done later that night counts towards it. There's no undo. It's never asked for: leave it, and the week closes by itself.
+The week closes when Sunday ends: on Monday, the first time the app is opened. Or sooner, if you choose. From Sunday evening the Week screen shows **Next week**, and on it **Wrap up this week**. A short sheet says what carries over and what ends with the week. Confirming closes the week then and makes next week the current one, so anything done later that night counts towards it. Until Monday, a new task goes to the bank, not onto today. There's no undo. It's never asked for: leave it, and the week closes by itself.
 
 1. Unfinished tasks you added yourself, a one-off goal's steps included, move into next week's bank, with no penalty. So do fixed-day recurring items: rent missed on the 1st still has to be paid.
 2. Unfinished weekly-target tasks lapse: a week of 1 of 3 is followed by a week of 3, not 5. A flexible recurring item lapses at the end of its period (laundry not done this week is replaced by next week's). Nothing counts against you, and the miss stays in your history.
-3. When a task has been carried over for two weeks, the app asks: "Still matter?" Keep it, reschedule it, or drop it. After Keep, it asks again only once the task has carried over two more weeks. A dropped task stays in your history; it isn't deleted.
+3. When a task you added, or a fixed-day item, has been carried over for two weeks, the app asks: "Still matter?" Keep it, reschedule it, or drop it. After Keep, it asks again only once the task has carried over two more weeks. A dropped task stays in your history; it isn't deleted.
 
 **Changing a goal (only when you choose to; the app doesn't prompt):**
 
-4. From a goal's page: change the weekly target, **Pause** or **Resume** it, or **End goal**. Pausing is immediate: the goal's unfinished tasks leave the days and the bank (done ones stay), in this week and in next week once it's open, and it drops out of Week's progress. Resuming returns those tasks to this week's bank. A goal whose aspiration is retired can be resumed too; it keeps the aspiration and shows under Other goals until the aspiration is brought back.
+4. From a goal's page: change the weekly target, **Pause** or **Resume** it, or **End goal**. Pausing is immediate: the goal's unfinished tasks leave the days and the bank (done ones stay), in this week and in next week once it's open, and it drops out of Week's progress. Resuming returns them to the bank of the week they belong to. After a longer pause the goal gets the current week's sessions fresh; last week's don't come back. Turning a recurring item off and on works the same way. A goal whose aspiration is retired can be resumed too; it keeps the aspiration and shows under Other goals until the aspiration is brought back.
 5. Neither goals nor aspirations have a Review (decided Nov 10). A review's choices (adjust the target, pause, end; or edit, move, retire for an aspiration) already sit on their pages, and nothing would show when one was last reviewed.
 
 **When a goal ends** (reached, deadline passed, or you end it):
 
-6. **End goal** leads with what you achieved: where you started, the latest result, and milestones hit. Then you say which it is, **I reached it** or **End it for now**, since only you can tell whether the line was crossed. Ending moves no tasks.
+6. **End goal** leads with what you achieved: where you started, the latest result, and milestones hit. Then you say which it is, **I reached it** or **End it for now**, since only you can tell whether the line was crossed. Ending sets the goal's unfinished tasks aside, like a pause; **Reopen** or **Go again** returns them.
 7. **Reached:** the goal counts complete; milestones you never checked in were passed on the way, and read so. A quiet **Reopen** undoes it, in case you reached it by mistake. "What's next for Be fit?" This guards against the drop-off after a big finish. If the practice behind the goal has become part of your life, the app offers to keep it going as a recurring item under the aspiration. The item remembers the goal it came from.
 8. **Not reached:** the page reads "Not yet." with the same lines. **Go again** makes it active, with its target and milestones as they were, ready to adjust or rethink. It's the same goal with its history, not a new attempt.
 
@@ -212,3 +212,9 @@ Settled questions (kept so the reasoning isn't lost):
 - Decided: goal work is spread evenly on the lightest days, and goals take turns in aspiration order when the week is short (Nov 16).
 - Decided: a task added by hand under a building goal counts towards its target, and the app never removes a session to make up for it. A one-off goal's step with no date waits on the goal's page until you pull it in or date it (Nov 16).
 - Decided: wrapping up doesn't change what rolls over. Sessions still lapse; a week of 1 of 3 is followed by 3 (Nov 16).
+- Decided: ending or reaching a goal sets its unfinished tasks aside like a pause, and so does turning a recurring item off. Coming back makes the current week's sessions fresh (Nov 16, replacing "ending moves no tasks").
+- Decided: a recurring item under an aspiration is planned as goal work at that priority; one with none is maintenance (Nov 16).
+- Decided: once next week is open, a target change takes effect from next week. Every other change acts on both open weeks (Nov 16).
+- Decided: only tasks you added and fixed-day items are asked "Still matter?". A flexible item's period is whole weeks; a month is the weeks whose Monday falls in it (Nov 16).
+- Decided: a check-off that arrives late, dated inside a closed week, still counts: a lapse isn't final (Nov 16).
+- Decided: a goal made or brought back midweek gets at most one session for each day left that week (Nov 16).
