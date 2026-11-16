@@ -112,7 +112,7 @@ Daily, and the most frequent interaction. It has to take one tap.
 
 Branches:
 
-- **Did something that wasn't planned:** log it as done. It counts the same as planned work. For a building goal it uses up one of the week's open sessions, so "3 of 3" never leaves a session in the bank; with none open, it's an extra.
+- **Did something that wasn't planned:** log it as done. It counts the same as planned work. Doing a planned session early is checking it off where it sits, on its day or pulled from the bank. A task you add by hand under a building goal counts towards the week's target too; the app doesn't remove a session to make up for it, so one may be left over. Send it to the bank, or let it lapse with the week.
 - **Partly done:** for the prototype, a task is done or not. Partial credit can come later if it's missed.
 
 ## Flow 6: See progress and check in at milestones
@@ -210,5 +210,5 @@ Settled questions (kept so the reasoning isn't lost):
 - Decided: the app drafts a week once, then only places new work as it arrives. "Back to bank" means the bank, and a freed slot isn't refilled (Nov 16, replacing "any change reflows the rest of the week's draft").
 - Decided: the cap is 3, 4 or 6 tasks a day and counts everything on the day. You can go over it by hand, and a fixed-day item lands on its day even over it (Nov 16).
 - Decided: goal work is spread evenly on the lightest days, and goals take turns in aspiration order when the week is short (Nov 16).
-- Decided: unplanned work for a building goal uses up an open session, and a one-off goal's step with no date waits on the goal's page until you pull it in or date it (Nov 16).
+- Decided: a task added by hand under a building goal counts towards its target, and the app never removes a session to make up for it. A one-off goal's step with no date waits on the goal's page until you pull it in or date it (Nov 16).
 - Decided: wrapping up doesn't change what rolls over. Sessions still lapse; a week of 1 of 3 is followed by 3 (Nov 16).
