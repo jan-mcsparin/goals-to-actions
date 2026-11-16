@@ -23,3 +23,10 @@ Planning means filling a week's bank, rolling over and lapsing what wasn't finis
 - After a change made on the phone, the server may redraft later days, and the phone sees that on its next refresh. Today still never changes on its own: the planner writes only to days after today and never to a task placed by hand.
 - A new week's plan can't be made offline. Opening the app offline on a Monday shows last week's plan until it can reach the API.
 - When the planner runs (on the first request of a week, after each change, or as a job) is settled in the planner's spec in the API repo.
+
+## Revisited 2026-11-16: when the planner runs
+
+[ADR-009](0009-week-opens-sunday-drafted-once.md) settles it: the planner drafts a week once, when the week opens, and after that only places work that newly arrives.
+
+- The server doesn't redraft later days after a change made on the phone. The one exception is lowering intensity.
+- A week's first draft may place on today. After it the planner writes only to days after today, and never to a task placed by hand.

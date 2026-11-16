@@ -23,3 +23,10 @@ In the first model one task row carried the thing to do, the week it belonged to
 - A task can be pinned to a day in a later week. The app's own draft still exists only for the current week, because target and recurring tasks are created when their week starts.
 - Reads join two tables where they read one before, and a task's state has to be kept in step with its rows in the same transaction.
 - When and how a week gets filled (a job, or the first request of the week) is left to the API.
+
+## Revisited 2026-11-16: when a week is filled
+
+[ADR-009](0009-week-opens-sunday-drafted-once.md) settles what this left to the API. A week is filled when it opens, at 6 p.m. on the Sunday before it, on the first request that finds it due; there is no job.
+
+- The app's draft now exists for the current week and, from Sunday evening, the next one.
+- "Planned through week" runs a week ahead from then, so the user also carries "closed through week", which is what the current week is read from.

@@ -32,6 +32,7 @@ A personal, installable, mobile-first web app that connects aspirations → goal
 
 - Keep logic out of components: the API client, types and client-side rules live in plain TypeScript modules and hooks; components only render. This keeps a later move to Capacitor or React Native cheap.
 - **The API does the planning** (ADR-008): filling a week, rollover and lapse, drafting days. The front end shows the plan and sends what the person did.
+- **A week is drafted once** (ADR-009): it opens on Sunday evening, closes on Monday or when the person wraps it up, and after the draft the app only places new work as it arrives.
 - During the click-through, screens get data through the same API-client functions the real app will use, returning mock data for now.
 - When a change alters behavior described in `docs/`, update the doc in the same piece of work. New architecture-level decisions get an ADR (`docs/adr/README.md` says when).
 - Start Claude Code here for work spanning both repos, or inside `web-frontend/` or `api/` for focused work. Commit in the repo the change belongs to.
