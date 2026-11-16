@@ -189,7 +189,7 @@ Settled questions (kept so the reasoning isn't lost):
 
 - Decided: no separate per-day capacity setting for the prototype. Intensity is the one dial; add per-day capacity only if days keep feeling overpacked. No time estimates per task.
 - Decided: free time is protected by capping how many tasks go on a day, set by intensity (normal by default).
-- Decided: no set finalize time. The plan updates continuously, so you can look ahead anytime and adjust; today's plan changes only because of something you did.
+- Decided: no set finalize time. You can look ahead anytime and adjust; today's plan changes only because of something you did. (Nov 16: "the plan updates continuously" became "the app drafts once", below.)
 - Decided: anything you explicitly schedule on a day stays there, and the app plans around it.
 - Decided: the week starts on Monday.
 - Decided: intensity defaults to normal and stays as set until you change it; no automatic expiry for now.
