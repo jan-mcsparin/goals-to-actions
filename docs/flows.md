@@ -58,12 +58,13 @@ Branches:
 
 Mostly automatic, once a week. The bank holds everything to get done this week, before it's assigned to days.
 
-1. At the start of each week, the app fills the bank with:
+1. When a week opens, at 6 p.m. on the Sunday before it, the app fills its bank with:
    - goal tasks from weekly targets (3 lifting sessions),
    - steps from one-off goals that are due this week (a step is a task, so it arrives like any task with a due date),
    - recurring maintenance due this week (laundry, rent),
-   - anything that rolled over from last week (flow 7), and tasks from the upcoming list that are now due.
-2. Anytime, you can add a task by hand (**+**, the Task tab): a title, and optionally the goal it serves, a due date and a time of day ("by" or "at" a time). If it's due this week or earlier, or has no due date, it goes straight into this week's bank, or onto today if you choose. **On today** is preselected when you add it from the Today screen, not from a day opened on Week, even when that day is today. A new task never goes onto any other day. If it's due later, it waits in an upcoming list and moves into the bank at the start of the week it's due (or a week or two early, for things that need lead time). A short line says where it went: "Added to this week's bank.", "Saved for the week of Nov 23." or "Added to today."
+   - tasks from the upcoming list that are now due,
+   - anything that rolled over from last week (flow 7). These arrive when last week closes, so after the rest unless you wrapped the week up.
+2. Anytime, you can add a task by hand (**+**, the Task tab): a title, and optionally the goal it serves, a due date and a time of day ("by" or "at" a time). If it's due this week or earlier, or has no due date, it goes straight into this week's bank, or onto today if you choose. **On today** is preselected when you add it from the Today screen, not from a day opened on Week, even when that day is today. A new task never goes onto any other day. If it's due later, it waits in an upcoming list and moves into the bank when the week it's due opens (or a week or two early, for things that need lead time). If that week is already open, it goes straight into its bank. A short line says where it went: "Added to this week's bank.", "Saved for the week of Nov 23." or "Added to today."
 3. **Maintenance is set up once:** a name, a repeat and how fixed it is. Fixed-day items happen on a set day ("take out the trash every Tuesday," "rent on the 1st"), and the plan always puts them there. Flexible items just need doing sometime in the window ("laundry once a week," "clean the bathroom every two weeks"), and the app places them on whichever day fits. Only the things that actually slip go in; automatic habits stay out. The same kind of recurring item can also keep up a practice after its goal ends (lifting 3 times a week, under Be fit).
    - **Adding one** (**+**, the Recurring tab, or **+ Add recurring** on an aspiration's page, which selects that aspiration): a name, then **Fixed day** or **Flexible**. Fixed: every week on a weekday, or every month on the 1st to the 28th, so every month has the day. Flexible: once a week, 2 to 6 times a week, every two weeks, or once a month. The repeat reads back as "Every Tuesday", "Monthly on the 1st", "3 times a week", "Every two weeks".
    - **Under an aspiration** is optional. With none, the item belongs to Keep life running.
@@ -72,7 +73,7 @@ Mostly automatic, once a week. The bank holds everything to get done this week, 
 
 Branches:
 
-- **Later weeks:** the data model lets a task sit on a day in a later week, but the app doesn't offer it yet; a later task waits in the upcoming list. The app's own draft exists only for the current week.
+- **Later weeks:** the app's draft exists for the current week and, from Sunday evening, the next one. Further out, a task waits in the upcoming list: the data model lets it sit on a day in a later week, but the app doesn't offer it yet.
 - **A task with no goal:** fine. It's maintenance or a one-time life task ("fill out my ballot"), usually with a due date, and still part of the day. Things that come around once a year can be yearly recurring items instead, once those are offered.
 - **More in the bank than the week can hold:** the app says so, and suggests what to push to next week or drop.
 
@@ -80,21 +81,25 @@ Branches:
 
 The heart of the app, and the most automated part. Planning should mostly be a glance and an "OK."
 
-1. **Start of the week:** the app drafts the whole week from the bank. It places maintenance on its due days first, spreads goal work across the week (learning your rhythm over time), leaves free time, and follows your intensity setting (flow 8).
-2. **Throughout the week:** the plan updates continuously as tasks get done, skipped or moved, so you can look ahead at any day and adjust it. Today's plan changes only because of something you did.
+1. **When the week opens:** the app drafts the whole week from the bank, once. It places maintenance on its due days first, spreads goal work across the week (learning your rhythm over time), leaves free time, and follows your intensity setting (flow 8).
+   - **The order:** fixed-day items on their day, tasks with a due date by that date, other maintenance, then goal work.
+   - **Goal work is spread evenly,** on the lightest days. Goals take turns in the order of their aspirations, so every goal gets a first session before any gets a second.
+   - **A day holds at most 3, 4 or 6 tasks** (flow 8), counting everything on it. What doesn't fit stays in the bank. A fixed-day item lands on its day even when that goes over.
+2. **Throughout the week:** the plan is yours to change. You can look ahead at any day and adjust it, and there's no finalize step. Today's plan changes only because of something you did.
 3. **Whenever you open it** (often the next morning): today's plan is shown in three groups: keeping life running, moving forward, and free time. Free time is the time tasks don't fill; it holds no tasks.
 4. You can:
    - **accept it** by doing nothing,
    - **swap** a task for one from the bank,
    - **skip** a task, which sends it back to the bank (shown as "Back to bank"),
    - **pull extra** work forward from the bank.
-5. Any change reflows the rest of the week's draft.
+5. After the draft, the app only places new work as it arrives (a carry-over, a new goal's sessions, a raised target, a new recurring item), on later days with room. It doesn't move what's on a day and doesn't refill a slot you freed: a task sent back to the bank stays there, and finishing early leaves the time free.
 
 Branches:
 
 - **You never open the plan:** it still stands. Skipping planning doesn't mean having no plan.
 - **A day is overloaded:** the app says so and suggests what to move, instead of quietly packing it full.
 - **You edit a future day:** it stays there, and the app plans the rest of the week around it.
+- **You first open the app midweek:** the week is drafted from that day on. A fixed-day item whose day has passed goes on that day.
 
 ## Flow 5: Do and check off
 
@@ -107,7 +112,7 @@ Daily, and the most frequent interaction. It has to take one tap.
 
 Branches:
 
-- **Did something that wasn't planned:** log it as done. It counts the same as planned work.
+- **Did something that wasn't planned:** log it as done. It counts the same as planned work. For a building goal it uses up one of the week's open sessions, so "3 of 3" never leaves a session in the bank; with none open, it's an extra.
 - **Partly done:** for the prototype, a task is done or not. Partial credit can come later if it's missed.
 
 ## Flow 6: See progress and check in at milestones
@@ -135,13 +140,15 @@ Mostly automatic. The app asks short questions only when something suggests it s
 
 **Weekly rollover (end of each week):**
 
+The week closes when Sunday ends: on Monday, the first time the app is opened. Or sooner, if you choose. From Sunday evening the Week screen shows **Next week**, and on it **Wrap up this week**. A short sheet says what carries over and what ends with the week. Confirming closes the week then and makes next week the current one, so anything done later that night counts towards it. There's no undo. It's never asked for: leave it, and the week closes by itself.
+
 1. Unfinished tasks you added yourself, a one-off goal's steps included, move into next week's bank, with no penalty. So do fixed-day recurring items: rent missed on the 1st still has to be paid.
 2. Unfinished weekly-target tasks lapse: a week of 1 of 3 is followed by a week of 3, not 5. A flexible recurring item lapses at the end of its period (laundry not done this week is replaced by next week's). Nothing counts against you, and the miss stays in your history.
 3. When a task has been carried over for two weeks, the app asks: "Still matter?" Keep it, reschedule it, or drop it. After Keep, it asks again only once the task has carried over two more weeks. A dropped task stays in your history; it isn't deleted.
 
 **Changing a goal (only when you choose to; the app doesn't prompt):**
 
-4. From a goal's page: change the weekly target, **Pause** or **Resume** it, or **End goal**. Pausing is immediate: this week's unfinished tasks for the goal leave the days and the bank (done ones stay), and it drops out of Week's progress. Resuming returns those tasks to this week's bank. A goal whose aspiration is retired can be resumed too; it keeps the aspiration and shows under Other goals until the aspiration is brought back.
+4. From a goal's page: change the weekly target, **Pause** or **Resume** it, or **End goal**. Pausing is immediate: the goal's unfinished tasks leave the days and the bank (done ones stay), in this week and in next week once it's open, and it drops out of Week's progress. Resuming returns those tasks to this week's bank. A goal whose aspiration is retired can be resumed too; it keeps the aspiration and shows under Other goals until the aspiration is brought back.
 5. Neither goals nor aspirations have a Review (decided Nov 10). A review's choices (adjust the target, pause, end; or edit, move, retire for an aspiration) already sit on their pages, and nothing would show when one was last reviewed.
 
 **When a goal ends** (reached, deadline passed, or you end it):
@@ -163,8 +170,9 @@ Branch:
 Anytime, and only when you choose. The app never prompts about pace.
 
 1. Pick **Going hard**, **Normal** or **Easing off**.
-2. From the next draft, the plan adjusts: more or less goal work, more or less free time. Maintenance stays the same.
-3. For the prototype, the setting stays until you change it. Whether it should be able to expire on its own is left open.
+2. Intensity sets the most tasks a day can hold: 3 for Easing off, 4 for Normal, 6 for Going hard. Everything on the day counts. Maintenance stays the same: it's placed first.
+3. Easing off takes effect at once: goal work the app placed on later days that are now over the cap goes back to the bank, lowest priority first. Anything you placed stays. Going hard moves nothing: the room shows on Week, and the next draft uses it.
+4. For the prototype, the setting stays until you change it. Whether it should be able to expire on its own is left open.
 
 ## Edge cases and open questions
 
@@ -173,13 +181,9 @@ Edge cases the prototype needs an answer for:
 - **First run, nothing set up:** start with one sentence, either a goal or a maintenance item, and get a plan for tomorrow right away.
 - **Away or sick for a while:** pause one goal or everything, so the gap doesn't count as missed and nothing piles up while you're gone.
 - **A whole week with no tasks done:** rollover still happens quietly; the first open afterwards shows how far you've come, not what you missed.
+- **A week you never opened:** it's skipped. Nothing is created just to lapse, and what you'd added yourself carries straight into the week you come back to, as one carry-over. A fixed-day item due in the gap doesn't appear.
 - **One task serving two goals:** for the prototype, each task belongs to one goal.
 - **Travelling between time zones:** a task's day and time carry no zone, so Tuesday at 6 p.m. is Tuesday at 6 p.m. wherever you are. Today is your phone's date. The week never goes backwards: fly west across Sunday midnight after the new week has started and you stay in the new week. Crossing the date line skips or repeats a date; a skipped day's tasks are simply unfinished.
-
-Open planner rules (the data model works either way):
-
-- **Unplanned work logged for a building goal:** does it use up one of the week's open sessions, or sit beside them? Leaning towards using one up, so "3 of 3 done" never leaves a session in the bank.
-- **A one-off goal's step with no date:** when does it enter a week? Leaning towards waiting on the goal's page until you pull it in or give it a date, so six steps don't flood the bank at once.
 
 Settled questions (kept so the reasoning isn't lost):
 
@@ -202,3 +206,9 @@ Settled questions (kept so the reasoning isn't lost):
 - Decided: drop and delete are different; delete is for mistakes and is offered on everything (Nov 13).
 - Decided: a recurring item is on or off; paused by a retired aspiration and turned off by hand are the same state (Nov 13).
 - Decided: aspirations have no Review. Its choices repeated Edit, move up or down and Retire, which sit on the aspiration's page anyway.
+- Decided: a week opens at 6 p.m. on the Sunday before it, and closes when Sunday ends or when you wrap it up. There's no job, and a week nobody opened is skipped (Nov 16, ADR-009).
+- Decided: the app drafts a week once, then only places new work as it arrives. "Back to bank" means the bank, and a freed slot isn't refilled (Nov 16, replacing "any change reflows the rest of the week's draft").
+- Decided: the cap is 3, 4 or 6 tasks a day and counts everything on the day. You can go over it by hand, and a fixed-day item lands on its day even over it (Nov 16).
+- Decided: goal work is spread evenly on the lightest days, and goals take turns in aspiration order when the week is short (Nov 16).
+- Decided: unplanned work for a building goal uses up an open session, and a one-off goal's step with no date waits on the goal's page until you pull it in or date it (Nov 16).
+- Decided: wrapping up doesn't change what rolls over. Sessions still lapse; a week of 1 of 3 is followed by 3 (Nov 16).

@@ -52,9 +52,10 @@ A **week** is named by the date of its Monday.
 
 | Field | Notes |
 | --- | --- |
-| Intensity | Going hard, normal (the default) or easing off. Sets the daily task cap, and so how much free time is protected. |
+| Intensity | Going hard, normal (the default) or easing off. Sets the daily task cap (3, 4 or 6), and so how much free time is protected. |
 | Last-known time zone | A zone name (`America/Denver`), sent by the phone with each request. Not a setting; there's nothing to change when you travel. |
-| Planned through week | The latest week whose bank has been filled. The current week is this or the phone's week, whichever is later, so the week never goes backwards. |
+| Planned through week | The latest week that has been opened: its bank filled and its days drafted. From 6 p.m. on Sunday this is next week (ADR-009). |
+| Closed through week | The latest week that has been closed. The current week is the one after it or the phone's week, whichever is later, so the week never goes backwards. |
 
 Sign-in is undecided (ADR-003); its fields are added when it is.
 
@@ -134,6 +135,7 @@ Building goals only. A change adds a row, so earlier weeks keep the target they 
 
 - **Count progress** is the goal's tasks done this week, out of sessions.
 - **Amount progress** is the sum of the values logged on the goal's tasks done this week, out of amount. The value's unit is the target's.
+- **A task counts for the week of the row it was done in,** not the date it was checked off. After the week is wrapped up, something done on Sunday night counts for the new week.
 
 ### recurring_items
 
@@ -192,6 +194,7 @@ What the screens show comes from these rows:
 | Upcoming list | Open tasks with a later due date and no row yet. |
 | A one-off goal's waiting steps | Its open tasks with no row yet. |
 | Times carried over | The task's rows with the outcome rolled over. |
+| Next week, from Sunday evening | The next week's rows, made when it opens. They can be moved but not checked off until that week is the current one. |
 | Pinned to a later week | A row for that week with a planned day, placed by hand. The model allows it; the app doesn't offer it yet. |
 
 **How a week ends for an unfinished task:**
@@ -205,7 +208,9 @@ What the screens show comes from these rows:
 
 Rolling over closes this week's row as rolled over and opens one in the next week's bank. Lapsing closes the row and the task; the miss stays in history.
 
-**Set aside** is what happens to a goal's unfinished tasks when it's paused, or when its aspiration is retired with its work paused, including tasks placed by hand. The row keeps its planned day but no day shows it. Resuming the goal returns its open tasks to this week's bank. (The first model called this "skipped", which read like "Back to bank". It isn't.)
+A week ends when its Sunday is over, or when the person wraps it up (ADR-009). A week with no rows was never opened, and is never filled or closed after the fact.
+
+**Set aside** is what happens to a goal's unfinished tasks when it's paused, or when its aspiration is retired with its work paused, including tasks placed by hand. It covers every open week: this one and, from Sunday evening, the next. The row keeps its planned day but no day shows it. Resuming the goal returns its open tasks to this week's bank. (The first model called this "skipped", which read like "Back to bank". It isn't.)
 
 ### quit_days
 
@@ -256,7 +261,7 @@ No screen reads it. It's for recovery, debugging, and questions nobody has asked
 - A task has at most one row per week, and at most one row with no outcome.
 - A task's state and its rows agree: done, dropped and lapsed tasks have no row still in play, and a done task's last row is done.
 - A planned day falls inside its row's week.
-- The planner writes only to days after today, and never to a row placed by hand. This is what keeps Today from changing on its own.
+- The planner never writes to a row placed by hand. A week's first draft may place on any day from today on; after it, the planner writes only to days after today. This is what keeps Today from changing on its own.
 - A milestone's date falls between its goal's start and deadline; a deadline is never before the start date.
 
 ## Where history lives

@@ -23,12 +23,14 @@ Help a person keep moving their life forward and improving over years, while als
 
 ## Planning
 
-1. **Weeks start Monday.** At the start of each week the bank fills with goal tasks, recurring items, rollovers and upcoming tasks now due.
+1. **Weeks start Monday.** When a week opens, its bank fills with goal tasks, recurring items, rollovers and upcoming tasks now due.
+   - **Next week opens on Sunday evening.** Its plan is drafted then, and you can look at it and rearrange it.
+   - **You can wrap the week up yourself** from Sunday evening; otherwise it closes when Sunday ends. Wrapping up is never asked for.
    - **Missed sessions don't pile up.** Unfinished weekly-target tasks and flexible recurring items lapse; the new week or period brings fresh ones. Tasks you added yourself and fixed-day items (rent on the 1st) roll over.
 2. The app drafts the whole week: **maintenance first**, then goal work, leaving free time. A day is never packed full.
-3. **Free time is protected** by a cap on tasks per day, set by intensity. No per-day capacity setting, no time estimates.
-4. **The plan adjusts continuously.** No finalize time; you can look ahead and edit any day.
-5. **Today only changes because of something you did** (skip, swap, finish early, pause a goal). Never on its own.
+3. **Free time is protected** by a cap on tasks per day, set by intensity: 3, 4 or 6. No per-day capacity setting, no time estimates.
+4. **The app drafts a week once; after that the plan is yours.** No finalize time; you can look ahead and edit any day. New work is placed as it arrives, on later days with room. The app never moves what is on a day, and never refills a slot you freed: a task sent back to the bank stays there, and finishing early leaves the time free.
+5. **Today only changes because of something you did** (skip, swap, finish early, pause a goal, wrap up the week). Never on its own.
 6. **Anything you put on a day stays there.** The app plans around it. The one exception is your own: pausing a goal, or retiring an aspiration and pausing its work, sets that work's unfinished tasks aside for the week.
 7. Timed tasks anchor the day; untimed tasks float around them.
 8. **A plan exists even if you never open it.**
