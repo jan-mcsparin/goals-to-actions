@@ -131,7 +131,7 @@ Building goals only. A change adds a row, so earlier weeks keep the target they 
 | Sessions | How many tasks the week gets. |
 | Amount | Amount targets only: the total to reach. |
 | Unit | "lifting sessions", "miles". |
-| Effective from | A week. One row per goal per week: a second change in the same week replaces the first. |
+| Effective from | A week. One row per goal per week: a second change in the same week replaces the first. A change takes effect in the current week, or from next week once next week is open (ADR-009), so Sunday night's score doesn't move. |
 
 - **Count progress** is the goal's tasks done this week, out of sessions.
 - **Amount progress** is the sum of the values logged on the goal's tasks done this week, out of amount. The value's unit is the target's.
@@ -153,6 +153,8 @@ Maintenance, or a practice kept up. Each creates tasks.
 | Active | One on/off state. Turned off by hand and paused by retiring its aspiration are the same state; the audit log holds which. |
 
 - **The readable repeat ("Every Tuesday", "3 times a week") and the next due day are worked out**, not stored.
+- **A flexible item's period is whole weeks.** A week is its own period. A two-week period is the week of starts-on and the one after, repeating. A month is the weeks whose Monday falls in it, so four or five.
+- **With an aspiration, an item is planned as goal work** at that aspiration's priority; with none it is maintenance, placed first.
 - **Not yet offered:** yearly repeats, "every N weeks" and a time of day. Each is another schedule kind or one more column.
 
 ### tasks
@@ -162,14 +164,14 @@ Maintenance, or a practice kept up. Each creates tasks.
 | Title | |
 | Origin | **By hand**, **weekly target** or **recurring item**. Decides what happens when the task isn't finished (below). |
 | Goal | Optional. Required when the origin is weekly target. A one-off goal's tasks are its steps. |
-| Recurring item | Set when the origin is recurring item. |
+| Recurring item | A task with an item has the origin recurring item. Not the other way round: deleting an item empties the link on its done tasks, which keep their origin. |
 | State | Open, done, dropped or lapsed. |
 | Due date | A day, optional. A real constraint, unlike the planned day. |
 | Time of day | Optional: a kind ("by" or "at") and a time. Tasks without one float around the timed ones. |
 | Value logged | A number, optional (miles, minutes). Counts towards an amount target. |
 | Completed at, completed on | The moment the phone recorded the check-off, and the day it counts for as the phone saw it. A 12:30 a.m. check-off counts for the new day. |
 | Period start, number | Generated tasks only: which week or period the task is for, and which one of that period's it is (session 2 of 3). Unique per goal or recurring item, so a week can't be filled twice. |
-| Still matters answered on | A day: when "Still matter?" was last answered Keep or Reschedule. |
+| Still matters answered on | A day: when "Still matter?" was last answered Keep or Reschedule. Only tasks added by hand and fixed-day recurring tasks are ever asked. |
 
 A task with no goal and no recurring item is a one-time life task, part of Keep life running.
 
@@ -193,7 +195,8 @@ What the screens show comes from these rows:
 | "Back to bank" | The planned day cleared. Nothing else changes. |
 | Upcoming list | Open tasks with a later due date and no row yet. |
 | A one-off goal's waiting steps | Its open tasks with no row yet. |
-| Times carried over | The task's rows with the outcome rolled over. |
+| A waiting step checked off on the goal's page | A done row on the day it was done, in that day's week. Unchecking removes the row. |
+| Times carried over | The task's rows with the outcome rolled over. A flexible item carrying inside its period is rolled over too, which is why it is never asked "Still matter?". |
 | Next week, from Sunday evening | The next week's rows, made when it opens. They can be moved but not checked off until that week is the current one. |
 | Pinned to a later week | A row for that week with a planned day, placed by hand. The model allows it; the app doesn't offer it yet. |
 
@@ -205,12 +208,22 @@ What the screens show comes from these rows:
 | Flexible recurring | **Lapses at the end of its period** (week, two weeks or month). Inside a longer period it carries from week to week. The next period's task replaces it. |
 | Fixed-day recurring | **Rolls over.** Rent missed on the 1st still has to be paid. |
 | By hand, steps included | **Rolls over.** |
+| Set aside, generated | **Ends with its week or period.** The task closes as lapsed, but its row still says set aside, so it never reads as a miss. |
+| Set aside, by hand | **Waits.** The row stays set aside and the task stays open, with no row in play. |
 
 Rolling over closes this week's row as rolled over and opens one in the next week's bank. Lapsing closes the row and the task; the miss stays in history.
 
+A lapse isn't final. A check-off that arrives late, dated inside the closed week (done offline on Sunday night, sent on Monday), turns the row and the task to done. For a task that rolled over, the late check-off lands on its row in the new week.
+
 A week ends when its Sunday is over, or when the person wraps it up (ADR-009). A week with no rows was never opened, and is never filled or closed after the fact.
 
-**Set aside** is what happens to a goal's unfinished tasks when it's paused, or when its aspiration is retired with its work paused, including tasks placed by hand. It covers every open week: this one and, from Sunday evening, the next. The row keeps its planned day but no day shows it. Resuming the goal returns its open tasks to this week's bank. (The first model called this "skipped", which read like "Back to bank". It isn't.)
+**Set aside** is what happens to a goal's unfinished tasks when it's paused, ended or reached, to a recurring item's when it's turned off, and to both when an aspiration is retired with its work paused. It includes tasks placed by hand, and covers every open week: this one and, from Sunday evening, the next. The row keeps its planned day but no day shows it. (The first model called this "skipped", which read like "Back to bank". It isn't.)
+
+**Coming back** (resume, reopen, go again, turning an item on):
+
+- A set-aside task whose week is still open returns to that week's bank.
+- A task added by hand whose week has closed gets a row in the current week's bank.
+- The current week's sessions or recurring tasks are made if the week has none. Last week's don't come back.
 
 ### quit_days
 
@@ -257,10 +270,11 @@ No screen reads it. It's for recovery, debugging, and questions nobody has asked
 - Active aspirations are numbered 1 to n with no gaps; a retired one has no position.
 - Milestones and weekly targets belong only to goals of a type that has them (see the table under goals).
 - A task has a goal or a recurring item or neither, never both.
-- A generated task is unique for its goal or recurring item, its period and its number.
+- A generated task is unique for its goal or recurring item, its period and its number. A deleted one still counts, so a deleted session isn't made again.
 - A task has at most one row per week, and at most one row with no outcome.
 - A task's state and its rows agree: done, dropped and lapsed tasks have no row still in play, and a done task's last row is done.
-- A planned day falls inside its row's week.
+- A planned day falls inside its row's week. So when today is before the current week (after a wrap-up, or a flight west), nothing new can be put on today; it goes to the bank.
+- Nothing is placed on a day before today, and a fixed-day recurring task on its day can't be moved off it. One that carried over is placed like any task.
 - The planner never writes to a row placed by hand. A week's first draft may place on any day from today on; after it, the planner writes only to days after today. This is what keeps Today from changing on its own.
 - A milestone's date falls between its goal's start and deadline; a deadline is never before the start date.
 

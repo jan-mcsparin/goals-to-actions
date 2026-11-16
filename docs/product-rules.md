@@ -17,7 +17,7 @@ Help a person keep moving their life forward and improving over years, while als
   - **One-off:** an optional deadline plus a short list of steps. The steps are tasks ("Step 3 of 6"): checking one off, on Today or on the goal's page, in any order, is what moves the count. A one-off goal has no milestones.
 - **Milestones:** benchmarks with a measurable line and optional date, on building and quitting goals. They prove improvement from a **baseline**. The goal itself is the final milestone, so a goal with none of its own reads "0 of 1".
 - **A task is something you do; a milestone is something you reach.** There is no third kind of thing.
-- **Recurring items:** maintenance or ongoing practices, fixed-day (trash every Tuesday) or flexible (laundry weekly). Can sit under an aspiration.
+- **Recurring items:** maintenance or ongoing practices, fixed-day (trash every Tuesday) or flexible (laundry weekly). Can sit under an aspiration: then it is planned as goal work, and with none it is maintenance.
 - **Tasks:** belong to a goal, a recurring item, or nothing. Optional due date and optional time of day ("due by" / "at").
 - **Drop and delete are different.** Dropping a task is deciding not to do it; it stays in your history. Deleting is for mistakes, and is offered on tasks, milestones, goals, aspirations and recurring items.
 
@@ -31,7 +31,7 @@ Help a person keep moving their life forward and improving over years, while als
 3. **Free time is protected** by a cap on tasks per day, set by intensity: 3, 4 or 6. No per-day capacity setting, no time estimates.
 4. **The app drafts a week once; after that the plan is yours.** No finalize time; you can look ahead and edit any day. New work is placed as it arrives, on later days with room. The app never moves what is on a day, and never refills a slot you freed: a task sent back to the bank stays there, and finishing early leaves the time free.
 5. **Today only changes because of something you did** (skip, swap, finish early, pause a goal, wrap up the week). Never on its own.
-6. **Anything you put on a day stays there.** The app plans around it. The one exception is your own: pausing a goal, or retiring an aspiration and pausing its work, sets that work's unfinished tasks aside for the week.
+6. **Anything you put on a day stays there.** The app plans around it. The one exception is your own: pausing or ending a goal, turning a recurring item off, or retiring an aspiration and pausing its work, sets that work's unfinished tasks aside until it comes back.
 7. Timed tasks anchor the day; untimed tasks float around them.
 8. **A plan exists even if you never open it.**
 9. If the bank holds more than the week can, or a day is overloaded, say so and suggest what to move; don't quietly cram.
