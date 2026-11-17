@@ -18,3 +18,4 @@ Short records of decisions that shape what gets built: context, decision, and wh
 | [008](0008-planner-on-server.md) | The planner runs on the server; the front end shows the plan | Accepted |
 | [009](0009-week-opens-sunday-drafted-once.md) | A week opens on Sunday evening, closes on Monday or by hand, and is drafted once | Accepted |
 | [010](0010-week-document-and-replayed-queue.md) | The phone keeps the week as one document and replays unsent changes over it | Accepted |
+| [011](0011-hosting-on-aws.md) | Hosted on AWS: the front end and a Lambda API on one subdomain, behind CloudFront | Accepted |
