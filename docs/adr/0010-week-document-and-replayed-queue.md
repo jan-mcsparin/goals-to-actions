@@ -53,3 +53,12 @@ The usual hard part of an offline design is patching stored data when a change i
 - A server error on one change holds up the ones behind it. Nothing is lost, and the quiet line says changes are waiting.
 - Sign-in must leave the queue in place when a session ends, and send it after signing in again.
 - To check when this is built: how readily iOS clears an installed app's stored data, and asking the browser for persistent storage.
+
+## Revisited 2026-11-16: the answers the first version didn't name
+
+Written with only 404, 409 and failures in mind. With sign-in decided ([ADR-012](0012-sign-in-with-a-passkey.md)) the rule is stated in full:
+
+- **Only a 404 or a 409 drops a change.** Every other answer keeps it and stops sending: a 401 (the session ended), a 403 (the origin check), a 422, a server error.
+- A 401 also asks for the passkey. After signing in, the queue is sent.
+- A 422 on a queued change is a bug in the app or the API. The change waits, and the quiet line on Today says so, so nothing is lost while it's fixed.
+- Signing out sends the queue before clearing it.

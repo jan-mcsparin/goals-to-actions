@@ -35,14 +35,16 @@ Four methods were compared:
 - **A session is a row in Postgres and a random token in a cookie.** The database keeps only a hash of the token.
 - **The cookie is `__Host-`, `HttpOnly`, `Secure` and `SameSite=Lax`,** so no page script can read it and no other subdomain can set or receive it (ADR-011).
 - **A session lasts 90 days from its last use,** so an app opened every day never asks again. Signing out ends it on the server.
-- **Every route but `health` answers 401 without a session.**
-- **A write is refused unless it comes from the app's own origin.** The founder's other projects sit on sibling subdomains, which browsers treat as the same site, so `SameSite` alone doesn't keep them out.
+- **Last use is recorded at most once a day,** in a small write of its own. Reads are read-only, and a write on every request would be the busiest thing the API does.
+- **Every route but `health` and the sign-in routes themselves answers 401 without a session.** The passkey steps and the one-time code have to work for someone not yet signed in.
+- **A write is refused unless it comes from the app's own origin.** The founder's other projects sit on sibling subdomains, which browsers treat as the same site, so `SameSite` alone doesn't keep them out. The refusal is a 403, which the phone's queue treats as "try again later", never as a refusal of the change (ADR-010).
 - **Everything sign-in remembers is in Postgres:** passkeys, sessions, codes, and the challenge of a sign-in under way. The function that runs the API holds nothing between requests.
 
 **When a session ends**
 
 - A 401 is not a refusal of the change. The queue stays as it is ([ADR-010](0010-week-document-and-replayed-queue.md)), sending stops, the app shows what the phone has stored and asks for the passkey. After signing in, the queue is sent.
-- The stored plan stays on the phone when a session runs out. Signing out on purpose clears it and the queue.
+- The stored plan stays on the phone when a session runs out.
+- Signing out on purpose sends the queue first. If changes are waiting and can't be sent, the app says so before going on. Then everything stored on the phone is cleared: the week documents, the other screens' last responses and the queue.
 
 ## Consequences
 
