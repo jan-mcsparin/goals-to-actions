@@ -57,7 +57,7 @@ A **week** is named by the date of its Monday.
 | Planned through week | The latest week that has been opened: its bank filled and its days drafted. From 6 p.m. on Sunday this is next week (ADR-009). |
 | Closed through week | The latest week that has been closed. The current week is the one after it or the phone's week, whichever is later, so the week never goes backwards. |
 
-Sign-in is undecided (ADR-003); its fields are added when it is.
+Sign-in is a passkey with a session in a cookie ([ADR-012](adr/0012-sign-in-with-a-passkey.md)); its tables are added when the `sign-in` spec is finalised.
 
 ### aspirations
 
