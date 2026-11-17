@@ -213,7 +213,7 @@ What the screens show comes from these rows:
 
 Rolling over closes this week's row as rolled over and opens one in the next week's bank. Lapsing closes the row and the task; the miss stays in history.
 
-A lapse isn't final. A check-off that arrives late, dated inside the closed week (done offline on Sunday night, sent on Monday), turns the row and the task to done. For a task that rolled over, the late check-off lands on its row in the new week.
+A lapse isn't final. A check-off that arrives late, dated inside the closed week (done offline on Sunday night, sent on Monday), turns the row and the task to done. For a task that rolled over, the late check-off lands on its row in the new week. An uncheck that arrives late works the same way round: the task gets the ending its week would have given it, rolled over or lapsed.
 
 A week ends when its Sunday is over, or when the person wraps it up (ADR-009). A week with no rows was never opened, and is never filled or closed after the fact.
 
@@ -273,10 +273,24 @@ No screen reads it. It's for recovery, debugging, and questions nobody has asked
 - A generated task is unique for its goal or recurring item, its period and its number. A deleted one still counts, so a deleted session isn't made again.
 - A task has at most one row per week, and at most one row with no outcome.
 - A task's state and its rows agree: done, dropped and lapsed tasks have no row still in play, and a done task's last row is done.
-- A planned day falls inside its row's week. So when today is before the current week (after a wrap-up, or a flight west), nothing new can be put on today; it goes to the bank.
+- A planned day falls inside its row's week. So when today is before the current week (after a wrap-up, or a flight west), nothing can be placed on today, and a task added to today is saved in the bank.
 - Nothing is placed on a day before today, and a fixed-day recurring task on its day can't be moved off it. One that carried over is placed like any task.
 - The planner never writes to a row placed by hand. A week's first draft may place on any day from today on; after it, the planner writes only to days after today. This is what keeps Today from changing on its own.
 - A milestone's date falls between its goal's start and deadline; a deadline is never before the start date.
+
+## What the phone keeps
+
+The server is the source of truth. The phone keeps three things (ADR-010), none of them a second copy of the model:
+
+- **The week document:** the week read as the server sent it, one per open week. Today, a day and the bank are drawn from it. It is never edited on the phone.
+- **The queue:** changes not yet sent, in order. The screen shows the week document with these replayed on top.
+- **The last response of every other read,** for opening a screen instantly and reading it offline.
+
+Only these changes can wait in the queue: check off, uncheck, place on a day, send to the bank, swap, add a task, and a quitting goal's daily answer and urge rating. Three rules make that safe:
+
+- Each states its end result, so sending it twice changes nothing more.
+- A plan edit names the week it was made in, and is refused once the task has moved to another week.
+- A create is never refused over where it goes: a task added to a day that is no longer allowed is saved in the current week's bank.
 
 ## Where history lives
 
