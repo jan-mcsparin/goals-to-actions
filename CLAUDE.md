@@ -23,7 +23,7 @@ A personal, installable, mobile-first web app that connects aspirations → goal
 
 ## Non-negotiables
 
-- **Today opens instantly** (ADR-004): cached app shell, last-known plan in IndexedDB rendered first then refreshed, optimistic check-offs with an offline queue, current screen and view persisted across iOS restarts.
+- **Today opens instantly** (ADR-004): cached app shell, last-known plan in IndexedDB rendered first then refreshed, optimistic check-offs with an offline queue, current screen and view persisted across iOS restarts. How the cache and queue work is ADR-010: the week is one stored document, and unsent changes are replayed over it.
 - **Today only changes because of something the user did.** Tasks the user placed on a day stay there.
 - **No nagging.** The only unprompted questions are "Still matter?" (task rolled over two weeks) and a slipped opt-in deadline. No review prompts, no pace prompts, no shame language; falling short is "not yet."
 - **Weeks start Monday.** Maintenance is planned first, then goal work; days are never packed full (task cap set by intensity).

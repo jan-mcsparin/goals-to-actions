@@ -20,3 +20,7 @@ Today must open instantly, without waiting on the network:
 - Built in from the click-through onward, not retrofitted.
 - The server stays the source of truth; the device keeps a cache plus a queue of pending changes. Conflicts are rare with one user, but the sync design should handle a change made on the phone and the laptop at once (e.g. last write wins per task).
 - Remaining difference from native: no home-screen or lock-screen widget showing today's list without opening the app.
+
+## Revisited 2026-11-16: how the cache and the queue work
+
+[ADR-010](0010-week-document-and-replayed-queue.md) settles the sync design this left open: the phone stores the week as one document, shows it with unsent changes replayed on top, and sends a small set of changes in order. Two devices changing one task: the last write to arrive wins.
