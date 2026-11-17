@@ -14,6 +14,7 @@ For the API, an always-on container behind a load balancer costs roughly $25 a m
 
 - **The app lives at `goals-to-actions.jan-mcsparin.me`.**
 - **The front end and the API share that one origin.** CloudFront serves the built front end from a private S3 bucket at `/` and passes `/api/*` to the API. No CORS, and the session cookie is first-party.
+- **The API serves its routes under `/api`,** locally as well as hosted. CloudFront passes the path on unchanged, so the dev proxy does too, and a request looks the same in both places.
 - **The API runs on Lambda as a container image,** with Lambda Web Adapter in front of the same FastAPI app that runs locally. No AWS code in the application.
 - **Its database is one database on the shared instance.** The app connects with a role that can't change the schema.
 - **Migrations run inside AWS.** The pipeline invokes a function that runs dbmate; nothing outside the network reaches the database.
@@ -26,6 +27,7 @@ For the API, an always-on container behind a load balancer costs roughly $25 a m
 
 - This app adds almost nothing to the shared monthly cost: the function, the bucket and CloudFront are close to free at one person's use.
 - The first request after a quiet spell takes a second or two while the function starts. Today doesn't wait for it, and a check-off made in that moment is already optimistic (ADR-004).
+- **Checks on a real phone wait for this.** A service worker and a passkey both need the hosted address, so the on-phone criteria of front-end issues #8 and #43 are met only once the app is hosted. Until sign-in is built, a phone can still reach a laptop's API for everything else.
 - **The subdomain is hard to change.** A new origin means a new passkey (if that is the sign-in method) and reinstalling the app on the phone, which loses its stored plan and queue.
 - **What this asks of sign-in:** the session cookie is host-only (the `__Host-` prefix), never set for `.jan-mcsparin.me`. A passkey would be bound to the full subdomain. A method that sends email needs a way out of the private network.
 - **Cache headers carry the "new version with no prompt" rule** (front-end issue #8): hashed assets are cached for good; `index.html`, the service worker and the manifest are never cached.
@@ -34,5 +36,6 @@ For the API, an always-on container behind a load balancer costs roughly $25 a m
   - that the Python 3.15 image starts on Lambda in acceptable time;
   - how CloudFront is made the only way in to the API. A function URL behind CloudFront needs extra request signing for `PUT` and `POST`; an API Gateway HTTP API as the origin avoids that;
   - that the page fallback to `index.html` is done on the front-end path only (a CloudFront Function). CloudFront's error pages apply to the whole distribution and would turn the API's real 404s into the app's page;
-  - that `X-Time-Zone` and the cookie reach the API through CloudFront, and that nothing under `/api/` is cached.
+  - that `X-Time-Zone` and the cookie reach the API through CloudFront, and that nothing under `/api/` is cached;
+  - that each running copy of the API holds one database connection and checks it before use. The shared instance is small, a copy serves one request at a time, and the default pool allows fifteen.
 - Still to decide: sign-in, in its own ADR.
