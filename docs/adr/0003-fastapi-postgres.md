@@ -26,4 +26,4 @@ The data access library and migrations are decided in [ADR-007](0007-data-access
 
 ## Revisited 2026-11-16
 
-Hosting is decided in [ADR-011](0011-hosting-on-aws.md): AWS, with the front end and the API on one subdomain. Sign-in is still open.
+Hosting is decided in [ADR-011](0011-hosting-on-aws.md): AWS, with the front end and the API on one subdomain. Sign-in is decided in [ADR-012](0012-sign-in-with-a-passkey.md): a passkey, with the session in a cookie.

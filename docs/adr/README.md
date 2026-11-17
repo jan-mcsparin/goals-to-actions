@@ -19,3 +19,4 @@ Short records of decisions that shape what gets built: context, decision, and wh
 | [009](0009-week-opens-sunday-drafted-once.md) | A week opens on Sunday evening, closes on Monday or by hand, and is drafted once | Accepted |
 | [010](0010-week-document-and-replayed-queue.md) | The phone keeps the week as one document and replays unsent changes over it | Accepted |
 | [011](0011-hosting-on-aws.md) | Hosted on AWS: the front end and a Lambda API on one subdomain, behind CloudFront | Accepted |
+| [012](0012-sign-in-with-a-passkey.md) | Sign-in with a passkey; the session is a row in Postgres and a host-only cookie | Accepted |
