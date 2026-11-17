@@ -114,6 +114,7 @@ Branches:
 
 - **Did something that wasn't planned:** log it as done. It counts the same as planned work. Doing a planned session early is checking it off where it sits, on its day or pulled from the bank. A task you add by hand under a building goal counts towards the week's target too; the app doesn't remove a session to make up for it, so one may be left over. Send it to the bank, or let it lapse with the week.
 - **Partly done:** for the prototype, a task is done or not. Partial credit can come later if it's missed.
+- **No connection:** checking off, moving a task and adding one show at once and are sent when the connection is back. If a send fails and changes are waiting, Today says so in one quiet line ("3 changes waiting to send"). A change that no longer applies (the task was deleted on the laptop) is dropped without a message. Anything that needs the server's planning, such as a new goal, a pause or wrapping up, waits for a connection.
 
 ## Flow 6: See progress and check in at milestones
 
@@ -218,3 +219,4 @@ Settled questions (kept so the reasoning isn't lost):
 - Decided: only tasks you added and fixed-day items are asked "Still matter?". A flexible item's period is whole weeks; a month is the weeks whose Monday falls in it (Nov 16).
 - Decided: a check-off that arrives late, dated inside a closed week, still counts: a lapse isn't final (Nov 16).
 - Decided: a goal made or brought back midweek gets at most one session for each day left that week (Nov 16).
+- Decided: offline, only the frequent plan actions queue (check off, uncheck, place, back to bank, swap, add a task, a quitting answer); everything else needs a connection. A refused change is dropped silently, and Today shows one quiet line while changes are waiting (ADR-010).
