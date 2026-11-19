@@ -126,7 +126,7 @@ Whenever you want to look, plus a check-in at each milestone. It shows improveme
    - **Next** is the first milestone that isn't hit. One marked "not yet" stays Next until it's hit, so a check-in never passes over a milestone. Once every milestone is hit, the goal is Next.
 2. **Overall:** each aspiration with its goals, so you can see the whole picture at a glance.
 3. **Milestone check-in:** whenever you choose, tap Check in under Next check-in: "How did it go?", an optional result, then **Hit it** or **Not yet**. Milestones are checked in in order, so only Next can be. Each check-in is kept, so results have a history. A one-off goal has no check-ins: its steps are tasks, checked off like any other.
-4. **Milestone hit:** a short "Milestone hit: …" line, and Next moves to the following milestone right away, so progress points forward. With every milestone hit, the goal itself is Next; hitting it marks the goal reached, exactly as End goal → I reached it does.
+4. **Milestone hit:** a short "Milestone hit: …" line, and Next moves to the following milestone right away, so progress points forward. With every milestone hit, the goal itself is Next; hitting it marks the goal reached, exactly as End goal → I reached it does. Not yet on the goal itself is kept like any check-in: the goal carries on, and its result becomes Latest.
 
 Branches:
 
