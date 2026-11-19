@@ -53,7 +53,7 @@ The app is organized aspirations first, matching the model: **Aspirations tab �
   - **Aspiration:** a name and an optional why. The sheet stays open on "Saved." with **Add a goal for this** and **Done**.
   - **Recurring:** a name, **Fixed day** (a weekday, or the 1st–28th) or **Flexible** (once to 6 times a week, every two weeks, once a month), and an optional aspiration; with none it belongs to Keep life running.
 - **Settings:** reached by the gear at the top right of the Aspirations tab; it counts as Aspirations in the tab bar, and "‹ Aspirations" goes back.
-  - **Intensity:** Easing off / Normal / Going hard in one row, Normal to start, with "Sets how full days are and how much is free." A tap saves it, with no Save button and no confirmation; it stays until changed, and nothing suggests changing it. A failed save puts back the earlier choice. Nothing reads it yet; the planner will.
+  - **Intensity:** Easing off / Normal / Going hard in one row, Normal to start, with "Sets how full days are and how much is free." A tap saves it, with no Save button and no confirmation; it stays until changed, and nothing suggests changing it. A failed save puts back the earlier choice. Nothing reads it yet; Week will show a day over its cap as full.
   - **Week starts** Monday and **Notifications** Off are shown, not set. The app asks for no notification permission.
   - **Export my data** answers "Coming later."
 

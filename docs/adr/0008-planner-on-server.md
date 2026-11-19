@@ -30,3 +30,7 @@ Planning means filling a week's bank, rolling over and lapsing what wasn't finis
 
 - The server doesn't redraft later days after a change made on the phone. The one exception is lowering intensity.
 - A week's first draft may place on today. After it the planner writes only to days after today, and never to a task placed by hand.
+
+## Revisited 2026-11-19: what the planner places
+
+[ADR-013](0013-place-only-recurring-work.md) narrows it: the planner places only recurring work (fixed-day items on their day, goal sessions and flexible items spread evenly), and everything else waits in the bank. The cap is a guide shown on Week, so lowering intensity moves nothing either. Planning still runs on the server.
