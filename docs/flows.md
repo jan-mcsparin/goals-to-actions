@@ -131,7 +131,7 @@ Whenever you want to look, plus a check-in at each milestone. It shows improveme
 Branches:
 
 - **Not yet:** the milestone is marked not yet with your result, and it stays Next. A card on the goal's page leads with progress since your baseline ("You started at … Now: …"), then offers: **keep the date**, **move it**, or **adjust the milestone** (its line and date). Each puts it back to upcoming. The card stays until you pick one, and never appears anywhere else.
-- **Moving a date pushes the later ones out:** when a milestone's date moves later, every later milestone with a date moves by the same number of days, never past the goal's deadline (one that would lands on the deadline). Undated ones stay undated, and moving a date earlier pulls nothing in.
+- **Moving a date pushes the later ones out:** whenever a milestone's date moves later, whether through **move it** or **adjust the milestone**, every later milestone with a date moves by the same number of days, never past the goal's deadline (one that would lands on the deadline). Undated ones stay undated, and moving a date earlier pulls nothing in.
 - **A milestone's date passes:** nothing changes by itself, and there's no badge. It reads like any other date until you check in.
 - **No date on the milestone:** Next check-in reads "Whenever you choose."
 
