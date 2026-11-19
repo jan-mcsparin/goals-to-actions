@@ -52,9 +52,9 @@ A **week** is named by the date of its Monday.
 
 | Field | Notes |
 | --- | --- |
-| Intensity | Going hard, normal (the default) or easing off. Sets the daily task cap (3, 4 or 6), and so how much free time is protected. |
+| Intensity | Going hard, normal (the default) or easing off. Sets the daily task cap (3, 4 or 6) that Week shows a day against. A guide, never enforced (ADR-013). |
 | Last-known time zone | A zone name (`America/Denver`), sent by the phone with each request. Not a setting; there's nothing to change when you travel. |
-| Planned through week | The latest week that has been opened: its bank filled and its days drafted. From 6 p.m. on Sunday this is next week (ADR-009). |
+| Planned through week | The latest week that has been opened: its bank filled and its recurring work placed. From 6 p.m. on Sunday this is next week (ADR-009). |
 | Closed through week | The latest week that has been closed. The current week is the one after it or the phone's week, whichever is later, so the week never goes backwards. |
 
 Sign-in is a passkey with a session in a cookie ([ADR-012](adr/0012-sign-in-with-a-passkey.md)); its tables are added when the `sign-in` spec is finalised.
@@ -154,7 +154,7 @@ Maintenance, or a practice kept up. Each creates tasks.
 
 - **Neither the readable repeat ("Every Tuesday", "3 times a week") nor a next due day is stored.** The front end words the repeat from the schedule fields; the planner works out which days and periods are due when a week opens.
 - **A flexible item's period is whole weeks.** A week is its own period. A two-week period is the week of starts-on and the one after, repeating. A month is the weeks whose Monday falls in it, so four or five.
-- **With an aspiration, an item is planned as goal work** at that aspiration's priority; with none it is maintenance, placed first.
+- **With an aspiration, an item is placed as goal work** at that aspiration's priority; with none it is maintenance, placed first. A fixed item goes on its day; a flexible item's tasks are spread evenly across the week (ADR-013).
 - **Not yet offered:** yearly repeats, "every N weeks" and a time of day. Each is another schedule kind or one more column.
 
 ### tasks
@@ -275,7 +275,7 @@ No screen reads it. It's for recovery, debugging, and questions nobody has asked
 - A task's state and its rows agree: done, dropped and lapsed tasks have no row still in play, and a done task's last row is done.
 - A planned day falls inside its row's week. So when today is before the current week (after a wrap-up, or a flight west), nothing can be placed on today, and a task added to today is saved in the bank.
 - Nothing is placed on a day before today, and a fixed-day recurring task on its day can't be moved off it. One that carried over is placed like any task.
-- The planner never writes to a row placed by hand. A week's first draft may place on any day from today on; after it, the planner writes only to days after today. This is what keeps Today from changing on its own.
+- The planner places only recurring work: fixed-day tasks, goal sessions and flexible recurring tasks (ADR-013). It never writes to a row placed by hand. A week's first placement may use any day from today on; after it, the planner writes only to days after today. This is what keeps Today from changing on its own.
 - A milestone's date falls between its goal's start and deadline; a deadline is never before the start date.
 
 ## What the phone keeps

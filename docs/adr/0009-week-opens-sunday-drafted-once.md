@@ -1,6 +1,6 @@
 # ADR-009: A week opens on Sunday evening and is drafted once
 
-**Date:** 2026-11-16 · **Status:** Accepted
+**Date:** 2026-11-16 · **Status:** Accepted; the draft narrowed by ADR-013
 
 ## Context
 
@@ -32,3 +32,7 @@ ADR-006 and ADR-008 left open when a week is filled and when the planner runs. W
 - Three weeks away reads as silence, not three weeks of lapsed sessions. The cost: a fixed-day item due in the gap (rent on the 1st) never becomes a task.
 - Two weeks can be open at once, from Sunday evening to the close. Pausing a goal and adding a task have to act on both.
 - The Week screen gains a Next week view and the wrap-up. "The app's own draft exists only for the current week" (ADR-006) no longer holds.
+
+## Revisited 2026-11-19: only recurring work is placed
+
+[ADR-013](0013-place-only-recurring-work.md) narrows the draft. When a week opens, the app places only its recurring work; tasks now due, a one-off goal's steps and carry-overs wait in the bank. Later arrivals that are recurring work are placed on days after today; carry-overs go to the bank. Lowering intensity no longer lifts anything off a day. Opening, closing, wrapping up and the two markers are unchanged.

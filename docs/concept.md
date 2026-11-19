@@ -42,7 +42,7 @@ Maintenance goes in first, goal work fits into what's left, and the day is never
 1. **Name an aspiration:** the underlying motivation, why I want what I want ("Be fit, so I can keep skiing, biking and playing hockey at a high level for decades"). Changes rarely.
 2. **Set a goal** that defines concretely what reaching that aspiration means to me, from one sentence. One aspiration can have several goals. I set the milestones and weekly targets myself in the prototype; app suggestions are a nice-to-have for later.
 3. **Task bank:** each week's tasks sit in a bank: goal tasks (generated or added by hand) and recurring life maintenance.
-4. **Proposed daily plan:** the app drafts the week, fitting maintenance first, then goal work, and leaving free time, and keeps it updated as the week goes, so I can look ahead anytime. I accept, swap or skip. A plan exists even if I never open it.
+4. **Daily plan:** the app places the week's recurring work (maintenance on its day, workouts and other sessions spread out), and I place the rest from the bank, leaving free time. I can look ahead anytime, and swap or skip. A plan exists even if I never open it.
 5. **Do and check off,** with each task showing the goal it serves and the aspiration behind it.
 6. **See progress:** pacing ("2 of 3 runs, 3 days left"), milestones hit, and improvement, not just effort.
 7. **Rollovers and reviews:** unfinished tasks I added roll over with no penalty, with a gentle "still matter?" after two weeks; missed weekly sessions lapse, and the new week starts fresh. Reviews happen whenever I want them; the app doesn't prompt.

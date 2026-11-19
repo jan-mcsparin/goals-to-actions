@@ -26,13 +26,13 @@ A personal, installable, mobile-first web app that connects aspirations → goal
 - **Today opens instantly** (ADR-004): cached app shell, last-known plan in IndexedDB rendered first then refreshed, optimistic check-offs with an offline queue, current screen and view persisted across iOS restarts. How the cache and queue work is ADR-010: the week is one stored document, and unsent changes are replayed over it.
 - **Today only changes because of something the user did.** Tasks the user placed on a day stay there.
 - **No nagging.** The only unprompted questions are "Still matter?" (task rolled over two weeks) and a slipped opt-in deadline. No review prompts, no pace prompts, no shame language; falling short is "not yet."
-- **Weeks start Monday.** Maintenance is planned first, then goal work; days are never packed full (task cap set by intensity).
+- **Weeks start Monday.** The app places only recurring work: fixed-day items on their day, goal sessions and flexible items spread evenly. Everything else waits in the bank for the person to place (ADR-013). The task cap set by intensity is a guide shown on Week, never enforced.
 
 ## Conventions
 
 - Keep logic out of components: the API client, types and client-side rules live in plain TypeScript modules and hooks; components only render. This keeps a later move to Capacitor or React Native cheap.
-- **The API does the planning** (ADR-008): filling a week, rollover and lapse, drafting days. The front end shows the plan and sends what the person did.
-- **A week is drafted once** (ADR-009): it opens on Sunday evening, closes on Monday or when the person wraps it up, and after the draft the app only places new work as it arrives.
+- **The API does the planning** (ADR-008): filling a week, rollover and lapse, placing recurring work. The front end shows the plan and sends what the person did.
+- **A week's recurring work is placed once** (ADR-009, ADR-013): it opens on Sunday evening, closes on Monday or when the person wraps it up, and after that the app only places new recurring work as it arrives.
 - During the click-through, screens get data through the same API-client functions the real app will use, returning mock data for now.
 - When a change alters behavior described in `docs/`, update the doc in the same piece of work. New architecture-level decisions get an ADR (`docs/adr/README.md` says when).
 - Start Claude Code here for work spanning both repos, or inside `web-frontend/` or `api/` for focused work. Commit in the repo the change belongs to.
