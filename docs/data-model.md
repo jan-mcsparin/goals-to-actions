@@ -217,7 +217,7 @@ A lapse isn't final. A check-off that arrives late, dated inside the closed week
 
 A week ends when its Sunday is over, or when the person wraps it up (ADR-009). A week with no rows was never opened, and is never filled or closed after the fact.
 
-**Set aside** is what happens to a goal's unfinished tasks when it's paused, ended or reached, to a recurring item's when it's turned off, and to both when an aspiration is retired with its work paused. It includes tasks placed by hand, and covers every open week: this one and, from Sunday evening, the next. The row keeps its planned day but no day shows it. (The first model called this "skipped", which read like "Back to bank". It isn't.)
+**Set aside** is what happens to a goal's unfinished tasks when it's paused, ended or reached, to a recurring item's when it's turned off, and to both when an aspiration is retired with its work paused. It includes tasks placed by hand, and covers every open week: this one and, from Sunday evening, the next. The row keeps its planned day but no day shows it. A task added under a goal that isn't active (queued offline while another device paused it) is saved set aside too, and comes back with the goal: a create is never refused. (The first model called this "skipped", which read like "Back to bank". It isn't.)
 
 **Coming back** (resume, reopen, go again, turning an item on):
 
