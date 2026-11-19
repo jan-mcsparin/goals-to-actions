@@ -59,3 +59,9 @@ Also found:
 - **Podman, not Docker:** Postgres and dbmate run under `podman compose`.
 - **The dbmate image's `pg_dump` (18.6) writes `pg_attver` values that change on every run,** so `schema.sql` never stayed the same. The API's `bin/dbmate` dumps the schema with the Postgres container's own `pg_dump` instead. Worth trying dbmate's own dump again when its image moves to a newer `pg_dump`.
 - **Every query gets its own row model,** even when the columns match (`GetUserRow`, `SetIntensityRow`), and parameters are keyword-only. Generated code doesn't follow ruff's style, so it's left out of ruff and still type-checked.
+
+## Revisited 2026-11-18: `numeric`, from `tasks-week`
+
+- **`numeric` is `decimal.Decimal`** in the generated code, for the value logged on a task and a weekly target's amount. The API sends it as a JSON number and turns a number it receives into a `Decimal` through its string, so 3.1 is stored as 3.1 and not as the nearest binary fraction.
+- **A column from a `left join lateral` comes out as never empty,** although it can be. Generated row models are Pydantic, so the empty value fails when the row is read. A plain `left join` on the row's id, chosen in a subquery, gives the same row and is typed as optional.
+- **A `:one` query returning a single column is typed `Any`.** Queries return the whole row (`returning *`) instead.

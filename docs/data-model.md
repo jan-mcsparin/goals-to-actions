@@ -195,7 +195,7 @@ What the screens show comes from these rows:
 | "Back to bank" | The planned day cleared. Nothing else changes. |
 | Upcoming list | Open tasks with a later due date and no row yet. |
 | A one-off goal's waiting steps | Its open tasks with no row yet. |
-| A waiting step checked off on the goal's page | A done row on the day it was done, in that day's week. Unchecking removes the row. |
+| A waiting step checked off on the goal's page | A done row on the day it was done, in that day's week. Unchecking puts it back in play on that day, as any uncheck does. |
 | Times carried over | The task's rows with the outcome rolled over. A flexible item carrying inside its period is rolled over too, which is why it is never asked "Still matter?". |
 | Next week, from Sunday evening | The next week's rows, made when it opens. They can be moved but not checked off until that week is the current one. |
 | Pinned to a later week | A row for that week with a planned day, placed by hand. The model allows it; the app doesn't offer it yet. |
