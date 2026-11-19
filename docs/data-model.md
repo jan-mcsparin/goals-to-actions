@@ -149,10 +149,10 @@ Maintenance, or a practice kept up. Each creates tasks.
 | Schedule kind | **Weekly on** a weekday, **monthly on** a day from the 1st to the 28th, or **flexible**. |
 | Weekday, day of month | For the two fixed kinds. |
 | Times, period | Flexible only: 1 to 6 times a week, once every two weeks, or once a month. |
-| Starts on | The day it's first due. Also anchors a two-week period. |
-| Active | One on/off state. Turned off by hand and paused by retiring its aspiration are the same state; the audit log holds which. |
+| Starts on | The first day it can be due; a fixed item is first due on its first matching day from here. Also anchors a two-week period. |
+| Active | One on/off state. Turned off by hand and paused by retiring its aspiration are the same state; the audit log holds which. Retiring its aspiration and keeping its work going, or turning it on after its aspiration was retired, leaves it with no aspiration. |
 
-- **The readable repeat ("Every Tuesday", "3 times a week") and the next due day are worked out**, not stored.
+- **Neither the readable repeat ("Every Tuesday", "3 times a week") nor a next due day is stored.** The front end words the repeat from the schedule fields; the planner works out which days and periods are due when a week opens.
 - **A flexible item's period is whole weeks.** A week is its own period. A two-week period is the week of starts-on and the one after, repeating. A month is the weeks whose Monday falls in it, so four or five.
 - **With an aspiration, an item is planned as goal work** at that aspiration's priority; with none it is maintenance, placed first.
 - **Not yet offered:** yearly repeats, "every N weeks" and a time of day. Each is another schedule kind or one more column.
@@ -217,7 +217,7 @@ A lapse isn't final. A check-off that arrives late, dated inside the closed week
 
 A week ends when its Sunday is over, or when the person wraps it up (ADR-009). A week with no rows was never opened, and is never filled or closed after the fact.
 
-**Set aside** is what happens to a goal's unfinished tasks when it's paused, ended or reached, to a recurring item's when it's turned off, and to both when an aspiration is retired with its work paused. It includes tasks placed by hand, and covers every open week: this one and, from Sunday evening, the next. The row keeps its planned day but no day shows it. A task added under a goal that isn't active (queued offline while another device paused it) is saved set aside too, and comes back with the goal: a create is never refused. (The first model called this "skipped", which read like "Back to bank". It isn't.)
+**Set aside** is what happens to a goal's unfinished tasks when it's paused, ended or reached, to a recurring item's when it's turned off, and to both when an aspiration is retired with its work paused. It includes tasks placed by hand, and covers every open week: this one and, from Sunday evening, the next. The row keeps its planned day but no day shows it. A task added under a goal that isn't active (queued offline while another device paused it) is saved set aside too, and comes back with the goal: a create is never refused. Unchecking a task whose goal isn't active, or whose item is off, leaves it set aside too. (The first model called this "skipped", which read like "Back to bank". It isn't.)
 
 **Coming back** (resume, reopen, go again, turning an item on):
 
