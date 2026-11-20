@@ -165,7 +165,7 @@ Branch:
 
 **Deleting (for mistakes):**
 
-9. A task, milestone, goal, aspiration or recurring item made by mistake can be deleted. It disappears everywhere; deleting a goal takes its tasks, milestones and records with it. This isn't dropping: a dropped task was a decision and stays in history. No screen offers delete yet.
+9. A task, milestone, goal, aspiration or recurring item made by mistake can be deleted. It asks once first, and there's no undo. It disappears everywhere; deleting a goal takes its tasks, milestones and records with it. Deleting an aspiration leaves its goals and recurring items with none (Other goals, Keep life running). Deleting a recurring item takes its open tasks; the ones done stay in history. This isn't dropping: a dropped task was a decision and stays in history. No screen offers delete yet.
 
 ## Flow 8: Set intensity
 
@@ -207,6 +207,7 @@ Settled questions (kept so the reasoning isn't lost):
 - Decided: a quitting goal's unanswered day is unknown, not a slip; the urge rating has three levels and is never a prompt (Nov 13).
 - Decided: a run of held days counts held answers since the last no. Unknown days don't break it, and the goal's page counts them so they can be filled in later, which gently invites it (Nov 19).
 - Decided: drop and delete are different; delete is for mistakes and is offered on everything (Nov 13).
+- Decided: deleting an aspiration leaves its goals and items with none; deleting a recurring item keeps its done tasks; no undo (Nov 19).
 - Decided: a recurring item is on or off; paused by a retired aspiration and turned off by hand are the same state (Nov 13).
 - Decided: aspirations have no Review. Its choices repeated Edit, move up or down and Retire, which sit on the aspiration's page anyway.
 - Decided: a week opens at 6 p.m. on the Sunday before it, and closes when Sunday ends or when you wrap it up. There's no job, and a week nobody opened is skipped (Nov 16, ADR-009).
