@@ -22,7 +22,7 @@ The logo, chosen Nov 19, 2026: **stepping stones to a star.** Three dots that gr
 
 ## For the app
 
-`web-frontend/public/` still has the placeholder checkmark icons from the scaffold. Replace `icon.svg`, `icon-192.png`, `icon-512.png` and `apple-touch-icon.png` from `app-icon.svg`, and use `logo-mark-small.svg` for the favicon.
+`web-frontend/public/` has the icons (web-frontend #66): `icon-512.png`, `icon-192.png` and `apple-touch-icon.png` rendered from `app-icon.svg` with macOS `sips`, and `icon.svg`, the favicon, from `logo-mark-small.svg`, switching to the on-dark colours in a dark browser. Render them again if the mark changes. The sign-in page draws the mark itself (`LogoMark.tsx`).
 
 ## Open
 
