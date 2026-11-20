@@ -85,7 +85,7 @@ The heart of the app. The app places the recurring work, which has an obvious pl
    - **Fixed-day items** go on their day ("trash every Tuesday", "rent on the 1st").
    - **A goal's weekly sessions and flexible recurring items** are spread evenly across the week: 3 lifting sessions go on Monday, Wednesday and Friday. Where there's a choice, they go on the lighter days, maintenance first, then goals in the order of their aspirations.
    - **Everything else waits in the bank:** tasks you added, a one-off goal's steps, tasks now due, and carry-overs. You put them on days yourself, on Next week from Sunday evening or any time during the week.
-   - **The cap is a guide** (flow 8). A day over it shows as full; the app doesn't hold anything back or move anything because of it.
+   - **The cap is a guide** (flow 8). A day that reaches it shows as full; the app doesn't hold anything back or move anything because of it.
 2. **Throughout the week:** the plan is yours to change. You can look ahead at any day and adjust it, and there's no finalize step. Today's plan changes only because of something you did.
 3. **Whenever you open it** (often the next morning): today's plan is shown in three groups: keeping life running, moving forward, and free time. Free time is the time tasks don't fill; it holds no tasks.
 4. You can:
@@ -98,7 +98,7 @@ The heart of the app. The app places the recurring work, which has an obvious pl
 Branches:
 
 - **You never open the plan:** it still stands. Skipping planning doesn't mean having no plan.
-- **A day is over the cap:** Week shows it as full. Nothing is moved.
+- **A day reaches the cap:** Week shows it as full. Nothing is moved.
 - **You edit a future day:** it stays there, and the app places new recurring work around it.
 - **You first open the app midweek:** the week's recurring work is placed from that day on. A fixed-day item whose day has passed goes on that day.
 
@@ -172,7 +172,7 @@ Branch:
 Anytime, and only when you choose. The app never prompts about pace.
 
 1. Pick **Going hard**, **Normal** or **Easing off**.
-2. Intensity sets how many tasks make a day full: 3 for Easing off, 4 for Normal, 6 for Going hard. Everything on the day counts. It's a guide: Week shows a day over it as full, and you can go over it.
+2. Intensity sets how many tasks make a day full: 3 for Easing off, 4 for Normal, 6 for Going hard. Everything on the day counts, done tasks too; dropped and set-aside ones don't. It's a guide: Week shows a day that reaches it as full, and you can go over it.
 3. Changing it moves nothing. The new cap shows on Week at once (ADR-013).
 4. For the prototype, the setting stays until you change it. Whether it should be able to expire on its own is left open.
 
@@ -211,6 +211,7 @@ Settled questions (kept so the reasoning isn't lost):
 - Decided: a week opens at 6 p.m. on the Sunday before it, and closes when Sunday ends or when you wrap it up. There's no job, and a week nobody opened is skipped (Nov 16, ADR-009).
 - Decided: the app places a week's recurring work once, then only places new recurring work as it arrives. "Back to bank" means the bank, and a freed slot isn't refilled (Nov 16, replacing "any change reflows the rest of the week's draft").
 - Decided: the cap is 3, 4 or 6 tasks a day and counts everything on the day. It's a guide shown on Week: the app never moves or refuses anything because of it (Nov 19, replacing "the planner never takes a day over the cap" from Nov 16).
+- Decided: a day is full once it reaches the cap (4 tasks on Normal), so the mark is consistent; some days just have to be busy, and nothing is capped or removed. The planner doesn't look at the cap when it places recurring work (Nov 19).
 - Decided: the app places only recurring work. Fixed-day items go on their day; a goal's sessions and flexible items are spread evenly. Everything else, carry-overs included, waits in the bank for you to place (Nov 19, ADR-013, replacing a full draft of the week with goals taking turns under the cap).
 - Decided: a task added by hand under a building goal counts towards its target, and the app never removes a session to make up for it. A one-off goal's step with no date waits on the goal's page until you pull it in or date it (Nov 16).
 - Decided: wrapping up doesn't change what rolls over. Sessions still lapse; a week of 1 of 3 is followed by 3 (Nov 16).
