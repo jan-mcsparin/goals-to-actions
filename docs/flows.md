@@ -205,6 +205,7 @@ Settled questions (kept so the reasoning isn't lost):
 - Decided: unfinished weekly-target tasks and flexible recurring items lapse; hand-added tasks and fixed-day items roll over (Nov 13, replacing "everything rolls over").
 - Decided: a slipped deadline is pushed back or ends the goal; "recommit" and "rethink" are gone, and there's no "missed" status (Nov 13).
 - Decided: a quitting goal's unanswered day is unknown, not a slip; the urge rating has three levels and is never a prompt (Nov 13).
+- Decided: a run of held days counts held answers since the last no. Unknown days don't break it, and the goal's page counts them so they can be filled in later, which gently invites it (Nov 19).
 - Decided: drop and delete are different; delete is for mistakes and is offered on everything (Nov 13).
 - Decided: a recurring item is on or off; paused by a retired aspiration and turned off by hand are the same state (Nov 13).
 - Decided: aspirations have no Review. Its choices repeated Edit, move up or down and Retire, which sit on the aspiration's page anyway.

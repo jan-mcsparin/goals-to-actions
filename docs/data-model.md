@@ -234,7 +234,9 @@ Quitting goals only. Not tasks: they never enter the bank or count against the d
 | Goal, day | One row per goal per day. |
 | Held | Yes or no. |
 
-**No row means unknown**, not a slip. A week away is a week of no answers, not seven failures. Streaks are worked out, never stored.
+**No row means unknown**, not a slip. A week away is a week of no answers, not seven failures. Streaks are worked out, never stored. A run of held days counts held answers since the last no; an unknown day neither ends it nor adds to it, and the read counts the unknown days inside it so they can be filled in. Any day from the goal's start to today can be answered, changed or cleared later. Once a goal is ended or reached, its record stops on that day: later days aren't answered or counted as unknown.
+
+A day is named by its goal and date, so the server makes the row's id. Clearing an answer sets `deleted_at`: the day is unknown again. The same goes for urge ratings.
 
 ### urge_ratings
 
