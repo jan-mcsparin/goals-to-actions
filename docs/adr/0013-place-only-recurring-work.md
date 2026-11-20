@@ -14,7 +14,7 @@ Some work has an obvious place, though. A fixed-day item has one right day. Repe
   - a fixed-day recurring task goes on its day;
   - a building goal's weekly sessions and a flexible recurring item's tasks are spread evenly across the week (3 a week: Monday, Wednesday, Friday).
 - **Everything else waits in the bank** for the person to place: tasks added by hand, a one-off goal's steps, tasks now due, and carry-overs.
-- **The cap is a guide, not a rule.** Intensity still sets 3, 4 or 6 tasks a day, and Week shows a day over it as full. The app never moves or refuses anything because of it, and changing intensity moves nothing.
+- **The cap is a guide, not a rule.** Intensity still sets 3, 4 or 6 tasks a day, and Week shows a day over it as full (later made "once it reaches it": `flows.md`, decided Nov 19). The app never moves or refuses anything because of it, and changing intensity moves nothing.
 - **When placement happens is unchanged from ADR-009,** except for carry-overs. Recurring work is placed when a week opens, and after that as it arrives (a new goal's sessions, a raised target, a new or changed recurring item), on days after today. Carry-overs go to the bank.
 - **Smart placement can come later** as something the person asks for, such as a "suggest a plan" button. The bank-first design leaves room for it.
 
