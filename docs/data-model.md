@@ -57,7 +57,18 @@ A **week** is named by the date of its Monday.
 | Planned through week | The latest week that has been opened: its bank filled and its recurring work placed. From 6 p.m. on Sunday this is next week (ADR-009). |
 | Closed through week | The latest week that has been closed. The current week is the one after it or the phone's week, whichever is later, so the week never goes backwards. |
 
-Sign-in is a passkey with a session in a cookie ([ADR-012](adr/0012-sign-in-with-a-passkey.md)); its tables are added when the `sign-in` spec is finalised.
+Sign-in is a passkey with a session in a cookie ([ADR-012](adr/0012-sign-in-with-a-passkey.md)). A user is added by a command run inside AWS, which also makes their first one-time code; there is no sign-up.
+
+### Sign-in
+
+Four tables hold everything sign-in remembers; the API holds nothing between requests. Their ids are made on the server, since nothing here is created offline. Nothing secret is kept: a token or a code is stored only as its SHA-256.
+
+| Table | Fields | Notes |
+| --- | --- | --- |
+| `passkeys` | Credential id, public key, sign count | A person can have several. Audited. |
+| `sign_in_codes` | Code hash, expires at, used at | Long, random, used once, gone in ten minutes. Audited: who was given a code and when. |
+| `sessions` | Token hash, last used at | Lasts 90 days from its last use, which is written at most once a day. Ending one sets its deleted time. Not audited: no token hashes in the log, and no row each day a session is used. |
+| `sign_in_challenges` | Kind (add a passkey, sign in), challenge, expires at | A sign-in under way. Has an owner only when adding a passkey: a sign-in's user isn't known until the passkey says. Deleted when used, gone in five minutes. Has only `id`, `user_id` and `created_at` of the shared columns, and isn't audited. |
 
 ### aspirations
 
