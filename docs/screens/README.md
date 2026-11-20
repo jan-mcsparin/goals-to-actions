@@ -11,6 +11,7 @@ Low-fidelity sketches from stage 3 (Nov 2, 2026). They settle layout and behavio
 - Three groups: **Keep life running**, **Move forward**, **Free time**. Keep life running holds maintenance and tasks with no goal ("Fill out my ballot"). Free time is the time tasks don't fill, not a list of tasks; it reads "The rest is yours." Timed tasks show "by 7 a.m." or "at 6 p.m." and anchor the order; untimed tasks follow.
 - Each goal task shows its goal and aspiration ("Be strong · Be fit"). In **By goal**, each card is titled the same way. Under each card's title, Keep life running included, a thin bar shows how much of that card is done on the day (bar only, no count). List has no per-group bars.
 - Tap a task to mark it done; tap again to undo.
+- **Still matter?** A task you added, or a fixed-day item, that has rolled over twice shows a quiet card at the top of Today: the question, the task's title, and **Keep**, **Reschedule** (the day picker) and **Drop**. **Not now** waves it off until tomorrow without answering; ignoring it changes nothing. The card never says how long the task has waited. It shows on Today only, not on other days.
 - Progress for today at the top ("1 of 4 done"). Weekly progress per goal lives on the Week screen.
 - The header (heading, "1 of 4 done", progress bar, and "‹ Week" on an opened day) stays pinned while the list scrolls. The List / By goal toggle scrolls away.
 - Toggle between **List** (default) and **By goal**. The chosen view is remembered (ADR-004).
@@ -22,6 +23,8 @@ Low-fidelity sketches from stage 3 (Nov 2, 2026). They settle layout and behavio
 
 - Weekly progress per goal ("1 of 3") with a pacing line: "6 days left · on pace", "6 days left · 1 more to plan", or "Done for the week". Nothing else, and never a warning.
 - Monday to Sunday. Today highlighted, past days dimmed; an empty day reads "Free day". Tap a day to open it like Today, with every Today action; "‹ Week" goes back. On past days, Pull from bank and Swap are hidden.
+- **Next week:** from 6 p.m. on Sunday a **This week | Next week** toggle appears under the heading, and the choice is remembered. Next week shows its own range, days and bank. Its tasks can be put on a day, sent back to the bank and swapped, but not checked off. The toggle goes once next week has become the current one.
+- **Wrap up this week** sits at the bottom of Next week. It opens a sheet that lists what **carries over to next week** and what **ends with this week**, as the API says for each task; an empty list is left out. **Wrap up this week** confirms and makes next week the current one, with no undo; **Not yet** closes the sheet. Nothing prompts it.
 - Fixed-day items (trash on Tuesday) stay put: they have no ⋯ menu, but can be checked off.
 - **The bank:** this week's tasks not yet on a day, as chips. Tap one, then pick a day (today or later). Drag may come later. Anything placed by hand stays put.
 - A tab bar switches screens; the open screen, including an opened day, is remembered. It's **Today | Week | + | Aspirations**: the + (read as "Add" by screen readers, and never marked as the current tab) opens the Add sheet over whatever screen is open.
