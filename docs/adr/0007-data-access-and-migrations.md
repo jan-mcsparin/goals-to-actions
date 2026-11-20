@@ -65,3 +65,7 @@ Also found:
 - **`numeric` is `decimal.Decimal`** in the generated code, for the value logged on a task and a weekly target's amount. The API sends it as a JSON number and turns a number it receives into a `Decimal` through its string, so 3.1 is stored as 3.1 and not as the nearest binary fraction.
 - **A column from a `left join lateral` comes out as never empty,** although it can be. Generated row models are Pydantic, so the empty value fails when the row is read. A plain `left join` on the row's id, chosen in a subquery, gives the same row and is typed as optional.
 - **A `:one` query returning a single column is typed `Any`.** Queries return the whole row (`returning *`) instead.
+
+## Revisited 2026-11-19: row-level security and invited testers
+
+A few invited testers will share the database with Jan (ADR-012's note of the same date). That makes them the "second user" this ADR said row-level security waits for, but for people Jan knows, the owner in every query and every foreign key is enough. A test in the `sign-in` slice proves a second user can't read or change the first's rows through any route. **Row-level security now waits for open sign-up.**

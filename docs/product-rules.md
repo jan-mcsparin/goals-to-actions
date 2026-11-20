@@ -52,4 +52,4 @@ Targets start from the baseline and ramp gradually. In the prototype the person 
 
 ## Out of scope for the prototype
 
-Native iOS, other users and sign-up, AI suggestions, calendar and watch integrations, partial credit on tasks, one task serving two goals, and the full safety principles (required before anyone else uses the app).
+Native iOS, sign-up and open sign-up, AI suggestions, calendar and watch integrations, partial credit on tasks, one task serving two goals, and the full safety principles (required before anyone the founder doesn't know uses the app, or before the app suggests much on its own). A few invited testers the founder knows can use it before then (ADR-012, revisited 2026-11-19).
