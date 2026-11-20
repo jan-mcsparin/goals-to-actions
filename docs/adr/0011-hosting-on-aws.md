@@ -36,6 +36,7 @@ For the API, an always-on container behind a load balancer costs roughly $25 a m
   - that the Python 3.15 image starts on Lambda in acceptable time;
   - how CloudFront is made the only way in to the API. A function URL behind CloudFront needs extra request signing for `PUT` and `POST`; an API Gateway HTTP API as the origin avoids that;
   - that the page fallback to `index.html` is done on the front-end path only (a CloudFront Function). CloudFront's error pages apply to the whole distribution and would turn the API's real 404s into the app's page;
-  - that `X-Time-Zone` and the cookie reach the API through CloudFront, and that nothing under `/api/` is cached;
+  - that `X-Time-Zone`, the cookie and `Origin` reach the API through CloudFront, and that nothing under `/api/` is cached. Without `Origin` every write is refused (ADR-012); a cached response could reach another user;
+  - a rate limit on `/api/sign-in/*` (an API Gateway throttle or a WAF rate rule), the only routes open without a session. Starting a sign-in writes a row; expired ones are cleared as new ones are made, but nothing else stops a loop. It only holds if CloudFront is the only way in;
   - that each running copy of the API holds one database connection and checks it before use. The shared instance is small, a copy serves one request at a time, and the default pool allows fifteen.
 - Still to decide: sign-in, in its own ADR.
