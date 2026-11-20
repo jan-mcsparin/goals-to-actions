@@ -62,3 +62,13 @@ Four methods were compared:
   - which request header the origin check reads (`Origin` or `Sec-Fetch-Site`), and that CloudFront passes it through;
   - whether the browser's own functions for turning passkey options to and from JSON are on every device in use, or a small helper is needed.
 - Still open, and not needed for one person: sign-up, deleting an account, row-level security (ADR-007).
+
+## Revisited 2026-11-19: a few invited testers
+
+Jan wants his wife and a couple of friends to test along once the app is hosted. Everyone using it is someone he knows, so no sign-up page is needed:
+
+- **The command that makes a code can also make the user.** "Add a user" creates the user and prints their first one-time code. Nobody gets an account unless someone with the AWS account runs it.
+- **There is still no sign-up page,** and no open sign-up. Those, deleting an account and exporting data wait until people Jan doesn't know use the app.
+- **Getting back in after losing every passkey** stays the AWS command line, run by Jan for whoever asks. That's fine for a few people he knows.
+- **Testers should know** that Jan can see their data in the database, and that removing it is done by hand for now.
+- Row-level security still waits: see ADR-007's note of the same date.
