@@ -54,12 +54,12 @@ Four methods were compared:
 - **The subdomain is now fixed in one more way:** a passkey made for it works nowhere else.
 - **Passkeys need HTTPS on a real name, or `localhost`.** The laptop can sign in to a local API. A phone pointed at the laptop's address can't, so the installed app is tested against the hosted one.
 - Tests make a session row directly. They don't act out a passkey.
-- `data-model.md` gains the tables when the spec is finalised. Whether sessions and codes carry the audit trigger like every other table (API shared decision 3) is settled there; the audit log shouldn't collect token hashes.
+- `data-model.md` lists the four sign-in tables. Passkeys and codes carry the audit trigger; sessions and challenges don't, so the audit log collects no token hashes (settled when built).
 - **To confirm when it's built:**
   - that iOS keeps the cookie for the installed app as long as the session lasts, with nothing cutting it to seven days;
   - that the passkey sheet works inside the installed app, not only in Safari;
   - that the library and `cryptography` install on Python 3.15 in the Lambda image;
-  - which request header the origin check reads (`Origin` or `Sec-Fetch-Site`), and that CloudFront passes it through;
+  - that CloudFront passes the `Origin` header through to the API (its origin request policy). The check reads `Origin`, which browsers send on every write, same-origin included; a write without it is refused (settled when built, 2026-11-20);
   - whether the browser's own functions for turning passkey options to and from JSON are on every device in use, or a small helper is needed.
 - Still open, and not needed for one person: sign-up, deleting an account, row-level security (ADR-007).
 
