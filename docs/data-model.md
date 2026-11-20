@@ -264,7 +264,13 @@ No screen reads it. It's for recovery, debugging, and questions nobody has asked
 ## Drop and delete
 
 - **Drop** is "I decided not to do this": the answer No to "Still matter?". The task's state becomes dropped and it stays in history.
-- **Delete** is "this was a mistake". It's offered on tasks, milestones, goals, aspirations and recurring items. The row gets a deleted time and is hidden everywhere; deleting a goal takes its tasks, milestones, check-ins and records with it. The row stays in the database so the delete reaches your other devices.
+- **Delete** is "this was a mistake". It's offered on tasks, milestones, goals, aspirations and recurring items. The row gets a deleted time and is hidden everywhere. The row stays in the database so the delete reaches your other devices. What goes with it:
+  - a task: its week records;
+  - a milestone: its check-ins; the milestones after it move up;
+  - a goal: its tasks and their week records, milestones, check-ins, weekly targets, quit days and urge ratings. A recurring item continued from it stays and forgets the goal;
+  - an aspiration: nothing. Its goals and recurring items stay with no aspiration; the aspirations below it move up;
+  - a recurring item: its open tasks. Its done, dropped and lapsed tasks stay as history, with no item and the origin "recurring item".
+- A deleted session or recurring task is never made again: the rule that keeps one task per goal or item, period and number counts deleted rows. Positions don't: a new aspiration or milestone can take a deleted one's place.
 
 ## Rules the data must keep
 
