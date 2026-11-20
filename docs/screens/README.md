@@ -62,13 +62,27 @@ The app is organized aspirations first, matching the model: **Aspirations tab �
 
 ![Goal detail: condensed and expanded milestone timeline](goal-detail-timeline.png)
 
+## Sign-in
+
+Designed Nov 20 from [ADR-012](../adr/0012-sign-in-with-a-passkey.md) and the brand's logo (stepping stones to a star). Settled with Jan the same day; where the build differs from the sketch, the notes below say so. Sign-in, the code and sign out are built in web-frontend #48; the session-ended sheet comes with the stored week and the queue (web-frontend #43).
+
+![Sign-in screens: sign in, one-time code, add a passkey, session ended, sign out](sign-in.png)
+
+- **Sign in** (no session on this device): the logo and wordmark, one line ("Small steps today toward who you want to be."), **Sign in with Face ID**, and **New device? Use a one-time code**. A cancelled or failed passkey shows a calm line ("Sign-in didn't finish. Try again when you're ready."); never an error tone.
+- **One-time code:** one field (`autocomplete="one-time-code"`) and Continue. A wrong, used or expired code: "That code didn't work. It may already have been used, or be more than ten minutes old. Ask for a new one." No name in the copy.
+- **Add a passkey:** "Code accepted", then "Add a passkey to this device" (Face ID from now on; iCloud Keychain carries it to the Mac). Then into the app. The sketch's tester note is left out.
+- **Session ended** (a 401 while using the app), **built with #43:** not a page. The app keeps showing what the phone has stored, with a sheet: "Sign in to keep saving… 3 changes will send as soon as you're back in." **Not now** leaves a small banner on the screen ("Not signed in · N changes waiting · Sign in"). The queue waits (ADR-010). Until then, a 401 shows the sign-in page.
+- **Sign out:** an Account section at the bottom of Settings with Sign out. No "Signed in as": the API has no name for a user. The sheet ("Sign out of this device?") says what's cleared from the phone and that data stays on the server. With unsent changes it warns first, and the button reads **Sign out anyway** (with #43).
+- Buttons stay the app's #2f6f4f: white on the logo's #1E8A5F falls short of 4.5:1. The wordmark uses the system font.
+- **Open:** the final tagline.
+
 ## Core loop
 
 ![Core loop](core-loop.png)
 
 ## Screen inventory
 
-Eight screens cover the prototype. Prompts like "still matter?" and "not yet" appear as cards on these screens, not as screens of their own.
+Eight screens cover the prototype, plus Sign-in, shown in place of the app while signed out. Prompts like "still matter?" and "not yet" appear as cards on these screens, not as screens of their own.
 
 | Screen | Used | What it does | Flows |
 | --- | --- | --- | --- |
