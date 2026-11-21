@@ -62,3 +62,11 @@ Written with only 404, 409 and failures in mind. With sign-in decided ([ADR-012]
 - A 401 also asks for the passkey. After signing in, the queue is sent.
 - A 422 on a queued change is a bug in the app or the API. The change waits, and the quiet line on Today says so, so nothing is lost while it's fixed.
 - Signing out sends the queue before clearing it.
+
+## Built 2026-11-20 (web-frontend 043b, part of #43)
+
+- The week documents and the queue are kept in IndexedDB, with memory where there's none; `navigator.storage.persist()` is asked once. Whether iOS keeps them is checked on the phone with #8.
+- "Online it waits for the queue ahead of it" is read as: a write that isn't queued waits for the send under way. If that send failed and changes are stuck, it goes anyway, so one stuck change never blocks Settings or a goal.
+- An added task shows where the server is expected to put it until the server's answer replaces it.
+- After a swap, the bank task takes the other's place until the week is read again; then the day shows in the order the read gives.
+- A quitting goal's answer and urge rating join the queue with #37, which builds their screen.
