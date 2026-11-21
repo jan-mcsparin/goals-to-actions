@@ -22,7 +22,7 @@ Low-fidelity sketches from stage 3 (Nov 2, 2026). They settle layout and behavio
 ![Week screen](week.png)
 
 - Weekly progress per goal ("1 of 3") with a pacing line: "6 days left · on pace", "6 days left · 1 more to plan", or "Done for the week". Nothing else, and never a warning.
-- Monday to Sunday. Today highlighted, past days dimmed; an empty day reads "Free day". Tap a day to open it like Today, with every Today action; "‹ Week" goes back. On past days, Pull from bank and Swap are hidden.
+- Monday to Sunday. Today highlighted, past days dimmed; an empty day reads "Free day". A day at its cap (3, 4 or 6 tasks, set by intensity) is marked "Full" in muted text, and a day with everything checked off "done" instead. Full is a guide only: nothing is refused, moved or warned about. Tap a day to open it like Today, with every Today action; "‹ Week" goes back. On past days, Pull from bank and Swap are hidden.
 - **Next week:** from 6 p.m. on Sunday a **This week | Next week** toggle appears under the heading, and the choice is remembered. Next week shows its own range, days and bank. Its tasks can be put on a day, sent back to the bank and swapped, but not checked off. The toggle goes once next week has become the current one.
 - **Wrap up this week** sits at the bottom of Next week. It opens a sheet that lists what **carries over to next week** and what **ends with this week**, as the API says for each task; an empty list is left out. **Wrap up this week** confirms and makes next week the current one, with no undo; **Not yet** closes the sheet. Nothing prompts it.
 - Fixed-day items (trash on Tuesday) stay put: they have no ⋯ menu, but can be checked off.
@@ -56,7 +56,7 @@ The app is organized aspirations first, matching the model: **Aspirations tab �
   - **Aspiration:** a name and an optional why. The sheet stays open on "Saved." with **Add a goal for this** and **Done**.
   - **Recurring:** a name, **Fixed day** (a weekday, or the 1st–28th) or **Flexible** (once to 6 times a week, every two weeks, once a month), and an optional aspiration; with none it belongs to Keep life running.
 - **Settings:** reached by the gear at the top right of the Aspirations tab; it counts as Aspirations in the tab bar, and "‹ Aspirations" goes back.
-  - **Intensity:** Easing off / Normal / Going hard in one row, Normal to start, with "Sets how full days are and how much is free." A tap saves it, with no Save button and no confirmation; it stays until changed, and nothing suggests changing it. A failed save puts back the earlier choice. Nothing reads it yet; Week will show a day as full once it reaches its cap.
+  - **Intensity:** Easing off / Normal / Going hard in one row, Normal to start, with "Sets how full days are and how much is free." A tap saves it, with no Save button and no confirmation; it stays until changed, and nothing suggests changing it. A failed save puts back the earlier choice. Week marks a day "Full" once it reaches the cap.
   - **Week starts** Monday and **Notifications** Off are shown, not set. The app asks for no notification permission.
   - **Export my data** answers "Coming later."
 
