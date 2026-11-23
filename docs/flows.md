@@ -64,7 +64,7 @@ Mostly automatic, once a week. The bank holds everything to get done this week, 
    - recurring maintenance due this week (laundry, rent),
    - tasks from the upcoming list that are now due,
    - anything that rolled over from last week (flow 7). These arrive when last week closes, so after the rest unless you wrapped the week up.
-2. Anytime, you can add a task by hand (**+**, the Task tab): a title, and optionally the goal it serves, a due date and a time of day ("by" or "at" a time). If it's due this week or earlier, or has no due date, it goes straight into this week's bank, or onto today if you choose. **On today** is preselected when you add it from the Today screen, not from a day opened on Week, even when that day is today. A new task never goes onto any other day. If it's due later, it waits in an upcoming list and moves into the bank when the week it's due opens. If that week is already open, it goes straight into its bank. A short line says where it went: "Added to this week's bank.", "Saved for the week of Nov 23." (next week's bank, once it's open), "Saved. It joins the week it's due." (the upcoming list) or "Added to today."
+2. Anytime, you can add a task by hand (**+**, the Task tab): a title, and optionally the goal it serves, a due date and a time of day ("by" or "at" a time). If it's due this week or earlier, or has no due date, it goes straight into this week's bank, or onto today if you choose. **On today** is preselected when you add it from the Today screen, not from a day opened on Week, even when that day is today. A new task can also go **On a day**: any day from today on, with an optional time, and it stays there (designed Nov 21, not built; `briefs/scheduling-and-other-weeks.md`). If it's due later, it waits in an upcoming list and moves into the bank when the week it's due opens. If that week is already open, it goes straight into its bank. A short line says where it went: "Added to this week's bank.", "Saved for the week of Nov 23." (next week's bank, once it's open), "Saved. It joins the week it's due." (the upcoming list) or "Added to today."
 3. **Maintenance is set up once:** a name, a repeat and how fixed it is. Fixed-day items happen on a set day ("take out the trash every Tuesday," "rent on the 1st"), and the plan always puts them there. Flexible items just need doing sometime in the window ("laundry once a week," "clean the bathroom every two weeks"), and the app spreads them evenly across the week. Only the things that actually slip go in; automatic habits stay out. The same kind of recurring item can also keep up a practice after its goal ends (lifting 3 times a week, under Be fit).
    - **Adding one** (**+**, the Recurring tab, or **+ Add recurring** on an aspiration's page, which selects that aspiration): a name, then **Fixed day** or **Flexible**. Fixed: every week on a weekday, or every month on the 1st to the 28th, so every month has the day. Flexible: once a week, 2 to 6 times a week, every two weeks, or once a month. The repeat reads back as "Every Tuesday", "Monthly on the 1st", "3 times a week", "Every two weeks".
    - **Under an aspiration** is optional. With none, the item belongs to Keep life running.
@@ -73,7 +73,7 @@ Mostly automatic, once a week. The bank holds everything to get done this week, 
 
 Branches:
 
-- **Later weeks:** the app's plan exists for the current week and, from Sunday evening, the next one. Further out, a task waits in the upcoming list: the data model lets it sit on a day in a later week, but the app doesn't offer it yet.
+- **Later weeks:** the app's plan exists for the current week and, from Sunday evening, the next one. Further out, a task waits in the upcoming list, or is pinned to a day with **On a day** (designed Nov 21, not built): its row waits in that week, and the planner places recurring work around it when the week opens.
 - **A task with no goal:** fine. It's maintenance or a one-time life task ("fill out my ballot"), usually with a due date, and still part of the day. Things that come around once a year can be yearly recurring items instead, once those are offered.
 - **A full bank:** it's your list to place from, not a backlog. Nothing in it is late, and the app doesn't suggest what to push or drop.
 
@@ -176,6 +176,21 @@ Anytime, and only when you choose. The app never prompts about pace.
 3. Changing it moves nothing. The new cap shows on Week at once (ADR-013).
 4. For the prototype, the setting stays until you change it. Whether it should be able to expire on its own is left open.
 
+## Flow 9: Look ahead and look back
+
+Designed Nov 21; not built. Details and suggested work: `briefs/scheduling-and-other-weeks.md`.
+
+1. **Any week:** on Week, ‹ › step to past weeks and up to 12 weeks ahead. Every week shows how full it is: a counts line ("● 8 for 3 goals · ● 5 upkeep · ● 2 added") and a bar against a typical week of 25.
+2. **A week that hasn't opened** shows only what's already known: tasks set to a day, fixed-day recurring items, milestone dates and deadlines. The rest is placed when it opens.
+3. **A past day:** open it and tick off what you did but didn't mark. It counts for that day; a task that rolled over leaves this week's bank.
+4. **Coming up:** from Week or the line at the bottom of Today, the next 12 weeks at a glance: how full each looks, and what's set, due or checked in. Tap a thing to open its day or goal.
+5. **Put something on a day:** the Add sheet's **On a day**, or Move on a future day's set item. It stays put.
+
+Branches:
+
+- **A week looks full:** nothing happens. Fullness is a guide, like the day cap.
+- **A check-in or deadline in a week:** listed with a hollow ring, never counted toward fullness.
+
 ## Edge cases and open questions
 
 Edge cases the prototype needs an answer for:
@@ -183,7 +198,7 @@ Edge cases the prototype needs an answer for:
 - **First run, nothing set up:** start with one sentence, either a goal or a maintenance item, and get a plan for tomorrow right away.
 - **Away or sick for a while:** pause one goal or everything, so the gap doesn't count as missed and nothing piles up while you're gone.
 - **A whole week with no tasks done:** rollover still happens quietly; the first open afterwards shows how far you've come, not what you missed.
-- **A week you never opened:** it's skipped. Nothing is created just to lapse, and what you'd added yourself carries straight into the week you come back to, as one carry-over. A fixed-day item due in the gap doesn't appear.
+- **A week you never opened:** it's skipped. Nothing is created just to lapse, and what you'd added yourself, including anything set to a day in the gap, carries straight into the week you come back to, as one carry-over. A fixed-day item due in the gap doesn't appear.
 - **One task serving two goals:** for the prototype, each task belongs to one goal.
 - **Travelling between time zones:** a task's day and time carry no zone, so Tuesday at 6 p.m. is Tuesday at 6 p.m. wherever you are. Today is your phone's date. The week never goes backwards: fly west across Sunday midnight after the new week has started and you stay in the new week. Crossing the date line skips or repeats a date; a skipped day's tasks are simply unfinished.
 
