@@ -209,7 +209,7 @@ What the screens show comes from these rows:
 | A waiting step checked off on the goal's page | A done row on the day it was done, in that day's week. Unchecking puts it back in play on that day, as any uncheck does. |
 | Times carried over | The task's rows with the outcome rolled over. A flexible item carrying inside its period is rolled over too, which is why it is never asked "Still matter?". |
 | Next week, from Sunday evening | The next week's rows, made when it opens. They can be moved but not checked off until that week is the current one. |
-| Pinned to a later week | A row for that week with a planned day, placed by hand. The model allows it; the app doesn't offer it yet. |
+| Pinned to a later week | A row for that week with a planned day, placed by hand. Offered by the Add sheet's **On a day** (designed Nov 21, not built; `briefs/scheduling-and-other-weeks.md`). |
 
 **How a week ends for an unfinished task:**
 
@@ -224,9 +224,9 @@ What the screens show comes from these rows:
 
 Rolling over closes this week's row as rolled over and opens one in the next week's bank. Lapsing closes the row and the task; the miss stays in history.
 
-A lapse isn't final. A check-off that arrives late, dated inside the closed week (done offline on Sunday night, sent on Monday), turns the row and the task to done. For a task that rolled over, the late check-off lands on its row in the new week. An uncheck that arrives late works the same way round: the task gets the ending its week would have given it, rolled over or lapsed.
+A lapse isn't final. A check-off can come late from a past day the person opens (late check-offs, designed Nov 21, not built) as well as from the offline queue. A check-off that arrives late, dated inside the closed week (done offline on Sunday night, sent on Monday), turns the row and the task to done. For a task that rolled over, the late check-off lands on its row in the new week. An uncheck that arrives late works the same way round: the task gets the ending its week would have given it, rolled over or lapsed.
 
-A week ends when its Sunday is over, or when the person wraps it up (ADR-009). A week with no rows was never opened, and is never filled or closed after the fact.
+A week ends when its Sunday is over, or when the person wraps it up (ADR-009). A week that was never opened is never filled after the fact. It can hold rows only for tasks pinned to a day in it; when it is skipped, those carry over like any unfinished hand-added task.
 
 **Set aside** is what happens to a goal's unfinished tasks when it's paused, ended or reached, to a recurring item's when it's turned off, and to both when an aspiration is retired with its work paused. It includes tasks placed by hand, and covers every open week: this one and, from Sunday evening, the next. The row keeps its planned day but no day shows it. A task added under a goal that isn't active (queued offline while another device paused it) is saved set aside too, and comes back with the goal: a create is never refused. Unchecking a task whose goal isn't active, or whose item is off, leaves it set aside too. (The first model called this "skipped", which read like "Back to bank". It isn't.)
 

@@ -37,4 +37,5 @@ A personal, installable, mobile-first web app that connects aspirations → goal
 - When a change alters behavior described in `docs/`, update the doc in the same piece of work. New architecture-level decisions get an ADR (`docs/adr/README.md` says when).
 - Start Claude Code here for work spanning both repos, or inside `web-frontend/` or `api/` for focused work. Commit in the repo the change belongs to.
 - Work items are GitHub issues using `.github/ISSUE_TEMPLATE/task.md`.
+- **Briefs** from claude.ai land in `docs/briefs/`: the product "what" for a feature, with suggested work. Turn each into issues and specs in `web-frontend/` and `api/` (the brief suggests, the code decides), and update the brief's status line when they exist.
 - Plain, concise writing in docs and UI copy. UI text is warm and never judgmental.

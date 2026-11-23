@@ -48,6 +48,7 @@ goals-to-actions/        this repo: product docs and shared context
     flows.md             the 8 core flows, edge cases, settled questions
     data-model.md        conceptual entities
     screens/             low-fi sketches and screen inventory
+    briefs/              feature briefs from claude.ai, turned into issues and specs
     adr/                 architecture decision records
   .github/               issue template
   web-frontend/ (own repo) goals-to-actions-web-frontend: React + Vite PWA
