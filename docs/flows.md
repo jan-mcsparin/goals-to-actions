@@ -50,7 +50,8 @@ Branches:
 - **No aspiration yet:** the app asks "What's this for?" You can link one, create one, or skip.
 - **Quitting goal:** instead of a weekly target, set a start date (today unless changed) and a daily all-or-nothing commitment. The finish line is the habit being broken, not a set number of days: you've quit when you don't really want one anymore.
   - **The daily answer** is held or slipped. A day with no answer is unknown, not a slip, so a week away isn't seven failures. It isn't a task: it never enters the bank or counts against the day's cap.
-  - **The urge rating** is low, some or strong. It sits beside the daily yes/no on some days and can be ignored; it's never a prompt.
+  - **The urge rating** is low, some or strong. It's offered beside the answer once a day is answered and can be ignored; it's never a prompt. Clearing the answer clears the rating too, so the day is back to unknown.
+  - **Where:** a quiet row on Today (and any opened day up to today), and the goal's page, which shows the run ("12 days held") and the last 28 days to fill in or change.
   - **Reached** when you say so. The app can point out that the urge has stayed low for a while, but never marks the goal reached itself.
 - **One-off goal:** set an optional deadline and a short list of steps. The steps are tasks that belong to the goal ("Step 3 of 6" is tasks done out of the goal's tasks, leaving out any you dropped), done in any order, since steps rarely depend on each other. Checking one off on Today finishes the step; there's nothing to mark a second time. A step that takes several sittings stays one unchecked task until it's finished, or you split it. A one-off goal has no milestones.
 

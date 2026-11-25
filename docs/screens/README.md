@@ -2,7 +2,7 @@
 
 Low-fidelity sketches from stage 3 (Nov 2, 2026). They settle layout and behavior, not visual style; hi-fi designs were judged unnecessary for the prototype. Behavior details live in `../flows.md`.
 
-**Behind the data model (Nov 13).** This page describes the click-through as built. The data model pass changed some behavior that the screens don't show yet; where they disagree, `../flows.md` and `../data-model.md` are right. Not yet on screen: a one-off goal's steps as tasks (the goal page still checks them in like milestones), amount targets, the two-choice slipped-deadline card, the quitting goal's daily answer and urge rating, and delete.
+**Behind the data model (Nov 13).** This page describes the click-through as built. The data model pass changed some behavior that the screens don't show yet; where they disagree, `../flows.md` and `../data-model.md` are right. Not yet on screen: a one-off goal's steps as tasks (the goal page still checks them in like milestones), amount targets, the two-choice slipped-deadline card, and delete.
 
 ## Today (home screen)
 
@@ -12,6 +12,7 @@ Low-fidelity sketches from stage 3 (Nov 2, 2026). They settle layout and behavio
 - Each goal task shows its goal and aspiration ("Be strong · Be fit"); a recurring item's task under an aspiration shows the aspiration alone ("Be fit"). In **By goal**, each card is titled the same way: an aspiration's own recurring items get a card of their own, after that aspiration's goals. Under each card's title, Keep life running included, a thin bar shows how much of that card is done on the day (bar only, no count). List has no per-group bars.
 - Tap a task to mark it done; tap again to undo.
 - **Still matter?** A task you added, or a fixed-day item, that has rolled over twice shows a quiet card at the top of Today: the question, the task's title, and **Keep**, **Reschedule** (the day picker) and **Drop**. **Not now** waves it off until tomorrow without answering; ignoring it changes nothing. The card never says how long the task has waited. It shows on Today only, not on other days.
+- **A quitting goal's day:** under the tasks, one quiet row per active quitting goal: its label and **Held** / **Slipped**. Once answered, the row shows the answer (tap it for **Held · Slipped · Clear**; Clear also clears the urge) and **Low · Some · Strong** beside it, all optional (tap the chosen level again to clear it). It shows on an empty day too, and on an opened past day, so a missed day can be filled in; a future day offers nothing. It isn't a task: never counted in "1 of 4 done", the cap or the bank, and it never asks.
 - Progress for today at the top ("1 of 4 done"). Weekly progress per goal lives on the Week screen.
 - The header (heading, "1 of 4 done", progress bar, and "‹ Week" on an opened day) stays pinned while the list scrolls. The List / By goal toggle scrolls away.
 - Toggle between **List** (default) and **By goal**. The chosen view is remembered (ADR-004).
@@ -47,6 +48,7 @@ The app is organized aspirations first, matching the model: **Aspirations tab �
 ![Goals, Goal detail, Add and Settings (Nov 2 sketch)](other-screens.png)
 
 - **Goal detail:** label, measurable line, aspiration (a link up to its page: "Be fit ›"; back returns wherever you came from), type, Started at / Latest, milestone timeline, weekly target (editable), next check-in with **Check in**, and **Pause · End goal**. Nothing opens unprompted, and there's no Review (dropped Nov 10, as for aspirations). Pausing sets the goal's unfinished tasks aside for the week; resuming returns them to the bank.
+  - **A quitting goal** shows its record in place of "Since Nov 3": "12 days held" (with "· 2 not answered" while days in the run have none), then **Recent days**, the last 28 newest first, each Held, Slipped or a dash, with its urge. Tapping a day opens a sheet to answer, change or clear it and rate the urge. An answer shows at once, offline too; the count is the server's and updates once the answer is sent.
   - **Checking in** is a sheet titled with the milestone: "How did it go?", an optional result, **Hit it** / **Not yet** (**Done** for a one-off goal's steps, which can be tapped in any order).
   - **Not yet** shows a quiet card under Next check-in that leads with progress since the baseline, then **Keep the date · Move the date · Adjust the milestone**. Moving a date later, by Move or by Adjust, pushes later milestones out, up to the deadline.
   - **End goal** leads with Started at / Latest and milestones hit, then **I reached it** or **End it for now**. A reached goal reads "Reached Nov 10" and "What's next for Be fit?", counts complete (milestones not checked in read "Passed on the way") and has a quiet **Reopen**; an ended one reads "Not yet." with **Go again**.

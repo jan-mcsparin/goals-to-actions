@@ -70,3 +70,8 @@ Written with only 404, 409 and failures in mind. With sign-in decided ([ADR-012]
 - An added task shows where the server is expected to put it until the server's answer replaces it.
 - After a swap, the bank task takes the other's place until the week is read again; then the day shows in the order the read gives.
 - A quitting goal's answer and urge rating join the queue with #37, which builds their screen.
+
+## Built 2026-11-25 (web-frontend 037, #37)
+
+- A quitting goal's answer and urge rating are four queued kinds (answer, clear answer, rate, clear rating), each naming its goal and day and stating its end result. Their replay rule sets the day in the week's `quittingGoals`.
+- The goal's page replays the same changes over its record, so an answer given there shows on its day at once. The run's count is the server's: the page reads the goal again once the queue has emptied.
