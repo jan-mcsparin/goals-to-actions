@@ -57,7 +57,7 @@ The app is organized aspirations first, matching the model: **Aspirations tab �
   - **The milestone timeline is vertical**, not horizontal as sketched: measurable lines need the full width, and side-swiping fights the iPhone back gesture (decided Nov 10).
   - **Past four milestones it condenses:** the latest hit milestone, any "not yet", Next and the goal always show. Each run of two or more of the rest, Start included, folds into one tappable row ("Start and 1 hit milestone", "2 more: Wk 16, Wk 20"); a single row shows as itself. Tapping a fold or Show all expands the timeline, and Show all / Show less is remembered per goal. This keeps the weekly target and Check in near the top.
 - **Add:** one sheet with Task / Goal / Aspiration / Recurring tabs, opened by the + in the tab bar (Task first) or from an aspiration's page. Each tab keeps what was typed while the sheet is open; closing it clears it. Save stays off until the required field is filled. After a task, goal or recurring item saves, the sheet closes and a line above the tab bar says where it went; it clears after 5 s or when tapped. Details in flows 1–3.
-  - **Task:** only a title is required; goal, due date and time of day ("by" or "at") are optional. It goes in the bank, or onto today (preselected when the sheet is opened from Today).
+  - **Task:** only a title is required. **When** is **On today · In the bank · On a day** (On today preselected when the sheet is opened from Today, In the bank elsewhere); On today and In the bank take an optional due date and time of day ("by" or "at"), and On a day takes a Day (required) and an optional time ("at") in their place. The goal comes last, optional.
   - **Goal:** the type first, then one sentence split at the first colon into label and line, What's this for? (none, an aspiration, or a new one), Where are you now?, a weekly target (building) or start date (quitting), and an optional deadline. Saving opens its page, where milestones are added.
   - **Aspiration:** a name and an optional why. The sheet stays open on "Saved." with **Add a goal for this** and **Done**.
   - **Recurring:** a name, **Fixed day** (a weekday, or the 1st–28th) or **Flexible** (once to 6 times a week, every two weeks, once a month), and an optional aspiration; with none it belongs to Keep life running.
@@ -85,14 +85,14 @@ Designed Nov 20 from [ADR-012](../adr/0012-sign-in-with-a-passkey.md) and the br
 
 ## Scheduling and other weeks
 
-Designed with Jan on Nov 21; **not built yet**. The full behavior, rules and suggested work are in [`../briefs/scheduling-and-other-weeks.md`](../briefs/scheduling-and-other-weeks.md).
+Designed with Jan on Nov 21. **Add, On a day** is built (#79); the rest isn't yet. The full behavior, rules and suggested work are in [`../briefs/scheduling-and-other-weeks.md`](../briefs/scheduling-and-other-weeks.md).
 
 ![Scheduling and other weeks: this week, a future week, Coming up, Add on a day, a past day](scheduling.png)
 
 - **Week, any week:** ‹ › arrows step back to past weeks and forward up to 12 weeks, replacing the This week | Next week toggle (Wrap up this week stays on Next week). Every week shows its counts line and fullness bar, then This week (when not on it) and **Coming up ›**.
 - **A week that hasn't opened** shows only what's known: tasks set to a day, fixed-day recurring items, milestone dates and deadlines. "Nothing set yet" on empty days; no Progress, bank or day bars.
 - **A past day** can be opened and its unfinished tasks ticked off: "Moved on to the next week · tap if you did it".
-- **Add, On a day:** When is **On today · In the bank · On a day**; On a day takes a day and an optional time, and the task stays there.
+- **Add, On a day** (built): When is **On today · In the bank · On a day**; On a day takes a day and an optional time, and the task stays there. Goal sits below them, though the image leaves it out.
 - **Coming up:** the next 12 weeks, one two-line row each: range, check-in and deadline counts (hollow ring), fullness bar, ▸/▾; then "● 8 for 3 goals · ● 5 upkeep · ● 2 added". The first two weeks open; open weeks list dated things by day, opening their day or goal.
 - **Fullness:** counts tasks by origin (goal sessions dark blue, upkeep mid blue, added by hand pale blue). Week bars against a typical week of 25; day bars against the intensity cap, so they agree with "Full". Check-ins and deadlines are never counted. The image says "set" for the third count; the label is "added".
 
