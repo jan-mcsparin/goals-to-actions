@@ -167,7 +167,7 @@ Branch:
 
 **Deleting (for mistakes):**
 
-9. A task, milestone, goal, aspiration or recurring item made by mistake can be deleted. It asks once first, and there's no undo. It disappears everywhere; deleting a goal takes its tasks, milestones and records with it. Deleting an aspiration leaves its goals and recurring items with none (Other goals, Keep life running). Deleting a recurring item takes its open tasks; the ones done stay in history. This isn't dropping: a dropped task was a decision and stays in history. No screen offers delete yet.
+9. A task, milestone, goal, aspiration or recurring item made by mistake can be deleted. It asks once first, and there's no undo. It disappears everywhere; deleting a goal takes its tasks, milestones and records with it. Deleting an aspiration leaves its goals and recurring items with none (Other goals, Keep life running). Deleting a recurring item takes its open tasks; the ones done stay in history. This isn't dropping: a dropped task was a decision and stays in history. Delete is the last choice wherever it's offered: a task's ⋯ menu and the bank's sheet, a milestone's row, the goal's page, an aspiration's edit sheet and a recurring item's edit sheet.
 
 ## Flow 8: Set intensity
 

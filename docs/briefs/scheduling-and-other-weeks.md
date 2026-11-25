@@ -109,6 +109,7 @@ A suggestion for issues and specs; split or merge as the code suggests. The API 
 ## Notes for the specs
 
 - **Remove vs. Delete (FE 4).** Spec 038 keeps Drop out of a task's menu so it never sits beside "Delete (made by mistake)". Remove on a future set item is a drop, in that menu. FE 4's spec settles how the two read side by side.
+- **Moving a fixed-day task for one week (FE 4).** A holiday moves trash day from Tuesday to Wednesday: the task moves for that week and the item keeps its day (Jan, 2026-11-25). The API refuses it today ("This one stays on its day", `keep_on_its_day` in `api/app/tasks/rules.py`), so it needs an API change with FE 4. Its ⋯ menu holds only Delete until then (spec 038).
 - **Quitting goals.** The quit-day row isn't a task: fullness never counts it. Once past weeks open (FE 3), a past day may show the quit row too, sent online only.
 - **A week nobody opened** can now hold a pinned row. Closing already works from the user's markers, not from rows, so a task pinned in a skipped week carries into the week the person comes back to. API 1 tests it and corrects `api/specs/week-turnover.md`.
 
