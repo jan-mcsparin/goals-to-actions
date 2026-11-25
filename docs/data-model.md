@@ -209,7 +209,7 @@ What the screens show comes from these rows:
 | A waiting step checked off on the goal's page | A done row on the day it was done, in that day's week. Unchecking puts it back in play on that day, as any uncheck does. |
 | Times carried over | The task's rows with the outcome rolled over. A flexible item carrying inside its period is rolled over too, which is why it is never asked "Still matter?". |
 | Next week, from Sunday evening | The next week's rows, made when it opens. They can be moved but not checked off until that week is the current one. |
-| Pinned to a later week | A row for that week with a planned day, placed by hand. Offered by the Add sheet's **On a day** (designed Nov 21, not built; `briefs/scheduling-and-other-weeks.md`). |
+| Pinned to a later week | A row for that week with a planned day, placed by hand. Offered by the Add sheet's **On a day** (built in the API, the Add sheet to come; `briefs/scheduling-and-other-weeks.md`). A move to another week moves this row; set aside with its goal, it comes back on its day. |
 
 **How a week ends for an unfinished task:**
 
