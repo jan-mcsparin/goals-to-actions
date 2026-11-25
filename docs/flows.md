@@ -70,7 +70,7 @@ Mostly automatic, once a week. The bank holds everything to get done this week, 
    - **Adding one** (**+**, the Recurring tab, or **+ Add recurring** on an aspiration's page, which selects that aspiration): a name, then **Fixed day** or **Flexible**. Fixed: every week on a weekday, or every month on the 1st to the 28th, so every month has the day. Flexible: once a week, 2 to 6 times a week, every two weeks, or once a month. The repeat reads back as "Every Tuesday", "Monthly on the 1st", "3 times a week", "Every two weeks".
    - **Under an aspiration** is optional. With none, the item belongs to Keep life running.
    - **When it's first due:** a fixed item on its next day, today included when today is that day; a flexible item from the day it's added. "Added. It will show up in the plan when it's next due."
-   - **Changing one** (its name, repeat or aspiration; the screen is front-end #76): this week's work follows, and next week's once it's open. Its open tasks take the new name. A fixed-day task moves to its new day if that day is today or later, and otherwise stays where it is. A new count or repeat adds tasks on later days or removes extra open ones, the bank first. A task you placed by hand, a task you've done and a carry-over from last week stay put. An item changed while it's off follows its new repeat when it comes back on.
+   - **Changing one** (its name, repeat or aspiration, from its row on an aspiration's page or Keep life running; Pause and Resume are there too): this week's work follows, and next week's once it's open. Its open tasks take the new name. A fixed-day task moves to its new day if that day is today or later, and otherwise stays where it is. A new count or repeat adds tasks on later days or removes extra open ones, the bank first. A task you placed by hand, a task you've done and a carry-over from last week stay put. An item changed while it's off follows its new repeat when it comes back on.
    - Yearly repeats, "every N weeks" and a time of day ("Thursdays at 8 p.m.") aren't offered yet.
 
 Branches:
@@ -95,7 +95,7 @@ The heart of the app. The app places the recurring work, which has an obvious pl
    - **swap** a task for one from the bank,
    - **skip** a task, which sends it back to the bank (shown as "Back to bank"),
    - **pull extra** work forward from the bank.
-5. After that, the app only places new recurring work as it arrives (a new goal's sessions, a raised target, a new or changed recurring item), spread over the days after today. Changing a recurring item is the one time it moves what the app placed: that item's tasks follow the change (flow 4, step 3). Carry-overs go to the bank. It doesn't move what's on a day and doesn't refill a slot you freed: a task sent back to the bank stays there, and finishing early leaves the time free.
+5. After that, the app only places new recurring work as it arrives (a new goal's sessions, a raised target, a new or changed recurring item), spread over the days after today. Changing a recurring item is the one time it moves what the app placed: that item's tasks follow the change (flow 3, step 3). Carry-overs go to the bank. It doesn't move what's on a day and doesn't refill a slot you freed: a task sent back to the bank stays there, and finishing early leaves the time free.
 
 Branches:
 
