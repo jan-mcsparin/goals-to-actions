@@ -36,8 +36,8 @@ Help a person keep moving their life forward and improving over years, while als
 8. **A plan exists even if you never open it.**
 9. If a day reaches the cap, Week shows it as full. Nothing is crammed or moved.
 10. **On a day is a hand placement** (designed Nov 21; built in the API, the Add sheet to come). A task can be put on any day from today on, with an optional time; it stays there, and the planner places recurring work around it when its week opens. A task added by hand can be moved to a day in another week, or removed.
-11. **Fullness is counted in tasks, by origin** (designed Nov 21; counts built in the API, the screens to come): goal sessions, upkeep (recurring items) and tasks added by hand. A week is measured against a typical week of 25, fixed so weeks compare; a day against the intensity cap, so its bar agrees with "Full". Check-ins and deadlines are never counted. Like the cap, fullness is a guide: nothing is refused, moved or warned about.
-12. **A week that hasn't opened shows only what's known** (designed Nov 21; built in the API, the screens to come): what's set to a day, fixed-day recurring items, milestone dates and deadlines, and expected counts. Never a guessed plan.
+11. **Fullness is counted in tasks, by origin** (designed Nov 21; built in the API and on Week, spec 080; Coming up to come): goal sessions, upkeep (recurring items) and tasks added by hand. A week is measured against a typical week of 25, fixed so weeks compare; a day against the intensity cap, so its bar agrees with "Full". Check-ins and deadlines are never counted. Like the cap, fullness is a guide: nothing is refused, moved or warned about.
+12. **A week that hasn't opened shows only what's known** (designed Nov 21; built in the API and on Week, spec 080): what's set to a day, fixed-day recurring items, milestone dates and deadlines, and expected counts. Never a guessed plan.
 
 ## Tone and prompts
 

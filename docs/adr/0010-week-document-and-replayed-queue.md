@@ -75,3 +75,8 @@ Written with only 404, 409 and failures in mind. With sign-in decided ([ADR-012]
 
 - A quitting goal's answer and urge rating are four queued kinds (answer, clear answer, rate, clear rating), each naming its goal and day and stating its end result. Their replay rule sets the day in the week's `quittingGoals`.
 - The goal's page replays the same changes over its record, so an answer given there shows on its day at once. The run's count is the server's: the page reads the goal again once the queue has emptied.
+
+## Built 2026-11-25 (web-frontend 080, #80)
+
+- **Only open weeks are stored:** the current week and an open next week. Past weeks and later ones are read when shown and never kept, offline or not (settled with Jan, 2026-11-23). Offline, Week says "Other weeks need a connection. They'll show once you're back online." and keeps its header and arrows. A copy of another week stored before this is ignored; a stored week from before weeks had a status counts as open.
+- The week on show is remembered as part of the open screen, so Week and a day's way back come back to it after an iOS restart.
