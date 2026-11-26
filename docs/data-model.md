@@ -224,7 +224,7 @@ What the screens show comes from these rows:
 
 Rolling over closes this week's row as rolled over and opens one in the next week's bank. Lapsing closes the row and the task; the miss stays in history.
 
-A lapse isn't final. A check-off can come late from a past day the person opens (late check-offs, designed Nov 21, not built) as well as from the offline queue. A check-off that arrives late, dated inside the closed week (done offline on Sunday night, sent on Monday), turns the row and the task to done. For a task that rolled over, the late check-off lands on its row in the new week. An uncheck that arrives late works the same way round: the task gets the ending its week would have given it, rolled over or lapsed.
+A lapse isn't final. A check-off can come late from a past day the person opens, any number of weeks later (built in the API; `api/specs/any-week.md`), as well as from the offline queue. The week read shows each past row with how it ended (rolled over, lapsed) and the task's state now. A check-off that arrives late, dated inside the closed week (done offline on Sunday night, sent on Monday), turns the row and the task to done. For a task that rolled over, the late check-off lands on its row in the new week. An uncheck that arrives late works the same way round: the task gets the ending its week would have given it, rolled over or lapsed.
 
 A week ends when its Sunday is over, or when the person wraps it up (ADR-009). A week that was never opened is never filled after the fact. It can hold rows only for tasks pinned to a day in it; when it is skipped, those carry over like any unfinished hand-added task.
 
