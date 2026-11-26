@@ -25,8 +25,9 @@ Low-fidelity sketches from stage 3 (Nov 2, 2026). They settle layout and behavio
 
 - Weekly progress per goal ("1 of 3") with a pacing line: "6 days left · on pace", "6 days left · 1 more to plan", or "Done for the week". Nothing else, and never a warning.
 - Monday to Sunday. Today highlighted, past days dimmed; an empty day reads "Free day". A day at its cap (3, 4 or 6 tasks, set by intensity) is marked "Full" in muted text, and a day with everything checked off "done" instead. Full is a guide only: nothing is refused, moved or warned about. Tap a day to open it like Today, with every Today action; "‹ Week" goes back. On past days, Pull from bank and Swap are hidden.
-- **Other weeks** (designed Nov 21, not built): ‹ › arrows in the header step to any week, back and forward, and replace the This week | Next week toggle below. Each week shows a counts line and fullness bar, and its days get day bars. See "Scheduling and other weeks".
-- **Next week:** from 6 p.m. on Sunday a **This week | Next week** toggle appears under the heading, and the choice is remembered. Next week shows its own range, days and bank. Its tasks can be put on a day, sent back to the bank and swapped, but not checked off. The toggle goes once next week has become the current one.
+- **Any week:** ‹ › arrows either side of the title step back to the first week with anything in it and forward 12 weeks; a stopped arrow is dimmed. The title is "This week", "Last week", "Next week" or "Week of Dec 7", over its range; **This week** under it goes back. The week on show is remembered, and a day's "‹" goes back to it, named by its title ("‹ Last week"). Under the range, the **counts line** and **week bar**; each day of an opened week gets a **day bar**. Past and later weeks need a connection (only this week and an open next week are on the phone); offline they say so under the header. See "Scheduling and other weeks".
+- **Next week:** from 6 p.m. on Sunday, › shows next week as an open week, with its days and bank. Its tasks can be put on a day, sent back to the bank and swapped, but not checked off.
+- **A past week:** Progress, days and bank as they were, rolled-over and lapsed tasks included; the bank can't be placed from.
 - **Wrap up this week** sits at the bottom of Next week. It opens a sheet that lists what **carries over to next week** and what **ends with this week**, as the API says for each task; an empty list is left out. **Wrap up this week** confirms and makes next week the current one, with no undo; **Not yet** closes the sheet. Nothing prompts it.
 - Fixed-day items (trash on Tuesday) stay put: their ⋯ menu holds only Delete, and they can be checked off. Moving one for a single week (a holiday moves trash day) is part of #82, and will join that menu.
 - **The bank:** this week's tasks not yet on a day, as chips. Tap one, then pick a day (today or later); the sheet ends with **Delete (made by mistake)**. Drag may come later. Anything placed by hand stays put.
@@ -85,12 +86,12 @@ Designed Nov 20 from [ADR-012](../adr/0012-sign-in-with-a-passkey.md) and the br
 
 ## Scheduling and other weeks
 
-Designed with Jan on Nov 21. **Add, On a day** is built (#79); the rest isn't yet. The full behavior, rules and suggested work are in [`../briefs/scheduling-and-other-weeks.md`](../briefs/scheduling-and-other-weeks.md).
+Designed with Jan on Nov 21. **Add, On a day** (#79) and **Week, any week** with its fullness (#80) are built; the rest isn't yet. The full behavior, rules and suggested work are in [`../briefs/scheduling-and-other-weeks.md`](../briefs/scheduling-and-other-weeks.md).
 
 ![Scheduling and other weeks: this week, a future week, Coming up, Add on a day, a past day](scheduling.png)
 
-- **Week, any week:** ‹ › arrows step back to past weeks and forward up to 12 weeks, replacing the This week | Next week toggle (Wrap up this week stays on Next week). Every week shows its counts line and fullness bar, then This week (when not on it) and **Coming up ›**.
-- **A week that hasn't opened** shows only what's known: tasks set to a day, fixed-day recurring items, milestone dates and deadlines. "Nothing set yet" on empty days; no Progress, bank or day bars.
+- **Week, any week** (built): ‹ › arrows step back to past weeks and forward up to 12 weeks, replacing the This week | Next week toggle (Wrap up this week stays on Next week). Every week shows its counts line and fullness bar, then This week (when not on it). **Coming up ›** comes with Coming up (#83).
+- **A week that hasn't opened** (built) shows only what's known, under a note: tasks set to a day, fixed-day recurring items, "Check in: Lift" and "Deadline: Lift". "Nothing set yet" on empty days; no Progress, bank or day bars. Its days open without Pull from bank or Swap.
 - **A past day** can be opened and its unfinished tasks ticked off: "Moved on to the next week · tap if you did it".
 - **Add, On a day** (built): When is **On today · In the bank · On a day**; On a day takes a day and an optional time, and the task stays there. Goal sits below them, though the image leaves it out.
 - **Coming up:** the next 12 weeks, one two-line row each: range, check-in and deadline counts (hollow ring), fullness bar, ▸/▾; then "● 8 for 3 goals · ● 5 upkeep · ● 2 added". The first two weeks open; open weeks list dated things by day, opening their day or goal.
