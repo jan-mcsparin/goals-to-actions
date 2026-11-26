@@ -293,7 +293,7 @@ No screen reads it. It's for recovery, debugging, and questions nobody has asked
 - A task has at most one row per week, and at most one row with no outcome.
 - A task's state and its rows agree: done, dropped and lapsed tasks have no row still in play, and a done task's last row is done.
 - A planned day falls inside its row's week. So when today is before the current week (after a wrap-up, or a flight west), nothing can be placed on today, and a task added to today is saved in the bank.
-- Nothing is placed on a day before today, and a fixed-day recurring task on its day can't be moved off it. One that carried over is placed like any task.
+- Nothing is placed on a day before today. A fixed-day recurring task never goes to the bank and moves only to another day of its own week, placed by hand (so a change to its item leaves it there). One that carried over is placed like any task.
 - The planner places only recurring work: fixed-day tasks, goal sessions and flexible recurring tasks (ADR-013). It never writes to a row placed by hand. A week's first placement may use any day from today on; after it, the planner writes only to days after today. This is what keeps Today from changing on its own.
 - A milestone's date falls between its goal's start and deadline; a deadline is never before the start date.
 

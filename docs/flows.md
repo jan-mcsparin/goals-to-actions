@@ -70,12 +70,12 @@ Mostly automatic, once a week. The bank holds everything to get done this week, 
    - **Adding one** (**+**, the Recurring tab, or **+ Add recurring** on an aspiration's page, which selects that aspiration): a name, then **Fixed day** or **Flexible**. Fixed: every week on a weekday, or every month on the 1st to the 28th, so every month has the day. Flexible: once a week, 2 to 6 times a week, every two weeks, or once a month. The repeat reads back as "Every Tuesday", "Monthly on the 1st", "3 times a week", "Every two weeks".
    - **Under an aspiration** is optional. With none, the item belongs to Keep life running.
    - **When it's first due:** a fixed item on its next day, today included when today is that day; a flexible item from the day it's added. "Added. It will show up in the plan when it's next due."
-   - **Changing one** (its name, repeat or aspiration, from its row on an aspiration's page or Keep life running; Pause and Resume are there too): this week's work follows, and next week's once it's open. Its open tasks take the new name. A fixed-day task moves to its new day if that day is today or later, and otherwise stays where it is. A new count or repeat adds tasks on later days or removes extra open ones, the bank first. A task you placed by hand, a task you've done and a carry-over from last week stay put. An item changed while it's off follows its new repeat when it comes back on.
+   - **Changing one** (its name, repeat or aspiration, from its row on an aspiration's page or Keep life running; Pause and Resume are there too): this week's work follows, and next week's once it's open. Its open tasks take the new name. A fixed-day task moves to its new day if that day is today or later, and otherwise stays where it is; one you moved yourself that week stays where you put it. A new count or repeat adds tasks on later days or removes extra open ones, the bank first. A task you placed by hand, a task you've done and a carry-over from last week stay put. An item changed while it's off follows its new repeat when it comes back on.
    - Yearly repeats, "every N weeks" and a time of day ("Thursdays at 8 p.m.") aren't offered yet.
 
 Branches:
 
-- **Later weeks:** the app's plan exists for the current week and, from Sunday evening, the next one. Further out, a task waits in the upcoming list, or is pinned to a day with **On a day**: its row waits in that week, and the planner places recurring work around it when the week opens. If nobody opens that week, the task carries into the week the person comes back to, once.
+- **Later weeks:** the app's plan exists for the current week and, from Sunday evening, the next one. Further out, a task waits in the upcoming list, or is pinned to a day with **On a day**: its row waits in that week, and the planner places recurring work around it when the week opens. A task set to a day can be moved to another day in any week, from that day's ⋯ menu, or removed if you're not doing it. If nobody opens that week, the task carries into the week the person comes back to, once.
 - **A task with no goal:** fine. It's maintenance or a one-time life task ("fill out my ballot"), usually with a due date, and still part of the day. Things that come around once a year can be yearly recurring items instead, once those are offered.
 - **A full bank:** it's your list to place from, not a backlog. Nothing in it is late, and the app doesn't suggest what to push or drop.
 
@@ -167,7 +167,7 @@ Branch:
 
 **Deleting (for mistakes):**
 
-9. A task, milestone, goal, aspiration or recurring item made by mistake can be deleted. It asks once first, and there's no undo. It disappears everywhere; deleting a goal takes its tasks, milestones and records with it. Deleting an aspiration leaves its goals and recurring items with none (Other goals, Keep life running). Deleting a recurring item takes its open tasks; the ones done stay in history. This isn't dropping: a dropped task was a decision and stays in history. Delete is the last choice wherever it's offered: a task's ⋯ menu and the bank's sheet, a milestone's row, the goal's page, an aspiration's edit sheet and a recurring item's edit sheet.
+9. A task, milestone, goal, aspiration or recurring item made by mistake can be deleted. It asks once first, and there's no undo. It disappears everywhere; deleting a goal takes its tasks, milestones and records with it. Deleting an aspiration leaves its goals and recurring items with none (Other goals, Keep life running). Deleting a recurring item takes its open tasks; the ones done stay in history. This isn't dropping: a dropped task was a decision and stays in history. **Remove (not doing it)** on a task set to a day is a drop, offered just above Delete with words that say so, and asks once too. Delete is the last choice wherever it's offered: a task's ⋯ menu and the bank's sheet, a milestone's row, the goal's page, an aspiration's edit sheet and a recurring item's edit sheet.
 
 ## Flow 8: Set intensity
 
@@ -180,13 +180,13 @@ Anytime, and only when you choose. The app never prompts about pace.
 
 ## Flow 9: Look ahead and look back
 
-Designed Nov 21. Built in the API: reading any week with its counts and dated items, and late check-offs from a past day (steps 1–3, `api/specs/any-week.md`) and On a day (step 5). On the screens: On a day in the Add sheet (step 5, spec 079) and any week on Week (steps 1 and 2, spec 080). Past days, Move and Coming up are to come. Details and suggested work: `briefs/scheduling-and-other-weeks.md`.
+Designed Nov 21. Built in the API: reading any week with its counts and dated items, and late check-offs from a past day (steps 1–3, `api/specs/any-week.md`) and On a day (step 5). On the screens: On a day in the Add sheet (step 5, spec 079) and any week on Week (steps 1 and 2, spec 080). Move and Remove on a set item, and moving a fixed-day task within its week (step 5, spec 082), are built too. Past days and Coming up are to come. Details and suggested work: `briefs/scheduling-and-other-weeks.md`.
 
 1. **Any week:** on Week, ‹ › step back to the first week with anything in it and up to 12 weeks ahead; This week comes back. Past and later weeks need a connection: only this week and an open next week are on the phone. Every week shows how full it is: a counts line ("● 8 for 3 goals · ● 5 upkeep · ● 2 added") and a bar against a typical week of 25.
 2. **A week that hasn't opened** shows only what's already known: tasks set to a day, fixed-day recurring items, milestone dates and deadlines. The rest is placed when it opens.
 3. **A past day:** open it and tick off what you did but didn't mark. It counts for that day; a task that rolled over leaves this week's bank.
 4. **Coming up:** from Week or the line at the bottom of Today, the next 12 weeks at a glance: how full each looks, and what's set, due or checked in. Tap a thing to open its day or goal.
-5. **Put something on a day:** the Add sheet's **On a day**, or Move on a future day's set item. It stays put.
+5. **Put something on a day:** the Add sheet's **On a day**, or Move on a set item (today or later), to any day in any week. It stays put. **Remove (not doing it)** drops it. A fixed-day item moves only within its week, for that week.
 
 Branches:
 
