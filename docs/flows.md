@@ -180,7 +180,7 @@ Anytime, and only when you choose. The app never prompts about pace.
 
 ## Flow 9: Look ahead and look back
 
-Designed Nov 21; not built. Details and suggested work: `briefs/scheduling-and-other-weeks.md`.
+Designed Nov 21. Built in the API: reading any week with its counts and dated items, and late check-offs from a past day (steps 1–3, `api/specs/any-week.md`) and On a day (step 5). The screens and Coming up are to come. Details and suggested work: `briefs/scheduling-and-other-weeks.md`.
 
 1. **Any week:** on Week, ‹ › step to past weeks and up to 12 weeks ahead. Every week shows how full it is: a counts line ("● 8 for 3 goals · ● 5 upkeep · ● 2 added") and a bar against a typical week of 25.
 2. **A week that hasn't opened** shows only what's already known: tasks set to a day, fixed-day recurring items, milestone dates and deadlines. The rest is placed when it opens.
