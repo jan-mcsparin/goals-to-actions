@@ -180,11 +180,11 @@ Anytime, and only when you choose. The app never prompts about pace.
 
 ## Flow 9: Look ahead and look back
 
-Designed Nov 21. Built in the API: reading any week with its counts and dated items, and late check-offs from a past day (steps 1–3, `api/specs/any-week.md`) and On a day (step 5). On the screens: On a day in the Add sheet (step 5, spec 079) and any week on Week (steps 1 and 2, spec 080). Move and Remove on a set item, and moving a fixed-day task within its week (step 5, spec 082), are built too. Past days and Coming up are to come. Details and suggested work: `briefs/scheduling-and-other-weeks.md`.
+Designed Nov 21. Built in the API: reading any week with its counts and dated items, and late check-offs from a past day (steps 1–3, `api/specs/any-week.md`) and On a day (step 5). On the screens: On a day in the Add sheet (step 5, spec 079) and any week on Week (steps 1 and 2, spec 080). Move and Remove on a set item, and moving a fixed-day task within its week (step 5, spec 082), are built too, and so are past days (step 3, spec 081). Coming up is to come. Details and suggested work: `briefs/scheduling-and-other-weeks.md`.
 
 1. **Any week:** on Week, ‹ › step back to the first week with anything in it and up to 12 weeks ahead; This week comes back. Past and later weeks need a connection: only this week and an open next week are on the phone. Every week shows how full it is: a counts line ("● 8 for 3 goals · ● 5 upkeep · ● 2 added") and a bar against a typical week of 25.
 2. **A week that hasn't opened** shows only what's already known: tasks set to a day, fixed-day recurring items, milestone dates and deadlines. The rest is placed when it opens.
-3. **A past day:** open it and tick off what you did but didn't mark. It counts for that day; a task that rolled over leaves this week's bank.
+3. **A past day:** open it and tick off what you did but didn't mark. It counts for that day; a task that rolled over leaves this week's bank. A closed week's day offers nothing else, and a task dropped since can't be ticked. To count a tick for another day, move the task first, to today or later.
 4. **Coming up:** from Week or the line at the bottom of Today, the next 12 weeks at a glance: how full each looks, and what's set, due or checked in. Tap a thing to open its day or goal.
 5. **Put something on a day:** the Add sheet's **On a day**, or Move on a set item (today or later), to any day in any week. It stays put. **Remove (not doing it)** drops it. A fixed-day item moves only within its week, for that week.
 
