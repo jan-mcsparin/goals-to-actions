@@ -16,7 +16,7 @@ Low-fidelity sketches from stage 3 (Nov 2, 2026). They settle layout and behavio
 - Progress for today at the top ("1 of 4 done"). Weekly progress per goal lives on the Week screen.
 - The header (heading, "1 of 4 done", progress bar, and "‹ Week" on an opened day) stays pinned while the list scrolls. The List / By goal toggle scrolls away.
 - Toggle between **List** (default) and **By goal**. The chosen view is remembered (ADR-004).
-- **Pull from bank** adds extra work. Each task's **⋯** menu offers **Back to bank** (skipping, in flows.md), **Swap** for a bank task, which takes its place in the day, and last **Delete (made by mistake)**. Done tasks have no menu. Swipe gestures may come later.
+- **Pull from bank** adds extra work. Each task's **⋯** menu offers **Back to bank** (skipping, in flows.md), **Swap** for a bank task, which takes its place in the day, and last **Delete (made by mistake)**. A set item (a task you added, unfinished, on today or a later day) also has **Move to another day** and **Remove (not doing it)** before Delete (spec 082). Done tasks have no menu. Swipe gestures may come later.
 - **Coming up line** (designed Nov 21, not built): at the bottom, "Coming up: Haircut · Wed at 4:30 p.m. ›", the next thing set to a day or due after today; it opens Coming up. Left out when there's nothing. See "Scheduling and other weeks".
 
 ## Week
@@ -29,7 +29,7 @@ Low-fidelity sketches from stage 3 (Nov 2, 2026). They settle layout and behavio
 - **Next week:** from 6 p.m. on Sunday, › shows next week as an open week, with its days and bank. Its tasks can be put on a day, sent back to the bank and swapped, but not checked off.
 - **A past week:** Progress, days and bank as they were, rolled-over and lapsed tasks included; the bank can't be placed from.
 - **Wrap up this week** sits at the bottom of Next week. It opens a sheet that lists what **carries over to next week** and what **ends with this week**, as the API says for each task; an empty list is left out. **Wrap up this week** confirms and makes next week the current one, with no undo; **Not yet** closes the sheet. Nothing prompts it.
-- Fixed-day items (trash on Tuesday) stay put: their ⋯ menu holds only Delete, and they can be checked off. Moving one for a single week (a holiday moves trash day) is part of #82, and will join that menu.
+- Fixed-day items (trash on Tuesday) never go to the bank. On today or a later day their ⋯ menu holds **Move to another day**, a day picker of that week's days from today on, then Delete. A move is for that week only (a holiday moves trash day); the item keeps its day. They can be checked off.
 - **The bank:** this week's tasks not yet on a day, as chips. Tap one, then pick a day (today or later); the sheet ends with **Delete (made by mistake)**. Drag may come later. Anything placed by hand stays put.
 - A tab bar switches screens; the open screen, including an opened day, is remembered. It's **Today | Week | + | Aspirations**: the + (read as "Add" by screen readers, and never marked as the current tab) opens the Add sheet over whatever screen is open.
 - The "This week" header and date range stay pinned while the page scrolls.
@@ -66,7 +66,7 @@ The app is organized aspirations first, matching the model: **Aspirations tab �
   - **Intensity:** Easing off / Normal / Going hard in one row, Normal to start, with "Sets how full days are and how much is free." A tap saves it, with no Save button and no confirmation; it stays until changed, and nothing suggests changing it. A failed save says so, and the choice shown comes back from the API. Week marks a day "Full" once it reaches the cap.
   - **Week starts** Monday and **Notifications** Off are shown, not set. The app asks for no notification permission.
   - **Export my data** answers "Coming later."
-- **Deleting** (spec 038) is for something made by mistake, never a decision: that's Drop, offered only on "Still matter?". Delete is always the last choice, in plain text, and asks once in a sheet that names the thing and says what goes with it ("Delete “Be strong”? Its tasks, milestones and check-ins go with it. There's no undo."), with **Cancel** first. It needs a connection; offline, nothing changes and "Couldn't delete that. Try again." shows. A deleted goal goes back to where it was opened from, and a deleted aspiration goes to the Aspirations tab.
+- **Deleting** (spec 038) is for something made by mistake, never a decision: that's Drop, offered on "Still matter?" and as **Remove (not doing it)** on a set item (spec 082). Remove asks once in the same sheet with its own words ("Remove “Dentist cleaning”? It's not done, and nothing counts against you.", **Cancel** then **Remove**), needs a connection, and the task stays in history. Delete is always the last choice, in plain text, and asks once in a sheet that names the thing and says what goes with it ("Delete “Be strong”? Its tasks, milestones and check-ins go with it. There's no undo."), with **Cancel** first. It needs a connection; offline, nothing changes and "Couldn't delete that. Try again." shows. A deleted goal goes back to where it was opened from, and a deleted aspiration goes to the Aspirations tab.
 
 ![Goal detail: condensed and expanded milestone timeline](goal-detail-timeline.png)
 
@@ -86,12 +86,12 @@ Designed Nov 20 from [ADR-012](../adr/0012-sign-in-with-a-passkey.md) and the br
 
 ## Scheduling and other weeks
 
-Designed with Jan on Nov 21. **Add, On a day** (#79) and **Week, any week** with its fullness (#80) are built; the rest isn't yet. The full behavior, rules and suggested work are in [`../briefs/scheduling-and-other-weeks.md`](../briefs/scheduling-and-other-weeks.md).
+Designed with Jan on Nov 21. **Add, On a day** (#79), **Week, any week** with its fullness (#80), and **Move and Remove** (#82) are built; the rest isn't yet. The full behavior, rules and suggested work are in [`../briefs/scheduling-and-other-weeks.md`](../briefs/scheduling-and-other-weeks.md).
 
 ![Scheduling and other weeks: this week, a future week, Coming up, Add on a day, a past day](scheduling.png)
 
 - **Week, any week** (built): ‹ › arrows step back to past weeks and forward up to 12 weeks, replacing the This week | Next week toggle (Wrap up this week stays on Next week). Every week shows its counts line and fullness bar, then This week (when not on it). **Coming up ›** comes with Coming up (#83).
-- **A week that hasn't opened** (built) shows only what's known, under a note: tasks set to a day, fixed-day recurring items, "Check in: Lift" and "Deadline: Lift". "Nothing set yet" on empty days; no Progress, bank or day bars. Its days open without Pull from bank or Swap.
+- **A week that hasn't opened** (built) shows only what's known, under a note: tasks set to a day, fixed-day recurring items, "Check in: Lift" and "Deadline: Lift". "Nothing set yet" on empty days; no Progress, bank or day bars. Its days open with the same note, then the tasks set to that day, each with Move, Remove and Delete, then **Also that day**, read-only: fixed-day items, "Check in: Lift · Milestone 3 of 4" and "Deadline: Lift". No progress bar, check-off, Pull from bank or Swap; "Nothing set yet" when empty.
 - **A past day** can be opened and its unfinished tasks ticked off: "Moved on to the next week · tap if you did it".
 - **Add, On a day** (built): When is **On today · In the bank · On a day**; On a day takes a day and an optional time, and the task stays there. Goal sits below them, though the image leaves it out.
 - **Coming up:** the next 12 weeks, one two-line row each: range, check-in and deadline counts (hollow ring), fullness bar, ▸/▾; then "● 8 for 3 goals · ● 5 upkeep · ● 2 added". The first two weeks open; open weeks list dated things by day, opening their day or goal.
